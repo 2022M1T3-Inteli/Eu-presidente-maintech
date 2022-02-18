@@ -2,10 +2,10 @@ extends Node2D
 
 
 # Declare member variables here. Examples:
-var P = 0
-var N = 0
-var porta1 = false
-
+var P = 0 # Essa variavel serve como valor das cordenadas
+var N = 0 # Essa variavel serve como o outro valor das cordenadas
+var porta1 = true # Essa Bolean esta aqui para o sistema de Start do jogo
+var porta2 = false
 # var b = "text"
 
 
@@ -19,13 +19,15 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	print(P,";",N)
-	
-	if (P == 0 and N == 0):
+	if (porta2 == false ):
+		$Sprite.hide()
+		$Consulta.text = "Consultar"
+		
+	else:
+		$Consulta.text = "Voltar"
+		$Sprite.show()
 		
 		porta1 = true
-	else:
-		porta1 = false
-	
 	if (porta1 == true):
 		$AnimatedSprite.hide()
 		
@@ -34,17 +36,26 @@ func _process(delta):
 	
 	if(P == 1 and N == 0):
 		print("Dentro p1;n0")
+		$Label.text = "Apoio Popular: 80%"
+		$Label2.text = "Apoio Camara: 08%"
 		$AnimatedSprite.play("card3")
-		pass
+		
 	if(P == 1 and N == 2):
 		print("Dentro p1;n2")
 		$AnimatedSprite.play("card2")
-		pass
+		$Label.text = "Apoio Popular: 50%"
+		$Label2.text = "Apoio Camara: 70%"
+		
 	if(P == 1 and N == 1):
 		print("Dentro p1;n1")
 		$AnimatedSprite.play("card1")
-		pass
-	
+	if(P>1):
+		
+		P = 1
+		N = 1
+	if(N > 2):
+		P = 1
+		N = 2
 
 func _on_Positivo_button_up():
 	P += 1
@@ -57,6 +68,19 @@ func _on_Negativo_button_up():
 
 
 func _on_Reorganizar_button_up():
-	N = 0
-	P = 0
+	get_tree().change_scene("res://Node2D.tscn")
+	pass # Replace with function body.
+
+
+func _on_comeca_button_up():
+	print("False")
+	porta1=false
+	pass # Replace with function body.
+
+
+func _on_Consulta_button_up():
+	if (porta2 == false):
+		porta2 = true
+	else:
+		porta2 = false
 	pass # Replace with function body.

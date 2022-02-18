@@ -1,5 +1,5 @@
 extends Node2D
-
+# Para inicio do jogo os botoes principais de escolha comecao com a visibilidade desligada.
 func _ready():
 	$Button2.visible = false
 	$Button3.visible = false
@@ -17,10 +17,10 @@ func _ready():
 	reiniciar.connect("pressed", self, "_reiniciar_pressed")
 	add_child(reiniciar)
 
-func _reiniciar_pressed():
+func _reiniciar_pressed(): # funcao para reiniciar o jogo pelo metodo reload_current_scene()
 	get_tree().reload_current_scene()
 
-func _on_Button_pressed():
+func _on_Button_pressed(): # Funcao para quando aperta o BTN Iniciar, perceba que ele faz com que os dois BTNS secundarios sumam e os principais aparecao
 	$Button.visible = false
 	$Card1.visible = true
 	$Button2.visible = true
@@ -56,7 +56,7 @@ func _on_Button6_pressed():
 	$Label2.visible = true
 
 
-func _on_Button2_pressed():
+func _on_Button2_pressed(): # Ao precionar vetar parcialmente
 	$Button2.visible = false
 	$Button3.visible = false
 	$Button4.visible = false
@@ -66,7 +66,7 @@ func _on_Button2_pressed():
 
 
 
-func _on_Button3_pressed():
+func _on_Button3_pressed(): # Ao precionar sancional
 	$Button2.visible = false
 	$Button3.visible = false
 	$Button4.visible = false
@@ -75,7 +75,7 @@ func _on_Button3_pressed():
 	$Label2.text = "Aprovação do Congresso: 30%"
 
 
-func _on_Button4_pressed():
+func _on_Button4_pressed(): # Ao precionar vetar parcialmente
 	$Button2.visible = false
 	$Button3.visible = false
 	$Button4.visible = false
