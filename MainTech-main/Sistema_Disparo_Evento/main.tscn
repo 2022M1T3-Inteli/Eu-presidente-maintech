@@ -12,14 +12,14 @@ animations = [ {
 "name": "card2",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 2 ) ],
-"loop": true,
-"name": "card3 ",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "card1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "card3 ",
 "speed": 5.0
 } ]
 
@@ -31,7 +31,7 @@ margin_left = 409.0
 margin_top = 523.0
 margin_right = 472.0
 margin_bottom = 543.0
-text = "Positivo"
+text = "Concorda"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -41,7 +41,7 @@ margin_left = 552.0
 margin_top = 523.0
 margin_right = 620.0
 margin_bottom = 543.0
-text = "Negativo"
+text = "Discordar"
 __meta__ = {
 "_edit_use_anchors_": false
 }
