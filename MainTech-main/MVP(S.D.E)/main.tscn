@@ -12,14 +12,9 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 4 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 2 ) ],
 "loop": true,
-"name": "card2",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
-"name": "card1",
+"name": "card0",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 7 ) ],
@@ -27,14 +22,19 @@ animations = [ {
 "name": "card3",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 2 ), ExtResource( 2 ) ],
+"frames": [ ExtResource( 3 ) ],
 "loop": true,
-"name": "a ",
+"name": "card1",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 9 ) ],
 "loop": true,
 "name": "consulta",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "card2",
 "speed": 5.0
 } ]
 
@@ -65,7 +65,7 @@ __meta__ = {
 position = Vector2( 508, 292 )
 scale = Vector2( 0.9, 0.76694 )
 frames = SubResource( 1 )
-animation = "a "
+animation = "card0"
 
 [node name="Reorganizar" type="Button" parent="."]
 margin_left = 845.0
@@ -107,7 +107,7 @@ scale = Vector2( 0.0566406, 0.0566406 )
 texture = ExtResource( 8 )
 
 [node name="Label" type="Label" parent="."]
-self_modulate = Color( 0.0235294, 0.0941176, 0.666667, 1 )
+modulate = Color( 0.25098, 0.258824, 0.313726, 1 )
 margin_left = 61.0
 margin_top = 67.0
 margin_right = 186.0
@@ -118,7 +118,7 @@ __meta__ = {
 }
 
 [node name="Label2" type="Label" parent="."]
-self_modulate = Color( 0.160784, 0.129412, 0, 1 )
+modulate = Color( 0.382812, 0.0343933, 0.0343933, 1 )
 margin_left = 61.0
 margin_top = 137.0
 margin_right = 185.0
