@@ -59,7 +59,7 @@ func _process(delta):
 		print("Dentro p1;n1")
 		$AnimatedSprite.play("card1")
 	if(P>1):
-		$AnimatedSprite.play("card2")
+		$AnimatedSprite.play("card0")
 		P = 0
 		N = 0
 	if(N > 2):
