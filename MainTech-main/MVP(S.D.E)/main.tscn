@@ -16,9 +16,9 @@ animations = [ {
 "name": "a",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ) ],
+"frames": [ ExtResource( 9 ) ],
 "loop": true,
-"name": "card3",
+"name": "consulta",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 3 ) ],
@@ -26,9 +26,9 @@ animations = [ {
 "name": "card1",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ) ],
+"frames": [ ExtResource( 7 ) ],
 "loop": true,
-"name": "consulta",
+"name": "card3",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ) ],
