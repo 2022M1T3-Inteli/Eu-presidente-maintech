@@ -4,7 +4,6 @@
 [ext_resource path="res://imag/Card4.jpg" type="Texture" id=2]
 [ext_resource path="res://imag/Card1.jpg" type="Texture" id=3]
 [ext_resource path="res://imag/Card3.jpg" type="Texture" id=4]
-[ext_resource path="res://Telas/MesaPresidente.jpeg" type="Texture" id=5]
 [ext_resource path="res://imag/speaker-at-a-conference.png" type="Texture" id=6]
 [ext_resource path="res://imag/card6.jpeg" type="Texture" id=7]
 [ext_resource path="res://imag/group.png" type="Texture" id=8]
@@ -12,9 +11,9 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 2 ) ],
+"frames": [ ExtResource( 2 ) ],
 "loop": true,
-"name": "card0",
+"name": "a",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 7 ) ],
@@ -36,7 +35,16 @@ animations = [ {
 "loop": true,
 "name": "card2",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "card0",
+"speed": 5.0
 } ]
+
+[sub_resource type="StreamTexture" id=2]
+flags = 4
+load_path = "res://.import/MesaPresidente.jpeg-dc94df264fdb7b39c2c0815b3b81a426.stex"
 
 [node name="main" type="Node2D"]
 script = ExtResource( 1 )
@@ -65,7 +73,7 @@ __meta__ = {
 position = Vector2( 508, 292 )
 scale = Vector2( 0.9, 0.76694 )
 frames = SubResource( 1 )
-animation = "card0"
+animation = "a"
 
 [node name="Reorganizar" type="Button" parent="."]
 margin_left = 845.0
@@ -78,6 +86,7 @@ __meta__ = {
 }
 
 [node name="comeca" type="Button" parent="."]
+modulate = Color( 0.219608, 0.901961, 0.121569, 1 )
 margin_left = 21.0
 margin_top = 517.0
 margin_right = 139.0
@@ -91,7 +100,7 @@ __meta__ = {
 position = Vector2( 512, 292.5 )
 scale = Vector2( 0.795313, 0.818056 )
 z_index = -1
-texture = ExtResource( 5 )
+texture = SubResource( 2 )
 __meta__ = {
 "_edit_lock_": true
 }

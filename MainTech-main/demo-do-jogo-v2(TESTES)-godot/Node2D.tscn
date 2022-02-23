@@ -1,0 +1,111 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Node2D.gd" type="Script" id=1]
+[ext_resource path="res://mesa-presidente.jpeg" type="Texture" id=2]
+[ext_resource path="res://card1.png" type="Texture" id=3]
+[ext_resource path="res://educação-política-veto-presidencial1-scaled.jpg" type="Texture" id=4]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Mesa-presidente" type="Sprite" parent="."]
+position = Vector2( 506.5, 296 )
+scale = Vector2( 0.789844, 0.822222 )
+texture = ExtResource( 2 )
+
+[node name="Educação-política-veto-presidencial1-scaled" type="Sprite" parent="."]
+position = Vector2( 498, 714 )
+scale = Vector2( 0.557082, 0.557082 )
+texture = ExtResource( 4 )
+
+[node name="Card1" type="Sprite" parent="."]
+position = Vector2( 509, 311 )
+scale = Vector2( 0.6275, 0.6275 )
+texture = ExtResource( 3 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 390.0
+margin_top = 224.0
+margin_right = 644.0
+margin_bottom = 332.0
+text = "INICIAR"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 208.0
+margin_top = 436.0
+margin_right = 324.0
+margin_bottom = 524.0
+text = "SANCIONAR"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 349.0
+margin_top = 437.0
+margin_right = 488.0
+margin_bottom = 524.0
+text = "VETAR TOTALMENTE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="."]
+margin_left = 512.0
+margin_top = 436.0
+margin_right = 675.0
+margin_bottom = 524.0
+text = "VETAR PARCIALMENTE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button5" type="Button" parent="."]
+margin_left = 693.0
+margin_top = 436.0
+margin_right = 811.0
+margin_bottom = 522.0
+text = "CONSULTA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button6" type="Button" parent="."]
+margin_left = 596.0
+margin_top = 3.0
+margin_right = 624.0
+margin_bottom = 39.0
+text = "X"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 0.333333, 0.329412, 0.415686, 1 )
+margin_left = 742.0
+margin_top = 67.0
+margin_right = 838.0
+margin_bottom = 141.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+modulate = Color( 0.333333, 0.329412, 0.415686, 1 )
+margin_left = 743.0
+margin_top = 91.0
+margin_right = 835.0
+margin_bottom = 163.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_Button4_pressed"]
+[connection signal="pressed" from="Button5" to="." method="_on_Button5_pressed"]
+[connection signal="pressed" from="Button6" to="." method="_on_Button6_pressed"]
