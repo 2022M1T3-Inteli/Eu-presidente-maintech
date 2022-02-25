@@ -11,21 +11,6 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
-"loop": true,
-"name": "a",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 9 ) ],
-"loop": true,
-"name": "consulta",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
-"name": "card1",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 7 ) ],
 "loop": true,
 "name": "card3",
@@ -34,6 +19,21 @@ animations = [ {
 "frames": [ ExtResource( 4 ) ],
 "loop": true,
 "name": "card2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "a",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "card1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "consulta",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 2 ), ExtResource( 2 ) ],
@@ -101,9 +101,6 @@ position = Vector2( 512, 292.5 )
 scale = Vector2( 0.795313, 0.818056 )
 z_index = -1
 texture = SubResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Camara" type="Sprite" parent="."]
 position = Vector2( 32, 144 )
