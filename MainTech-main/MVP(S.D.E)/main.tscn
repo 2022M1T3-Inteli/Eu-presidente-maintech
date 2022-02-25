@@ -21,6 +21,7 @@ animations = [ {
 "name": "card2",
 "speed": 5.0
 }, {
+<<<<<<< HEAD
 "frames": [ ExtResource( 2 ) ],
 "loop": true,
 "name": "a",
@@ -34,6 +35,27 @@ animations = [ {
 "frames": [ ExtResource( 9 ) ],
 "loop": true,
 "name": "consulta",
+=======
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "card2",
+"speed": 5.0
+}, {
+<<<<<<< Updated upstream
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "card3",
+=======
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "card1",
+>>>>>>> Stashed changes
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "card3",
+>>>>>>> 24b6a783c27a314243adb5b913272f8952072cad
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 2 ), ExtResource( 2 ) ],
