@@ -16,51 +16,29 @@ animations = [ {
 "name": "card3",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ) ],
-"loop": true,
-"name": "card2",
-"speed": 5.0
-}, {
-<<<<<<< HEAD
-"frames": [ ExtResource( 2 ) ],
-"loop": true,
-"name": "a",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "card1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "card2",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 9 ) ],
 "loop": true,
 "name": "consulta",
-=======
-"frames": [ ExtResource( 4 ) ],
-"loop": true,
-"name": "card2",
-"speed": 5.0
-}, {
-<<<<<<< Updated upstream
-"frames": [ ExtResource( 7 ) ],
-"loop": true,
-"name": "card3",
-=======
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
-"name": "card1",
->>>>>>> Stashed changes
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 7 ) ],
-"loop": true,
-"name": "card3",
->>>>>>> 24b6a783c27a314243adb5b913272f8952072cad
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 2 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "card0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "a",
 "speed": 5.0
 } ]
 
@@ -123,6 +101,9 @@ position = Vector2( 512, 292.5 )
 scale = Vector2( 0.795313, 0.818056 )
 z_index = -1
 texture = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Camara" type="Sprite" parent="."]
 position = Vector2( 32, 144 )
