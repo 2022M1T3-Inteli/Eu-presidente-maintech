@@ -1,0 +1,68 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Telas/mapaBrsail.jpg" type="Texture" id=1]
+[ext_resource path="res://Node2Dcode.gd" type="Script" id=2]
+[ext_resource path="res://imag/AssetTags.png" type="Texture" id=3]
+[ext_resource path="res://imag/AssetDinheiro.png" type="Texture" id=4]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 34.0
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Dinheiro" type="Area2D" parent="."]
+position = Vector2( 539, 312 )
+scale = Vector2( 0.5, 0.588403 )
+z_index = 2
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Dinheiro"]
+position = Vector2( 6, 0 )
+scale = Vector2( 1.1, 1 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dinheiro"]
+position = Vector2( 4, 0 )
+shape = SubResource( 1 )
+
+[node name="Control" type="Control" parent="."]
+margin_left = 30.0
+margin_top = 19.0
+margin_right = 992.0
+margin_bottom = 581.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Tags" type="Sprite" parent="Control"]
+position = Vector2( 495, 235 )
+scale = Vector2( 0.533854, 0.551852 )
+z_index = 1
+texture = ExtResource( 3 )
+
+[node name="Voltar" type="Button" parent="Control"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -87.0
+margin_top = -24.0
+text = "Voltar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mapa" type="Sprite" parent="."]
+position = Vector2( 512.5, 299 )
+scale = Vector2( 0.533854, 0.551852 )
+z_index = -1
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[connection signal="button_up" from="Control/Voltar" to="." method="_on_Voltar_button_up"]

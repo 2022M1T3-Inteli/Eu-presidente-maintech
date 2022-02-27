@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/MesaPresidente.jpeg-dc94df264fdb7b39c2c0815b3b81a426.stex"
+path="res://.import/AssetTags.png-47512a0054db28ea798b445c0800bc41.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Telas/MesaPresidente.jpeg"
-dest_files=[ "res://.import/MesaPresidente.jpeg-dc94df264fdb7b39c2c0815b3b81a426.stex" ]
+source_file="res://imag/AssetTags.png"
+dest_files=[ "res://.import/AssetTags.png-47512a0054db28ea798b445c0800bc41.stex" ]
 
 [params]
 

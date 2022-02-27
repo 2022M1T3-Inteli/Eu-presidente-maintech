@@ -37,6 +37,7 @@ func _process(delta):
 		porta3 = true
 	else: 
 		$AnimatedSprite.show()
+		porta3 = false
 	
 		
 	if(P == 1 and N == 0):
@@ -62,9 +63,9 @@ func _process(delta):
 		$AnimatedSprite.play("card0")
 		P = 0
 		N = 0
-	if(N > 2):
-		P = 1
-		N = 0
+	if(P == 1 and N == 3):
+		get_tree().change_scene("res://MiniGameDinheiro.tscn") # Iniciar o mini game
+		
 	if(P == 0 and N == 1 ):
 		P = 1
 		N = 0
