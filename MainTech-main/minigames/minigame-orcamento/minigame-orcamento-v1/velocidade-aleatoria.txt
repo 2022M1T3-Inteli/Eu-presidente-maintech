@@ -1,0 +1,24 @@
+extends Node2D
+
+var orcamento = [] 
+var rng = RandomNumberGenerator.new()
+var aleatorios_x = []
+var aleatorios_y = []
+var contador_de_pontos = 0
+
+func _ready():
+	orcamento.append($dinheiro1)
+	orcamento.append($dinheiro2)
+	orcamento.append($dinheiro3)
+	orcamento.append($dinheiro4)
+
+func _process(delta):
+	for i in range(0, 4): # cria um laço que repete os comandos abaixo 4 vezes
+		rng.randomize() # gera um número aleatório
+		var aleatorio_x = rng.randi_range(2, 5) # armazena esse valor na variável aleatorio_x
+		rng.randomize() # gera outro número aleatório
+		var aleatorio_y = rng.randi_range(2, 5) # armazena esse valor na variável aleatorio_y
+		aleatorios_x.append(aleatorio_x) # adiciona o valor aleatorio_x na lista aleatrios_x
+		aleatorios_y.append(aleatorio_y) # adiciona o valor aleatorio_x na lista aleatrios_y
+		orcamento[i].move_local_x(aleatorios_x[i]) # define o valor na posição "i" da lista aleatorios_x como a velocidade no eixo x do item na posição "i" na lista orcamentos
+		orcamento[i].move_local_y(aleatorios_y[i]) # define o valor na posição "i" da lista aleatorios_y como a velocidade no eixo y do item na posição "i" na lista orcamentos
