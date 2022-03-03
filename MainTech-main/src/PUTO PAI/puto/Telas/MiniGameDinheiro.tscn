@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
+[ext_resource path="res://Telas/Label.gd" type="Script" id=1]
 [ext_resource path="res://code/Node2Dcode.gd" type="Script" id=3]
 [ext_resource path="res://imag/AssetTags.png" type="Texture" id=4]
 [ext_resource path="res://imag/Mao.png" type="Texture" id=7]
@@ -63,6 +64,16 @@ margin_top = 502.0
 margin_right = 102.0
 margin_bottom = 554.0
 text = "Add Dinheiro"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control"]
+margin_left = 12.0
+margin_top = -7.0
+margin_right = 121.0
+margin_bottom = 32.0
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
