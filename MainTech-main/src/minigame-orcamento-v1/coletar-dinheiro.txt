@@ -1,0 +1,9 @@
+função para detectar a entrada de um body na area2d
+para criar essa função, adicione um node do tipo area2d e crie um signal body_entered(body: Node)
+
+func _on_dinheiro1_body_entered(body): #função que é executada caso um body entre na área do dinheiro1
+	if body.name == "player": # verifica se apenas o player, e não outros corpos, encostar no dinheiro1
+		contador_de_pontos += 1 # contador de pontos aumenta em uma unidade
+		$"dinheiro1/shape-dinheiro1".queue_free() # exclui a possibilidade de colidir com o dinheiro1
+		$dinheiro1.visible = false # torna o dinheiro1 invisível
+		print(contador_de_pontos) # retorna o valor do contador no terminal

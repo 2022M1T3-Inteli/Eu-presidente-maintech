@@ -1,0 +1,86 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Node2D.gd" type="Script" id=2]
+[ext_resource path="res://14-140422_cartoon-money-clipart-money-clipart-png.png" type="Texture" id=3]
+[ext_resource path="res://player.gd" type="Script" id=4]
+[ext_resource path="res://dinheiro1.gd" type="Script" id=5]
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 31, 31 )
+
+[sub_resource type="CircleShape2D" id=10]
+radius = 32.3883
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 31.5, 16.5 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 32, 15 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 29, 16 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="player" type="KinematicBody2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="shape-player" type="CollisionShape2D" parent="player"]
+position = Vector2( 505, 311 )
+shape = SubResource( 5 )
+
+[node name="sprite-player" type="Sprite" parent="player"]
+position = Vector2( 505, 310 )
+texture = ExtResource( 1 )
+
+[node name="dinheiro1" type="Area2D" parent="."]
+script = ExtResource( 5 )
+
+[node name="sprite-dinheiro1" type="Sprite" parent="dinheiro1"]
+position = Vector2( 150, 136 )
+scale = Vector2( 0.159009, 0.159009 )
+texture = ExtResource( 3 )
+
+[node name="shape-dinheiro1" type="CollisionShape2D" parent="dinheiro1"]
+position = Vector2( 148, 133 )
+shape = SubResource( 10 )
+
+[node name="dinheiro2" type="Area2D" parent="."]
+
+[node name="sprite-dinheiro2" type="Sprite" parent="dinheiro2"]
+position = Vector2( 279, 133 )
+scale = Vector2( 0.159009, 0.159009 )
+texture = ExtResource( 3 )
+
+[node name="shape-dinheiro2" type="CollisionShape2D" parent="dinheiro2"]
+position = Vector2( 281, 128 )
+shape = SubResource( 7 )
+
+[node name="dinheiro3" type="Area2D" parent="."]
+
+[node name="sprite-dinheiro3" type="Sprite" parent="dinheiro3"]
+position = Vector2( 417, 132 )
+scale = Vector2( 0.159009, 0.159009 )
+texture = ExtResource( 3 )
+
+[node name="shape-dinheiro3" type="CollisionShape2D" parent="dinheiro3"]
+position = Vector2( 416, 129 )
+shape = SubResource( 8 )
+
+[node name="dinheiro4" type="Area2D" parent="."]
+
+[node name="sprite-dinheiro4" type="Sprite" parent="dinheiro4"]
+position = Vector2( 542, 133 )
+scale = Vector2( 0.159009, 0.159009 )
+texture = ExtResource( 3 )
+
+[node name="shape-dinheiro4" type="CollisionShape2D" parent="dinheiro4"]
+position = Vector2( 542, 126 )
+shape = SubResource( 9 )
+
+[connection signal="body_entered" from="dinheiro1" to="." method="_on_dinheiro1_body_entered"]
+[connection signal="body_entered" from="dinheiro2" to="." method="_on_dinheiro2_body_entered"]
+[connection signal="body_entered" from="dinheiro3" to="." method="_on_dinheiro3_body_entered"]
+[connection signal="body_entered" from="dinheiro4" to="." method="_on_dinheiro4_body_entered"]
