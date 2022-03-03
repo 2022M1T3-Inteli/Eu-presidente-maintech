@@ -70,5 +70,6 @@ func _process(delta):
 
 func _on_Dinheiro_area_entered(area):
 	if(area.name == "Mouse"):
+		area.get_parent().pontos += 1
 		queue_free()
 	pass # Replace with function body.
