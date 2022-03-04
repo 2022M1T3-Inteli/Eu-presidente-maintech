@@ -1,0 +1,85 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://code/Node2Dcode.gd" type="Script" id=3]
+[ext_resource path="res://imag/AssetTags.png" type="Texture" id=4]
+[ext_resource path="res://imag/Mao.png" type="Texture" id=7]
+[ext_resource path="res://code/Mouse.gd" type="Script" id=13]
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 25.02
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -230.0 ]
+}
+
+[node name="Control" type="Control" parent="."]
+margin_left = 30.0
+margin_top = 19.0
+margin_right = 992.0
+margin_bottom = 581.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Tags" type="Sprite" parent="Control"]
+position = Vector2( 495, 235 )
+scale = Vector2( 0.533854, 0.551852 )
+z_index = 1
+texture = ExtResource( 4 )
+
+[node name="Voltar" type="Button" parent="Control"]
+anchor_left = 0.91
+anchor_top = 0.957
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -0.420044
+margin_top = 0.166016
+text = "Voltar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProgressBar" type="ProgressBar" parent="Control"]
+anchor_left = 0.911
+anchor_top = 0.028
+anchor_right = 1.003
+anchor_bottom = 0.082
+margin_left = -0.38208
+margin_top = 0.264
+margin_right = 0.113953
+margin_bottom = -0.0839996
+max_value = 3.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Control"]
+modulate = Color( 0.301961, 1, 0.47451, 1 )
+margin_left = 6.0
+margin_top = 502.0
+margin_right = 102.0
+margin_bottom = 554.0
+text = "Add Dinheiro"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mouse" type="Area2D" parent="."]
+script = ExtResource( 13 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mouse"]
+position = Vector2( 0, 5 )
+shape = SubResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="Mouse"]
+position = Vector2( 2, 2 )
+z_index = 2
+texture = ExtResource( 7 )
+hframes = 2
+
+[connection signal="pressed" from="Control/Voltar" to="." method="_on_Voltar_pressed"]
+[connection signal="pressed" from="Control/Button" to="." method="_on_Button_pressed"]
+[connection signal="area_entered" from="Mouse" to="." method="_on_Mouse_area_entered"]

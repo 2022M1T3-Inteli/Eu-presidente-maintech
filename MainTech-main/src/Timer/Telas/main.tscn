@@ -1,0 +1,118 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://code/main.gd" type="Script" id=1]
+[ext_resource path="res://imag/CardsTree.jpg" type="Texture" id=2]
+[ext_resource path="res://imag/BG/GabinteMesa.jpg" type="Texture" id=5]
+[ext_resource path="res://imag/speaker-at-a-conference.png" type="Texture" id=6]
+[ext_resource path="res://imag/group.png" type="Texture" id=8]
+[ext_resource path="res://imag/Captura de Tela 2022-02-18 às 09.30.42.png" type="Texture" id=9]
+
+[node name="main" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Chamadas" type="Sprite" parent="."]
+position = Vector2( 508, 281 )
+scale = Vector2( 0.952077, 0.952077 )
+texture = ExtResource( 2 )
+hframes = 4
+vframes = 4
+
+[node name="BG" type="Sprite" parent="."]
+position = Vector2( 514, 300.312 )
+scale = Vector2( 0.539548, 0.554977 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="Consulta_sprite" type="Sprite" parent="."]
+position = Vector2( 509, 288 )
+scale = Vector2( 0.701942, 0.690965 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 0.25098, 0.258824, 0.313726, 1 )
+margin_left = 81.0
+margin_top = 67.0
+margin_right = 206.0
+margin_bottom = 87.0
+text = "Apoio Popular: 60%"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+modulate = Color( 0.329412, 0.329412, 0.329412, 1 )
+margin_left = 81.0
+margin_top = 137.0
+margin_right = 205.0
+margin_bottom = 157.0
+text = "Apoio Camara: 10%"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Positivo" type="Button" parent="."]
+margin_left = 429.0
+margin_top = 523.0
+margin_right = 500.0
+margin_bottom = 543.0
+text = "Concorda"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Negativo" type="Button" parent="."]
+margin_left = 572.0
+margin_top = 523.0
+margin_right = 645.0
+margin_bottom = 543.0
+text = "Discordar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Reorganizar" type="Button" parent="."]
+margin_left = 865.0
+margin_top = 519.0
+margin_right = 983.0
+margin_bottom = 557.0
+text = "Reorganizar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="comeca" type="Button" parent="."]
+modulate = Color( 0.219608, 0.901961, 0.121569, 1 )
+margin_left = 41.0
+margin_top = 517.0
+margin_right = 159.0
+margin_bottom = 555.0
+text = "Ouvir"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Consulta" type="Button" parent="."]
+margin_left = 45.0
+margin_top = 466.0
+margin_right = 117.0
+margin_bottom = 486.0
+text = "Consultar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PleopleIcon" type="Sprite" parent="."]
+position = Vector2( 52, 73 )
+scale = Vector2( 0.0566406, 0.0566406 )
+texture = ExtResource( 8 )
+
+[node name="CamaraIcon" type="Sprite" parent="."]
+position = Vector2( 52, 144 )
+scale = Vector2( 0.0742187, 0.0742187 )
+texture = ExtResource( 6 )
+
+[connection signal="button_up" from="Positivo" to="." method="_on_Positivo_button_up"]
+[connection signal="button_up" from="Negativo" to="." method="_on_Negativo_button_up"]
+[connection signal="button_up" from="Reorganizar" to="." method="_on_Reorganizar_button_up"]
+[connection signal="button_up" from="comeca" to="." method="_on_comeca_button_up"]
+[connection signal="button_up" from="Consulta" to="." method="_on_Consulta_button_up"]
