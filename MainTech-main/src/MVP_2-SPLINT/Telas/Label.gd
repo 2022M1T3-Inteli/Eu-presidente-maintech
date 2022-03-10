@@ -1,7 +1,7 @@
 extends Label
 
-export var tempo = 3
-var tempo_on = true
+export var tempo = 3 # Estado inicial do timer
+var tempo_on = true # Caso esteje funcioanando o timer essa variavel e igual a true
 
 func _process(delta):
 	if (tempo <= 0):

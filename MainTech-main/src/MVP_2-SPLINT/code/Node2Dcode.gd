@@ -8,8 +8,7 @@ func _ready():
 func criar_dinheiro(): # Funcao, quando chama cria e instancia o obj Dinheiro apartir da cena Dinheiro.tscn
 	var loadDinheiro = preload("res://Obj/Dinheiro.tscn")# Carrega a cena Dinheiro.tscn
 	var dinheiro = loadDinheiro.instance() # Instancia o obj Dinheiro
-	get_parent().add_child(dinheiro) # get_parent(), pega o no pai, nesse caso Node2D. add_child(), é uma funcao que adiciona um obj a cen
-	dinheiro.free()
+	get_parent().add_child(dinheiro) # get_parent(), pega o no pai, nesse caso Node2D. add_child(), é uma funcao que adiciona um obj a cena
 		
 	
 func _process(delta):	if ($Control/Label.tempo <= 0):

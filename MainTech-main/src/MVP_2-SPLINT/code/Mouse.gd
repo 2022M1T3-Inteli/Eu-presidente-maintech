@@ -15,8 +15,8 @@ func _process(delta):
 
 
 func seguirMouse():
-	var mX
-	var mY
+	var mX # Mouse x
+	var mY # Mouse y
 	mX = get_viewport().get_mouse_position().x
 	mY = get_viewport().get_mouse_position().y
 	position.x = mX

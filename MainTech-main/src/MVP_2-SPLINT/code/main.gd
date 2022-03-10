@@ -42,7 +42,7 @@ func _process(delta):
 	
 	
 	if(P > 3 or N > 3 ):
-		get_tree().change_scene("res://Telas/MiniGameDinheiro.tscn") # Iniciar o mini game
+		get_tree().change_scene("res://Telas/MiniGameDinheiro.tscn")  # Iniciar o mini game
 		
 
 func _on_Positivo_button_up(): # Quando precionado adiciona +1 a cordenada X

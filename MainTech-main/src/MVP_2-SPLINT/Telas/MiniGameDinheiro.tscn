@@ -49,6 +49,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+tempo = 10
 
 [node name="Mouse" type="Area2D" parent="."]
 script = ExtResource( 13 )
