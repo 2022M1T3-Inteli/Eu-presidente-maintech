@@ -1,0 +1,69 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Telas/Label.gd" type="Script" id=1]
+[ext_resource path="res://code/Node2Dcode.gd" type="Script" id=3]
+[ext_resource path="res://imag/Mao.png" type="Texture" id=7]
+[ext_resource path="res://code/Mouse.gd" type="Script" id=13]
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 25.02
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -230.0 ]
+}
+maxDinheiro = 38
+
+[node name="Control" type="Control" parent="."]
+margin_left = 30.0
+margin_top = 19.0
+margin_right = 992.0
+margin_bottom = 581.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="Control"]
+
+[node name="ProgressBar" type="ProgressBar" parent="Control"]
+anchor_left = 0.887
+anchor_top = 0.03
+anchor_right = 0.979
+anchor_bottom = 0.082
+margin_left = -0.293945
+margin_top = 0.139999
+margin_right = 0.202087
+margin_bottom = 0.916
+max_value = 3.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control"]
+anchor_right = 0.042
+anchor_bottom = 0.025
+margin_right = -0.404003
+margin_bottom = -0.0500002
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+tempo = 10
+
+[node name="Mouse" type="Area2D" parent="."]
+script = ExtResource( 13 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mouse"]
+position = Vector2( 0, 5 )
+shape = SubResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="Mouse"]
+position = Vector2( 2, 2 )
+z_index = 2
+texture = ExtResource( 7 )
+hframes = 2
+
+[connection signal="timeout" from="Control/Timer" to="." method="_on_Timer_timeout"]
+[connection signal="area_entered" from="Mouse" to="." method="_on_Mouse_area_entered"]
+[connection signal="area_entered" from="Mouse" to="Mouse" method="_on_Mouse_area_entered"]

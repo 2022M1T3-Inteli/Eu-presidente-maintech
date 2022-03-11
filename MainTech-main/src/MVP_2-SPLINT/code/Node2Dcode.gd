@@ -20,7 +20,7 @@ func _process(delta):	if ($Control/Label.tempo <= 0):
 
 
 func _on_Timer_timeout():
-	for i in range (0,2):
-		criar_dinheiro()
-		print("criou")
-		i +=1
+		for i in range (0,4):
+			criar_dinheiro()
+			print("criou")
+			i +=1
