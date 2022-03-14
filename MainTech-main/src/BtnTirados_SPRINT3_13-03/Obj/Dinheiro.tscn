@@ -16,4 +16,7 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
+[node name="endtimer" type="Timer" parent="."]
+
 [connection signal="area_entered" from="." to="." method="_on_Dinheiro_area_entered"]
+[connection signal="timeout" from="endtimer" to="." method="_on_endtimer_timeout"]

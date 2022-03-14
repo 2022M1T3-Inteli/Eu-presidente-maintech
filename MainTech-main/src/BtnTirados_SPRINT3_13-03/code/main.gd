@@ -10,26 +10,26 @@ var porta3 = true # Essa Bolean restringe a atualizacao das cordenadas ao moment
 
 
 
-# As cordenadas comecao inicialmente em (0;0)
+# As cordenadas comecao inicialmente em (1;1)
 func _ready():
 	
 	$Chamadas.frame_coords = Vector2(1,1)
-	pass # Replace with function body.
+
 
 func _process(delta):
 	print(P,";",N)
 	
-#	if (P==2 and N==2):
-#		get_tree().change_scene("res://Telas/MiniGameDinheiro.tscn")
 	if (porta2 == false ):
 		$Consulta_sprite.hide() # Esconde a SPRITE de consulta
 		$BTN/Consulta.text = "Consultar"
 		porta3 = false
+		porta1 = false
 		
 	else:
 		$BTN/Consulta.text = "Voltar"
 		$Consulta_sprite.show() # Mostra a SPRITE de consulta
 		porta3 = true
+		porta1 = true
 		
 		
 	if (porta1 == true):
@@ -50,32 +50,19 @@ func _process(delta):
 func _on_Positivo_button_up(): # Quando precionado adiciona +1 a cordenada X
 	if(porta3 == false):
 		P += 1
-	pass # Replace with function body.
 
 
-func _on_Negativo_button_up(): # Quando precionado adiciona -1 a cordenada X
+
+func _on_Negativo_button_up(): # Quando precionado adiciona +1 a cordenada Y
 	if(porta3 == false):
 		N += 1
-	pass # Replace with function body.
 
 
-func _on_Reorganizar_button_up(): # Ao precionar o BTN reorganizar o metodo reload_current_scene() recarrega o jogo "Restart"
-	get_tree().reload_current_scene()
-	pass # Replace with function body.
-
-
-#func _on_comeca_button_up(): # BTN ouvir, 
-#	print("False")
-#	porta1=false
-#	pass # Replace with function body.
-
-
-func _on_Consulta_button_up():
+func _on_Consulta_button_up(): # Quando precionado muda o estado da Variavel que controla o BTN de consulta, usada na linha 22
 	if (porta2 == false):
 		porta2 = true
 	else:
 		porta2 = false
-	pass # Replace with function body.
 
 
 

@@ -15,8 +15,8 @@ func _process(delta):
 
 
 func seguirMouse():
-	var mX
-	var mY
+	var mX # Mouse x
+	var mY # Mouse y
 	mX = get_viewport().get_mouse_position().x
 	mY = get_viewport().get_mouse_position().y
 	position.x = mX
@@ -24,11 +24,10 @@ func seguirMouse():
 
 
 func _on_Mouse_area_entered(area):
-	if (area != Label) :
-		var a = InputEventAction.new()
-		a.action = "ui_click"
-		a.pressed = true
-		Input.parse_input_event(a)
-		yield(get_tree().create_timer(0.2),"timeout")
-		a.pressed = false
-		Input.parse_input_event(a)
+	var a = InputEventAction.new()
+	a.action = "ui_click"
+	a.pressed = true
+	Input.parse_input_event(a)
+	yield(get_tree().create_timer(0.2),"timeout")
+	a.pressed = false
+	Input.parse_input_event(a)

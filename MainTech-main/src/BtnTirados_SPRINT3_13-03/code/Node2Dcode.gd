@@ -1,36 +1,37 @@
 extends Node2D
 
-var fim = false
 onready var pontos = 0
-export var maxDinheiro = 78
+export var maxDinheiro = 10
+export var tempo = 10 # Estado inicial do timer
+var tempo_on = true # Caso esteje funcioanando o timer essa variavel e igual a true
+
 func _ready():
+	$Control/ProgressBar.max_value = maxDinheiro
 	$Control/Timer.start()
 
 func criar_dinheiro(): # Funcao, quando chama cria e instancia o obj Dinheiro apartir da cena Dinheiro.tscn
 	var loadDinheiro = preload("res://Obj/Dinheiro.tscn")# Carrega a cena Dinheiro.tscn
 	var dinheiro = loadDinheiro.instance() # Instancia o obj Dinheiro
 	get_parent().add_child(dinheiro) # get_parent(), pega o no pai, nesse caso Node2D. add_child(), é uma funcao que adiciona um obj a cena
-		
-	
+
+
 func _process(delta):
-	if ($Control/Label.acabou == false):
-		$Control/ProgressBar.max_value = maxDinheiro
+	if (tempo <= 0):
+		tempo_on = false
+		$Control/Label.text = "00" + ":" + "00"
+		yield(get_tree().create_timer(0.5),"timeout")
+		get_tree().change_scene("res://Telas/main.tscn")
+	if(tempo_on):
+		tempo -= delta
+		$Control/Label.text = "00" + ":" + str(int(tempo))
 		$Control/ProgressBar.value = pontos
-		print("Pontos: ",pontos," Maximo de Pontos: ",maxDinheiro )
-	else:
-		if(fim == false):
-			var loadLimpador = preload("res://Obj/Limpador.tscn")
-			var limpador = loadLimpador.instance()
-			get_parent().add_child(limpador)
-			fim = true
-		else:
-			yield(get_tree().create_timer(1),"timeout")
-			get_tree().change_scene("res://Telas/main.tscn")
+
 
 
 
 func _on_Timer_timeout():
-	for i in range (0,2):
-		if (fim == false):
+	if tempo >= 2.5:
+		for i in range (0,2):
 			criar_dinheiro()
-		i +=1
+			print("criou")
+			i +=1

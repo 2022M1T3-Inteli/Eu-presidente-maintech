@@ -1,6 +1,5 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://code/Label.gd" type="Script" id=1]
 [ext_resource path="res://code/Node2Dcode.gd" type="Script" id=3]
 [ext_resource path="res://imag/Mao.png" type="Texture" id=7]
 [ext_resource path="res://code/Mouse.gd" type="Script" id=13]
@@ -13,7 +12,7 @@ script = ExtResource( 3 )
 __meta__ = {
 "_edit_horizontal_guides_": [ -230.0 ]
 }
-maxDinheiro = 38
+maxDinheiro = 15
 
 [node name="Control" type="Control" parent="."]
 margin_left = 30.0
@@ -25,6 +24,7 @@ __meta__ = {
 }
 
 [node name="Timer" type="Timer" parent="Control"]
+wait_time = 0.5
 
 [node name="ProgressBar" type="ProgressBar" parent="Control"]
 anchor_left = 0.887
@@ -35,7 +35,6 @@ margin_left = -0.293945
 margin_top = 0.139999
 margin_right = 0.202087
 margin_bottom = 0.916
-max_value = 3.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -45,11 +44,9 @@ anchor_right = 0.042
 anchor_bottom = 0.025
 margin_right = -0.404003
 margin_bottom = -0.0500002
-script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-tempo = 10
 
 [node name="Mouse" type="Area2D" parent="."]
 script = ExtResource( 13 )

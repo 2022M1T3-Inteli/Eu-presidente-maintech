@@ -14,6 +14,8 @@ var rng = RandomNumberGenerator.new()
 
 func _ready():
 	# Para que o codigo comece é necessario ao menos duas das portas serem verdadeiras 
+	$endtimer.start(rand_range(1,2.5))
+	randomize()
 	indoB = true # Porta inicial para x
 	indoD = true # Porta inicial para y
 	rng.randomize()
@@ -72,6 +74,7 @@ func _on_Dinheiro_area_entered(area):
 	if(area.name == "Mouse"):
 		area.get_parent().pontos += 1
 		queue_free()
-	elif area.name == "Limpador":
-		queue_free()
 	pass # Replace with function body.
+	
+func _on_endtimer_timeout():
+	queue_free()
