@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://banana.png" type="Texture" id=1]
+[ext_resource path="res://coletavel.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 39.5, 22 )
+
+[node name="coletavel" type="Area2D"]
+script = ExtResource( 2 )
+
+[node name="coletavel-shape" type="CollisionShape2D" parent="."]
+position = Vector2( -1.5, 12 )
+shape = SubResource( 1 )
+
+[node name="coletavel-sprite" type="Sprite" parent="."]
+position = Vector2( -0.582989, 12 )
+scale = Vector2( 0.0410594, 0.0414938 )
+texture = ExtResource( 1 )
+
+[connection signal="body_entered" from="." to="." method="_on_coletavel_body_entered"]
