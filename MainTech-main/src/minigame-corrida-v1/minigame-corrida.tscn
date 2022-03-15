@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://minigame-corrida.gd" type="Script" id=2]
+[ext_resource path="res://coletavel.tscn" type="PackedScene" id=3]
+[ext_resource path="res://obstaculo.tscn" type="PackedScene" id=4]
+[ext_resource path="res://background.tscn" type="PackedScene" id=5]
+
+[node name="minigame-corrida" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 221, 101 )
+
+[node name="coletavel" parent="." instance=ExtResource( 3 )]
+
+[node name="timer" type="Timer" parent="."]
+
+[node name="pontuacao" type="RichTextLabel" parent="."]
+margin_left = 428.0
+margin_top = 2.0
+margin_right = 566.0
+margin_bottom = 42.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="obstaculo" parent="." instance=ExtResource( 4 )]
+
+[node name="gameover" type="RichTextLabel" parent="."]
+visible = false
+margin_left = 356.0
+margin_top = 206.0
+margin_right = 612.0
+margin_bottom = 336.0
+text = "GAME OVER"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" parent="." instance=ExtResource( 5 )]
+
+[connection signal="timeout" from="timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="obstaculo" to="." method="_on_obstaculo_area_entered"]
+[connection signal="body_entered" from="obstaculo" to="." method="_on_obstaculo_body_entered"]
