@@ -2,19 +2,19 @@ extends Node2D
 
 
 # Declare member variables here. Examples:
-var P = 0 # Essa variavel serve como valor X das cordenadas
-var N = 0 # Essa variavel serve como o outro valor Y das cordenadas
+var P = 0 # Essa variavel serve como valor LINHA das cordenadas
+var N = 0 # Essa variavel serve como o outro valor COLUNA das cordenadas
 var porta1 = false # Essa Bolean esta aqui para o sistema de Start do jogo
 var porta2 = false # Usada como porta para BTN consultar
 var porta3 = true # Essa Bolean restringe a atualizacao das cordenadas ao momento de escolha ( "concordar" e "discordar" )
 
 
 
-# As cordenadas comecao inicialmente em (1;1)
+# As cordenadas comecao inicialmente em (0;0)
 func _ready():
 	
 	$Chamadas.frame_coords = Vector2(1,1)
-
+	pass # Replace with function body.
 
 func _process(delta):
 	print(P,";",N)
@@ -53,12 +53,12 @@ func _on_Positivo_button_up(): # Quando precionado adiciona +1 a cordenada X
 
 
 
-func _on_Negativo_button_up(): # Quando precionado adiciona +1 a cordenada Y
+func _on_Negativo_button_up(): # Quando precionado adiciona -1 a cordenada X
 	if(porta3 == false):
 		N += 1
 
 
-func _on_Consulta_button_up(): # Quando precionado muda o estado da Variavel que controla o BTN de consulta, usada na linha 22
+func _on_Consulta_button_up():
 	if (porta2 == false):
 		porta2 = true
 	else:

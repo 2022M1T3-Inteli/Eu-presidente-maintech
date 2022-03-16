@@ -2,7 +2,7 @@
 
 [ext_resource path="res://code/main.gd" type="Script" id=1]
 [ext_resource path="res://imag/CardsTree.jpg" type="Texture" id=2]
-[ext_resource path="res://imag/BG/GabinteMesa.jpg" type="Texture" id=5]
+[ext_resource path="res://imag/BG/Paint.jpg" type="Texture" id=3]
 [ext_resource path="res://imag/Captura de Tela 2022-02-18 às 09.30.42.png" type="Texture" id=9]
 
 [node name="main" type="Node2D"]
@@ -17,9 +17,8 @@ vframes = 4
 
 [node name="BG" type="Sprite" parent="."]
 position = Vector2( 514, 300.312 )
-scale = Vector2( 0.539548, 0.554977 )
 z_index = -1
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="Consulta_sprite" type="Sprite" parent="."]
 position = Vector2( 509, 288 )

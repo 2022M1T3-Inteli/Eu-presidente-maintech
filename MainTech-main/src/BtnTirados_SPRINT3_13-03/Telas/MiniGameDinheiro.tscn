@@ -1,6 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
+[ext_resource path="res://imag/BG/Paint_MIneGameDinheiro.jpg" type="Texture" id=1]
+[ext_resource path="res://imag/BtnDinheiroMineGame_Pontos.png" type="Texture" id=2]
 [ext_resource path="res://code/Node2Dcode.gd" type="Script" id=3]
+[ext_resource path="res://imag/BtnDinheiroMineGame_Tempo.png" type="Texture" id=4]
+[ext_resource path="res://imag/AssetMineGameDinheiro_Fala.png" type="Texture" id=5]
 [ext_resource path="res://imag/Mao.png" type="Texture" id=7]
 [ext_resource path="res://code/Mouse.gd" type="Script" id=13]
 
@@ -26,6 +30,22 @@ __meta__ = {
 [node name="Timer" type="Timer" parent="Control"]
 wait_time = 0.5
 
+[node name="BtnTempo" type="Sprite" parent="Control"]
+position = Vector2( 119, 65 )
+z_index = 1
+texture = ExtResource( 4 )
+
+[node name="BtnPontos" type="Sprite" parent="Control"]
+position = Vector2( 831, 63 )
+z_index = 1
+texture = ExtResource( 2 )
+
+[node name="Titulo" type="Sprite" parent="Control"]
+visible = false
+position = Vector2( 477, 106 )
+z_index = 1
+texture = ExtResource( 5 )
+
 [node name="ProgressBar" type="ProgressBar" parent="Control"]
 anchor_left = 0.887
 anchor_top = 0.03
@@ -48,7 +68,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="BG" type="Sprite" parent="."]
+position = Vector2( 512, 302 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
 [node name="Mouse" type="Area2D" parent="."]
+z_index = 2
 script = ExtResource( 13 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mouse"]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GabinteMesa.jpg-098d5c1b460f2cdf9221a25c6059c71d.stex"
+path="res://.import/Paint_MIneGameDinheiro.jpg-d3413f506ed1b3c7e56873b07e555823.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imag/BG/GabinteMesa.jpg"
-dest_files=[ "res://.import/GabinteMesa.jpg-098d5c1b460f2cdf9221a25c6059c71d.stex" ]
+source_file="res://imag/BG/Paint_MIneGameDinheiro.jpg"
+dest_files=[ "res://.import/Paint_MIneGameDinheiro.jpg-d3413f506ed1b3c7e56873b07e555823.stex" ]
 
 [params]
 

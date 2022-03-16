@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BGDinheiro.jpg-ba17e923b14809184cd71514413abdcc.stex"
+path="res://.import/BtnDinheiroMineGame_Tempo.png-9c2aec019446dff903287d824afa21d6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imag/BG/BGDinheiro.jpg"
-dest_files=[ "res://.import/BGDinheiro.jpg-ba17e923b14809184cd71514413abdcc.stex" ]
+source_file="res://imag/BtnDinheiroMineGame_Tempo.png"
+dest_files=[ "res://.import/BtnDinheiroMineGame_Tempo.png-9c2aec019446dff903287d824afa21d6.stex" ]
 
 [params]
 
