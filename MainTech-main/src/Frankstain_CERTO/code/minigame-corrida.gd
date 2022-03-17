@@ -16,6 +16,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
 	if (jogoON == true):
 		timerColetavel += delta
 		timerObstaculo += delta
@@ -47,3 +48,4 @@ func gameover():
 	Global.gP = 0
 	yield(get_tree().create_timer(1),"timeout")
 	get_tree().change_scene("res://Telas/main.tscn")
+	
