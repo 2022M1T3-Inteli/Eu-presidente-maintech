@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://imag/BG/Paint_MIneGameDinheiro.jpg" type="Texture" id=1]
 [ext_resource path="res://imag/BtnDinheiroMineGame_Pontos.png" type="Texture" id=2]
 [ext_resource path="res://code/Node2Dcode.gd" type="Script" id=3]
 [ext_resource path="res://imag/BtnDinheiroMineGame_Tempo.png" type="Texture" id=4]
 [ext_resource path="res://imag/AssetMineGameDinheiro_Fala.png" type="Texture" id=5]
+[ext_resource path="res://music/sambaminigame1.wav" type="AudioStream" id=6]
 [ext_resource path="res://imag/Mao.png" type="Texture" id=7]
 [ext_resource path="res://code/Mouse.gd" type="Script" id=13]
 
@@ -89,6 +90,11 @@ z_index = 2
 texture = ExtResource( 7 )
 hframes = 2
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = 3.909
+
 [connection signal="timeout" from="Control/Timer" to="." method="_on_Timer_timeout"]
 [connection signal="area_entered" from="Mouse" to="." method="_on_Mouse_area_entered"]
 [connection signal="area_entered" from="Mouse" to="Mouse" method="_on_Mouse_area_entered"]
+[connection signal="ready" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_ready"]
