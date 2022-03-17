@@ -8,6 +8,7 @@ var tempo_on = true # Caso esteje funcioanando o timer essa variavel e igual a t
 func _ready():
 	$Control/ProgressBar.max_value = maxDinheiro
 	$Control/Timer.start()
+	$AudioStreamPlayer.ready()
 
 func criar_dinheiro(): # Funcao, quando chama cria e instancia o obj Dinheiro apartir da cena Dinheiro.tscn
 	var loadDinheiro = preload("res://Obj/Dinheiro.tscn")# Carrega a cena Dinheiro.tscn
@@ -35,3 +36,7 @@ func _on_Timer_timeout():
 			criar_dinheiro()
 			print("criou")
 			i +=1
+
+
+func _on_AudioStreamPlayer_ready():
+	pass # Replace with function body.
