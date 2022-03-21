@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Obj/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://code/minigame-corrida.gd" type="Script" id=2]
+[ext_resource path="res://Obj/coletavel.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Obj/obstaculo.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Obj/background.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Telas/AudioStreamPlayerCorrida.gd" type="Script" id=6]
+
+[node name="minigame-corrida" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 511, 0 )
+
+[node name="coletavel" parent="." instance=ExtResource( 3 )]
+
+[node name="timer" type="Timer" parent="."]
+
+[node name="pontuacao" type="RichTextLabel" parent="."]
+margin_left = 428.0
+margin_top = 2.0
+margin_right = 566.0
+margin_bottom = 42.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="obstaculo" parent="." instance=ExtResource( 4 )]
+position = Vector2( 139, 71 )
+
+[node name="gameover" type="RichTextLabel" parent="."]
+visible = false
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 326.0
+margin_top = 253.0
+margin_right = 383.0
+margin_bottom = 269.0
+rect_scale = Vector2( 7, 7 )
+text = "Reiniciar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" parent="." instance=ExtResource( 5 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+script = ExtResource( 6 )
+
+[connection signal="timeout" from="timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="obstaculo" to="." method="_on_obstaculo_area_entered"]
+[connection signal="body_entered" from="obstaculo" to="." method="_on_obstaculo_body_entered"]
