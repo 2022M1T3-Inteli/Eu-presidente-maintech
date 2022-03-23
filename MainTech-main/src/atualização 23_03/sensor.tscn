@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="SegmentShape2D" id=1]
+a = Vector2( 670, 195 )
+b = Vector2( -355, 195 )
+
+[node name="sensor" type="Area2D"]
+position = Vector2( 353, 96 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -150 )
+shape = SubResource( 1 )
