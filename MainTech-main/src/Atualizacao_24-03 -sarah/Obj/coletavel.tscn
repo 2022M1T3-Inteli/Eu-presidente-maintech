@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://imag/MineGameCorrida/tijolom2-removebg-preview.png" type="Texture" id=1]
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends Area2D
+
+var rng = RandomNumberGenerator.new()
+var posicaoColetavel = 0
+
+func _ready():
+	rng.randomize()
+	posicaoColetavel = rng.randi_range(0, 3) # gera um número aleatório (0, 1 ou 2)
+	if posicaoColetavel == 0:
+		$\".\".position.x = 246 # caso a posicaoColetavel for 0, a posição x do coletável será 307
+	elif posicaoColetavel == 1:
+		$\".\".position.x = 512 # caso a posicaoColetavel for 1, a posição x do coletável será 512
+	else:
+		$\".\".position.x = 780 # caso a posicaoColetavel for 2, a posição x do coletável será 716
+
+
+func _on_coletavel_body_entered(body):
+	if body.name == \"player\":
+		Global.pontuacao += 1
+		print(Global.pontuacao)
+		queue_free() # caso o player entre na área do coletável, este será excluído da cena
+
+func _process(delta):
+	$\".\".position.y += Global.velocidade
+	if $\".\".position.y > 600:
+		queue_free()
+	
+"
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 23, 10 )
+
+[node name="coletavel" type="Area2D"]
+script = SubResource( 2 )
+
+[node name="coletavel-shape" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -1 )
+shape = SubResource( 1 )
+
+[node name="coletavel-sprite" type="Sprite" parent="."]
+position = Vector2( -1, -9.53674e-07 )
+scale = Vector2( 0.112907, 0.112907 )
+texture = ExtResource( 1 )
+
+[connection signal="body_entered" from="." to="." method="_on_coletavel_body_entered"]
