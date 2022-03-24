@@ -5,4 +5,5 @@ func _ready():
 
 #Quando clicar no botão, troca para o menu de personagens
 func _on_Button_button_up():
-	 get_tree().change_scene("res://Telas/PersonagemEscolha.tscn")
+	get_tree().change_scene("res://Telas/PersonagemEscolha.tscn")
+	$sombotao.play()

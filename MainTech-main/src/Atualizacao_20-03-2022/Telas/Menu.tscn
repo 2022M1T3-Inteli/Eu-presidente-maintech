@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://code/Manu.gd" type="Script" id=1]
 [ext_resource path="res://imag/Captura_de_Tela_2022-03-08_às_15.16.10-removebg-preview.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://imag/settings-removebg-preview (1).png" type="Texture" id=5]
 [ext_resource path="res://imag/constituicao-removebg-preview.png" type="Texture" id=6]
 [ext_resource path="res://imag/EuPresidente.png" type="Texture" id=7]
+[ext_resource path="res://music/botaomenu.wav" type="AudioStream" id=8]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -52,4 +53,9 @@ position = Vector2( 949, 80 )
 scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 6 )
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+
+[connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]
 [connection signal="button_up" from="Button" to="." method="_on_Button_button_up"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
