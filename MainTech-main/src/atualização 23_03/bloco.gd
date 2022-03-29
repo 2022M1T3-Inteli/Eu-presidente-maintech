@@ -4,8 +4,6 @@ var indo = true #Variável booleana: TRUE se o bloco esta se movendo para direit
 var parado = false #Variável booleana: FALSE se o bloco está se mexendo.
 var velocidade = Vector2(0,0) # Variável criada para iniciar a "gravidade" quando necessário.
 
-
-
 func _process(delta):
 
 	if parado == false: #Começa o movimento do bloco se movendo 2 unidades para a direita.

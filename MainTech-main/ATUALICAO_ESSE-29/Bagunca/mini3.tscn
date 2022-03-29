@@ -11,7 +11,7 @@
 script = ExtResource( 3 )
 
 [node name="fundo" parent="." instance=ExtResource( 7 )]
-position = Vector2( 556.75, 297.375 )
+position = Vector2( 462, 297 )
 scale = Vector2( 0.690313, 0.751563 )
 
 [node name="bloco" parent="." instance=ExtResource( 1 )]
@@ -31,5 +31,6 @@ current = true
 zoom = Vector2( 1, 1.125 )
 smoothing_enabled = true
 
+[connection signal="area_exited" from="sensor" to="." method="_on_sensor_area_exited"]
 [connection signal="body_entered" from="sensor" to="." method="_on_sensor_body_entered"]
 [connection signal="body_entered" from="sensor2" to="." method="_on_sensor2_body_entered"]

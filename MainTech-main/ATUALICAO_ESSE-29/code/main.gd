@@ -47,6 +47,7 @@ func _ready():
 		$Importante_03/AnimationPlayer.play("intro_emenda")
 	elif(Global.fase == "03"):
 		yield(get_tree().create_timer(2),"timeout")
+		Global.pontuacao = 0
 		get_tree().change_scene("res://Bagunca/mini3.tscn")
 		
 	
@@ -174,6 +175,7 @@ func _on_proximo_pressed():
 	if(click >= 1 ):
 		$BTN/proximo.visible = false
 		$Importante_03.visible = false
+		$proibido.visible = false
 		porta1 = false
 	else:
 		click += 1 

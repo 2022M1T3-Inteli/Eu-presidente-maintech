@@ -17,12 +17,19 @@ scale = Vector2( 0.838125, 0.838125 )
 [node name="bloco" parent="." instance=ExtResource( 1 )]
 
 [node name="sensor" parent="." instance=ExtResource( 2 )]
+position = Vector2( 447, 550 )
 
 [node name="sensor2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 2, 97 )
 
 [node name="chão" parent="." instance=ExtResource( 4 )]
 position = Vector2( 9, 334 )
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2( 513, 336 )
+current = true
+zoom = Vector2( 1, 1.125 )
+smoothing_enabled = true
 
 [connection signal="body_entered" from="sensor" to="." method="_on_sensor_body_entered"]
 [connection signal="body_entered" from="sensor2" to="." method="_on_sensor2_body_entered"]
