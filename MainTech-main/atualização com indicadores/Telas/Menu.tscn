@@ -1,0 +1,78 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://code/Manu.gd" type="Script" id=1]
+[ext_resource path="res://imag/Captura_de_Tela_2022-03-08_às_15.16.10-removebg-preview.png" type="Texture" id=2]
+[ext_resource path="res://imag/Background.webp" type="Texture" id=3]
+[ext_resource path="res://imag/Botão de Jogar.webp" type="Texture" id=4]
+[ext_resource path="res://imag/settings-removebg-preview (1).png" type="Texture" id=5]
+[ext_resource path="res://imag/constituicao-removebg-preview.png" type="Texture" id=6]
+[ext_resource path="res://imag/EuPresidente.png" type="Texture" id=7]
+
+[sub_resource type="CanvasItemMaterial" id=2]
+
+[sub_resource type="Theme" id=1]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 117.0 ]
+}
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 511.95, 299 )
+scale = Vector2( 1.30267, 1.327 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TituloPresidente" type="Sprite" parent="."]
+position = Vector2( 497, 87 )
+texture = ExtResource( 7 )
+
+[node name="Presidentes" type="Sprite" parent="."]
+position = Vector2( 518, 306 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 2 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 394.0
+margin_top = 481.0
+margin_right = 657.0
+margin_bottom = 572.0
+flat = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="BotãoDeJogar" type="Sprite" parent="Button"]
+position = Vector2( 131, 45 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 4 )
+
+[node name="settings" type="Sprite" parent="."]
+position = Vector2( 72, 86 )
+scale = Vector2( 0.386228, 0.386228 )
+z_index = 3
+texture = ExtResource( 5 )
+
+[node name="Button2" type="Button" parent="."]
+material = SubResource( 2 )
+margin_left = 36.0
+margin_top = 56.0
+margin_right = 106.0
+margin_bottom = 120.0
+theme = SubResource( 1 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="constituicao" type="Sprite" parent="."]
+position = Vector2( 949, 80 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 6 )
+
+[connection signal="button_up" from="Button" to="." method="_on_Button_button_up"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
