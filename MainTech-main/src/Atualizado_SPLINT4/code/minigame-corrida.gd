@@ -56,8 +56,8 @@ func criar_obstaculo():
 func gameover():
 	jogoON = false
 	$gameover.visible = true
-	Global.gN = 0
-	Global.gP = 0
+	Global.gY = 0
+	Global.gX = 6
 	Global.fase = "03"
 	remove_child($player)
 	remove_child($obstaculo)

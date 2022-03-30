@@ -28,6 +28,8 @@ func _process(delta):
 		tempo_on = false
 		$Control/Label.text = "00" + ":" + "00"
 		Global.fase = "02"
+		Global.gX = 0
+		Global.gY = 3
 		yield(get_tree().create_timer(0.5),"timeout")
 		get_tree().change_scene("res://Telas/main.tscn")
 	else:
