@@ -14,10 +14,12 @@ script = ExtResource( 3 )
 position = Vector2( 462, 297 )
 scale = Vector2( 0.690313, 0.751563 )
 
-[node name="bloco" parent="." instance=ExtResource( 1 )]
+[node name="blocos" parent="." instance=ExtResource( 1 )]
+position = Vector2( 10, -7 )
+input_pickable = true
 
 [node name="sensor" parent="." instance=ExtResource( 2 )]
-position = Vector2( 447, 483 )
+position = Vector2( 446, 466 )
 
 [node name="sensor2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 2, 24 )

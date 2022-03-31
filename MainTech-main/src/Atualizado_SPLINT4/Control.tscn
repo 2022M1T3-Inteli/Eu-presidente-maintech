@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://font/Oswald-VariableFont_wght.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://imag/CardsNovos/backDialogo.png" type="Texture" id=2]
 [ext_resource path="res://Control.gd" type="Script" id=3]
+[ext_resource path="res://imag/CardsNovos/President_1/Presidente_3.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 26
@@ -53,8 +54,8 @@ __meta__ = {
 }
 
 [node name="Image(1)" type="Sprite" parent="."]
-position = Vector2( 265, 108 )
-scale = Vector2( 0.681442, 0.681442 )
+position = Vector2( 400.723, 160.374 )
+scale = Vector2( 0.980721, 0.980721 )
 texture = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="."]
@@ -77,3 +78,7 @@ __meta__ = {
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Label"]
 anims/RESET = SubResource( 2 )
 anims/intro1 = SubResource( 3 )
+
+[node name="Presidente3" type="Sprite" parent="."]
+position = Vector2( 351, 58 )
+texture = ExtResource( 4 )

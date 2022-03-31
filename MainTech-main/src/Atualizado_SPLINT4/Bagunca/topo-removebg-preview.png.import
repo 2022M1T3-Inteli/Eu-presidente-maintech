@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tijolo.jpg-5ef767a56b3ea84460f05b99df27f0ef.stex"
+path="res://.import/topo-removebg-preview.png-fcc79d68cf249ea9c13561f07b9a5240.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Bagunca/tijolo.jpg"
-dest_files=[ "res://.import/tijolo.jpg-5ef767a56b3ea84460f05b99df27f0ef.stex" ]
+source_file="res://Bagunca/topo-removebg-preview.png"
+dest_files=[ "res://.import/topo-removebg-preview.png-fcc79d68cf249ea9c13561f07b9a5240.stex" ]
 
 [params]
 

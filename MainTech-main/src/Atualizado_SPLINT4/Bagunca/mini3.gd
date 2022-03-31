@@ -1,31 +1,56 @@
 extends Node2D
 var novobloco
-var dentro = 0
-func _ready():
-	pass
-func criar_bloco(): #Função criada para criar novos blocos quando chamada.
+var a = 0
+var b = 0
+var c = 0
+func criar_bloco(a): #Função criada para criar novos blocos quando chamada.
 		novobloco = preload("res://Bagunca/bloco.tscn").instance()
 		get_parent().add_child(novobloco)
+		novobloco.frames = a
+		#b = novobloco.CSX
+		#c = novobloco.CSY
+func _ready():
+	Global.pontuacao = 0
+	criar_bloco(a)
+	print("ready")
+	#print("Savlv",novobloco.position)
+
 func _on_sensor_body_entered(body): #Se o bloco passar por essa area2d, então a funcão criar_bloco() é chamada.
-	criar_bloco()
+	criar_bloco(a)
 	Global.pontuacao += 1
-	$sensor/CollisionShape2D.position.y -= 60
-	print(Global.pontuacao)
-	$Camera.position.y -= 60
-	novobloco.position.y -= (Global.pontuacao*60)
-	dentro = 1
+	$sensor/CollisionShape2D.position.y -= 50
+	$Camera.position.y -= 50
+	novobloco.position.y -= (Global.pontuacao*50)
+	print("collidiu")
 
 func _on_sensor2_body_entered(body): #Se o bloco passar por essa area2d, então o jogo é finalizado e cena de fim é chamada.
 	$'.'.get_tree().paused = true
-	get_tree().change_scene("res://Bagunca/fim_mini3.tscn")
+	Global.fase = ""
+	yield(get_tree().create_timer(1),"timeout")
+	get_tree().change_scene("res://Telas/main.tscn")
 
 func _process(delta):
-	if novobloco != null:
-		if dentro == 0 and novobloco.position.y == $sensor.position.y:
-			$'.'.get_tree().paused = true
-			get_tree().change_scene("res://Bagunca/fim_mini3.tscn")
+	if Global.pontuacao == 7:
+		$'.'.get_tree().paused = true
+		Global.fase = ""
+		yield(get_tree().create_timer(1),"timeout")
+		get_tree().change_scene("res://Telas/main.tscn")
+	print(novobloco)
+	#if Global.pontuacao == 0:
+	#	print("baixo")
+	#	a = 0
+		#b = 0.97
+		#c = 0.70
+	if Global.pontuacao < 5:
+		print("meio")
+		a = 1
+		#b = 1.03
+		#c = 1.20
+	if Global.pontuacao == 5:
+		print("topo")
+		a = 2
+		#b = 1.00
+		#c = 1.00
 
 
-func _on_sensor_area_exited(area):
-	dentro = 0
-	pass # Replace with function body.
+

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tijolo.jpg-5ef767a56b3ea84460f05b99df27f0ef.stex"
+path="res://.import/arvore-obstaculo.png-cd027eb3c9c855d97bcc8ec198ccd560.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Bagunca/tijolo.jpg"
-dest_files=[ "res://.import/tijolo.jpg-5ef767a56b3ea84460f05b99df27f0ef.stex" ]
+source_file="res://imag/MineGameCorrida/arvore-obstaculo.png"
+dest_files=[ "res://.import/arvore-obstaculo.png-cd027eb3c9c855d97bcc8ec198ccd560.stex" ]
 
 [params]
 

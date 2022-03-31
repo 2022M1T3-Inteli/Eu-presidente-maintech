@@ -4,6 +4,9 @@ var rng = RandomNumberGenerator.new()
 var posicaoObstaculo = 0
 
 func _ready():
+	if(Global.skinsGames == "floresta"):
+		$Roadblock.texture = load("res://imag/MineGameCorrida/arvore-obstaculo.png")
+		$Roadblock.scale = Vector2(0.1,0.1)
 	rng.randomize()
 	posicaoObstaculo = rng.randi_range(0, 3) # gera um número aleatório (0, 1 ou 2)
 	if posicaoObstaculo == 0:

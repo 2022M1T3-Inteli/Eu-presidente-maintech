@@ -62,8 +62,6 @@ func gameover():
 	remove_child($player)
 	remove_child($obstaculo)
 	remove_child($background)
-	yield(get_tree().create_timer(2.5),"timeout")
-	#get_tree().change_scene("res://Telas/main.tscn")
 	get_tree().change_scene("res://Telas/main.tscn")
 	
 	

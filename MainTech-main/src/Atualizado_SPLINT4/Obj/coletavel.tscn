@@ -9,6 +9,9 @@ var rng = RandomNumberGenerator.new()
 var posicaoColetavel = 0
 
 func _ready():
+	if(Global.skinsGames == \"floresta\"):
+		$\"coletavel-sprite\".texture = load(\"res://imag/MineGameCorrida/manga-coletavel.png\")
+
 	rng.randomize()
 	posicaoColetavel = rng.randi_range(0, 3) # gera um número aleatório (0, 1 ou 2)
 	if posicaoColetavel == 0:

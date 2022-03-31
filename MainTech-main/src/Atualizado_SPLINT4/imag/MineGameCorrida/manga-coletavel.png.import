@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tijolo.jpg-5ef767a56b3ea84460f05b99df27f0ef.stex"
+path="res://.import/manga-coletavel.png-4e9c156e2a74c269bf5cddd9c79844d0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Bagunca/tijolo.jpg"
-dest_files=[ "res://.import/tijolo.jpg-5ef767a56b3ea84460f05b99df27f0ef.stex" ]
+source_file="res://imag/MineGameCorrida/manga-coletavel.png"
+dest_files=[ "res://.import/manga-coletavel.png-4e9c156e2a74c269bf5cddd9c79844d0.stex" ]
 
 [params]
 

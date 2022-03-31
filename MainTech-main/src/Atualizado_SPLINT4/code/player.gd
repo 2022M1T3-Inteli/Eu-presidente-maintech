@@ -1,7 +1,9 @@
 extends KinematicBody2D
 
 
-
+func _ready():
+	if(Global.skinsGames == "floresta"):
+		$"player-sprite".texture = load("res://imag/MineGameCorrida/jeep-removebg-preview.png")
 func _physics_process(delta):
 	movimento_player()
 	if Global.gameover:
