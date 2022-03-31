@@ -31,6 +31,7 @@ func _ready():
 		mineGamem = false
 		
 	elif(Global.fase == "02"):
+		$Control.vai = true
 		$BTN/B.rect_position =  Vector2(0,0)
 		$BTN/A.rect_position =  Vector2(0,0)
 		Global.gY = 3
@@ -94,11 +95,12 @@ func _process(delta):
 			get_tree().change_scene("res://Telas/MiniGameDinheiro.tscn")
 			
 	elif(Global.gX + Global.gY > 4 and  Global.fase == "02"):
-		if(falas == false):
+		
+		if(falas == false and $Control.vai == true):
 			porta1 = true
 			$BTN/Consulta.visible = true
 			$Control.visible=true
-			$Control.vai = true
+			$Control.vai = false
 		else:
 			$Control.visible=false
 			porta1 = false

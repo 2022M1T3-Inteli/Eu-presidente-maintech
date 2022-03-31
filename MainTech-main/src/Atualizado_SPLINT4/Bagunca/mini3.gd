@@ -11,7 +11,6 @@ func criar_bloco(a): #Função criada para criar novos blocos quando chamada.
 		#c = novobloco.CSY
 func _ready():
 	Global.pontuacao = 0
-	criar_bloco(a)
 	print("ready")
 	#print("Savlv",novobloco.position)
 
@@ -26,6 +25,7 @@ func _on_sensor_body_entered(body): #Se o bloco passar por essa area2d, então a
 func _on_sensor2_body_entered(body): #Se o bloco passar por essa area2d, então o jogo é finalizado e cena de fim é chamada.
 	$'.'.get_tree().paused = true
 	Global.fase = ""
+	Global.final3 = 1
 	yield(get_tree().create_timer(1),"timeout")
 	get_tree().change_scene("res://Telas/main.tscn")
 
@@ -33,6 +33,7 @@ func _process(delta):
 	if Global.pontuacao == 7:
 		$'.'.get_tree().paused = true
 		Global.fase = ""
+		Global.final3 = 1
 		yield(get_tree().create_timer(1),"timeout")
 		get_tree().change_scene("res://Telas/main.tscn")
 	print(novobloco)

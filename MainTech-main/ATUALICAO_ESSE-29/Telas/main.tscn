@@ -76,6 +76,9 @@ margin_left = 137.0
 margin_top = 66.0
 margin_right = 177.0
 margin_bottom = 173.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Chamadas" type="Sprite" parent="."]
 visible = false

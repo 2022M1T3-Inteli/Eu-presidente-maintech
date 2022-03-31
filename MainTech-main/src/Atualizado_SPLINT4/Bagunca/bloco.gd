@@ -11,7 +11,8 @@ func _process(delta):
 	$AnimatedSprite.frame = frames
 	$CollisionShape2D.scale.x = CSX
 	$CollisionShape2D.scale.y = CSY
-
+	if Global.final3:
+		$".".visible = false
 	if parado == false: #Começa o movimento do bloco se movendo 2 unidades para a direita.
 		if indo:
 			position.x += 2
