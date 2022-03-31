@@ -1,11 +1,13 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Bagunca/bloco.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Bagunca/sensor.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Bagunca/mini3.gd" type="Script" id=3]
 [ext_resource path="res://Bagunca/chão.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Bagunca/sensor2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://music/sambaminigame1.wav" type="AudioStream" id=6]
 [ext_resource path="res://Bagunca/fundo.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Bagunca/AudioStreamPlayer.gd" type="Script" id=8]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 3 )
@@ -32,6 +34,10 @@ position = Vector2( 513, 336 )
 current = true
 zoom = Vector2( 1, 1.125 )
 smoothing_enabled = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+script = ExtResource( 8 )
 
 [connection signal="area_exited" from="sensor" to="." method="_on_sensor_area_exited"]
 [connection signal="body_entered" from="sensor" to="." method="_on_sensor_body_entered"]

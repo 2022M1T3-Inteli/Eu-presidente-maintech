@@ -1,8 +1,9 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://code/main.gd" type="Script" id=1]
 [ext_resource path="res://imag/CardsNovos/CardTree_Guide.jpg" type="Texture" id=2]
 [ext_resource path="res://imag/BG/Paint.jpg" type="Texture" id=3]
+[ext_resource path="res://Telas/mainmusica.gd" type="Script" id=4]
 [ext_resource path="res://imag/Main/AnimaTablet/Tela_03.png" type="Texture" id=6]
 [ext_resource path="res://imag/Main/AnimaTablet/Tela_04.png" type="Texture" id=7]
 [ext_resource path="res://imag/Main/AnimaTablet/Tela_01.png" type="Texture" id=8]
@@ -213,6 +214,9 @@ flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="mainmusica" type="AudioStreamPlayer2D" parent="."]
+script = ExtResource( 4 )
 
 [connection signal="mouse_entered" from="BTN/Papel/PapelArea" to="." method="_on_PapelArea_mouse_entered"]
 [connection signal="mouse_entered" from="BTN/Tablet2/TabletArea" to="." method="_on_Tablet_mouse_entered"]

@@ -14,6 +14,7 @@ var trava1 = false
 func _on_Button_pressed():
 	Global.nomePessoa = $LineEdit.text
 	if trava4 == true and $LineEdit.text != "" and $CheckBox.pressed == true:
+		MusicController.play_music()
 		get_tree().change_scene("res://Telas/main.tscn")
 		print(Global.nomePessoa,Global.personagem)
 
