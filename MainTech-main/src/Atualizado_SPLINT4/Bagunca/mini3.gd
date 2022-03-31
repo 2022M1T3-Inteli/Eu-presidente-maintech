@@ -17,7 +17,7 @@ func _ready():
 func _on_sensor_body_entered(body): #Se o bloco passar por essa area2d, então a funcão criar_bloco() é chamada.
 	criar_bloco(a)
 	Global.pontuacao += 1
-	$sensor/CollisionShape2D.position.y -= 50
+	#$sensor/CollisionShape2D.position.y -= 50
 	$Camera.position.y -= 50
 	novobloco.position.y -= (Global.pontuacao*50)
 	print("collidiu")
@@ -31,7 +31,7 @@ func _on_sensor2_body_entered(body): #Se o bloco passar por essa area2d, então 
 
 func _process(delta):
 	if Global.pontuacao == 7:
-		$'.'.get_tree().paused = true
+		#$'.'.get_tree().paused = true
 		Global.fase = ""
 		Global.final3 = 1
 		yield(get_tree().create_timer(1),"timeout")

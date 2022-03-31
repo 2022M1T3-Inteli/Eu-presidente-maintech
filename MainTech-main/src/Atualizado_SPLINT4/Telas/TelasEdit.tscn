@@ -15,51 +15,86 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Control"]
-anchor_left = 0.321
-anchor_top = 0.275
-anchor_right = 0.617
-anchor_bottom = 0.377
-margin_left = 1.259
-margin_top = 0.824997
-margin_right = 1.15497
-margin_bottom = 0.625
+anchor_left = 0.264
+anchor_top = 0.692
+anchor_right = 0.56
+anchor_bottom = 0.793
+margin_left = 0.455994
+margin_top = -0.124023
+margin_right = 0.351929
+margin_bottom = 0.27298
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Path" type="LineEdit" parent="Control"]
-anchor_left = 0.103
-anchor_top = 0.327
-anchor_right = 0.277
-anchor_bottom = 0.369
-margin_left = -0.16301
-margin_top = -0.219009
-margin_right = 0.182983
-margin_bottom = -0.293015
+anchor_left = 0.061
+anchor_top = 0.727
+anchor_right = 0.235
+anchor_bottom = 0.769
+margin_left = -0.281006
+margin_top = -0.019043
+margin_right = 0.0649872
+margin_bottom = -0.0930176
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="volta" type="Button" parent="Control"]
-margin_left = 811.0
-margin_top = 64.0
-margin_right = 928.0
-margin_bottom = 99.0
+anchor_left = 0.794
+anchor_top = 0.107
+anchor_right = 0.909
+anchor_bottom = 0.166
+margin_left = 0.325989
+margin_top = 0.120995
+margin_right = -0.0890503
+margin_bottom = -0.102005
 text = "Volta"
 
 [node name="Acept" type="Button" parent="Control"]
-anchor_left = 0.102
-anchor_top = 0.5
-anchor_right = 0.214
-anchor_bottom = 0.55
-margin_left = -0.142006
-margin_top = 4.5
-margin_right = 0.169983
-margin_bottom = 1.5
+anchor_left = 0.061
+anchor_top = 0.871
+anchor_right = 0.173
+anchor_bottom = 0.916
+margin_left = -0.280998
+margin_top = 0.0129395
+margin_right = 0.0309906
+margin_bottom = -0.0020752
 text = "Pronto"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Label2" type="Label" parent="Control"]
+anchor_left = 0.061
+anchor_top = 0.446
+anchor_right = 0.316
+anchor_bottom = 0.722
+margin_left = -0.281006
+margin_top = -0.261993
+margin_right = 0.363983
+margin_bottom = -0.0340271
+text = "Para importar a sua propria cardTree e necessario colocar o caminho da imagem"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox" type="CheckBox" parent="Control"]
+anchor_left = 0.035
+anchor_top = 0.106
+anchor_right = 0.244
+anchor_bottom = 0.188
+margin_left = 0.264999
+margin_top = -0.282005
+margin_right = -0.124023
+margin_bottom = -0.236008
+text = "Mutar o som do jogo"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="mouse_entered" from="Control/Path" to="." method="_on_Path_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Path" to="." method="_on_Path_mouse_exited"]
 [connection signal="button_down" from="Control/volta" to="." method="_on_volta_button_down"]
 [connection signal="button_up" from="Control/Acept" to="." method="_on_Acept_button_up"]

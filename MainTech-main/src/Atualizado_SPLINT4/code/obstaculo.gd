@@ -2,6 +2,7 @@ extends Area2D
 
 var rng = RandomNumberGenerator.new()
 var posicaoObstaculo = 0
+var timer = 0
 
 func _ready():
 	if(Global.skinsGames == "floresta"):
@@ -17,10 +18,13 @@ func _ready():
 		$".".position.x = 780 # caso a posicaoColetavel for 2, a posição x do coletável será 716
 
 func _process(delta):
+	timer += delta
 	$".".position.y += Global.velocidade
 	if $".".position.y > 600:
 		queue_free()
+	if(Global.gX == 6):
+		queue_free()
 
 func _on_obstaculo_body_entered(body):
-	if body.name == "player":
+	if body.name == "player" and timer > 0:
 		Global.gameover = true

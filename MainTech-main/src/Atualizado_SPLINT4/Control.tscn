@@ -64,12 +64,13 @@ anchor_left = 0.006
 anchor_right = 0.755
 anchor_bottom = 0.551
 margin_left = -0.26
-margin_right = -0.0499878
+margin_right = 138.95
 margin_bottom = 3.985
 rect_pivot_offset = Vector2( 300, 72 )
 custom_fonts/font = SubResource( 1 )
 text = "As Propostas de Emendas Constitucionais são mudanças,
  incrementos ou exclusões na Constituição Federal."
+autowrap = true
 percent_visible = 0.0
 __meta__ = {
 "_edit_use_anchors_": false
@@ -80,5 +81,5 @@ anims/RESET = SubResource( 2 )
 anims/intro1 = SubResource( 3 )
 
 [node name="Presidente3" type="Sprite" parent="."]
-position = Vector2( 351, 58 )
+position = Vector2( 335, 58 )
 texture = ExtResource( 4 )

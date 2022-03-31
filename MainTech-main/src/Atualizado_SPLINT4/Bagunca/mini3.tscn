@@ -21,7 +21,7 @@ position = Vector2( 10, -7 )
 input_pickable = true
 
 [node name="sensor" parent="." instance=ExtResource( 2 )]
-position = Vector2( 446, 466 )
+position = Vector2( 446, 270 )
 
 [node name="sensor2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 2, 24 )

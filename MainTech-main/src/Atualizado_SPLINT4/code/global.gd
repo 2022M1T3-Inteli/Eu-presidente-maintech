@@ -14,6 +14,7 @@ var apPopulacao = 60
 var timerInve = 0 
 var sprite = ""
 var final3 = 0
+var mute = true
 
 func expandir (obj):
 	obj.scale = Vector2(0.25,0.25)

@@ -41,6 +41,7 @@ func _ready():
 		print(Global.gY + Global.gX)
 		mineGamem = false
 		
+		
 	elif(Global.fase == "03"):
 		$BTN/B.rect_position =  Vector2(0,0)
 		$BTN/A.rect_position =  Vector2(0,0)
@@ -99,17 +100,17 @@ func _process(delta):
 		if(falas == false and $Control.vai == true):
 			porta1 = true
 			$BTN/Consulta.visible = true
-			$Control.visible=true
-			$Control.vai = false
+			$Control.visible = true
+			#$Control.vai = false
 		else:
 			$Control.visible=false
 			porta1 = false
 			$BTN/Consulta.visible = false
 			escolha(true,"proximo")
-			print("Foi")
+			print("Foi", " Falas:",falas, " Vai:",$Control.vai)
 			
 		
-		if(mineGamem == true):
+		if(mineGamem == true and falas == true):
 			get_tree().change_scene("res://Telas/minigame-corrida.tscn")
 			
 	elif(Global.gX + Global.gY > 7 and Global.fase == "03"):

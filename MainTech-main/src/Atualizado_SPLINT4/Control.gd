@@ -14,13 +14,23 @@ func _process(delta):
 	if(vai == true):
 		$Label.text = falas [a]
 		$Label/AnimationPlayer.play("intro1")
-		vai = false
+
 
 func _ready():
 	$Label.autowrap = quebraLinha
 	$Label.text = falas [0]
 	$Label/AnimationPlayer.play("intro1")
 	vai = false
+	if Global.personagem == 1:
+		$Presidente3.texture = load("res://imag/CardsNovos/President_1/Presidente_2.png")
+	elif Global.personagem == 2:
+		$Presidente3.texture = load("res://imag/CardsNovos/President_1/Presidente_1.png")
+	elif Global.personagem == 3:
+		$Presidente3.texture = load("res://imag/CardsNovos/President_1/Presidente_4.png")
+	elif Global.personagem == 4:
+		$Presidente3.texture = load("res://imag/CardsNovos/President_1/Presidente_1.png")
+	else: print("Erro, Control, nem um personagem selecionado")
+		
 	#print (falas[1])
 	
 	pass

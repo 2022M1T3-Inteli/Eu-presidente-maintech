@@ -10,6 +10,7 @@ func _ready() -> void:
 
 func _process(delta):
 	if(get_parent().tempo_on == true and a <= 0):
-		self.play()
-		a += 1
+		if(Global.mute != true):
+			self.play()
+			a += 1
 	

@@ -8,6 +8,8 @@ func _physics_process(delta):
 	movimento_player()
 	if Global.gameover:
 		morte_player()
+	if(Global.gX == 6):
+		queue_free()
 	
 
 func movimento_player(): # função de movimento do player
