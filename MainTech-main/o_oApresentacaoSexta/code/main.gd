@@ -56,7 +56,7 @@ func _ready():
 
 func _process(delta):
 	
-	if($Control.a > 4):
+	if($Control.a > 2):
 			falas = true
 	
 	if (porta2 == false ):
