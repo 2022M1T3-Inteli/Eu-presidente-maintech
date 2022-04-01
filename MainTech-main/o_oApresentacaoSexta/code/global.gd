@@ -17,6 +17,7 @@ var final3 = 0
 var mute = true
 
 func expandir (obj):
+	
 	obj.scale = Vector2(0.25,0.25)
 	for i in 5:
 		obj.scale = Vector2(0.25*i,0.25*i)

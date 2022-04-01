@@ -84,6 +84,7 @@ func _process(delta):
 		if(Input.is_action_just_pressed("ui_click") and $Chamadas.visible == false):
 			porta1 = false
 			Global.expandir($Chamadas)
+			print("aqui",porta1)
 	
 	$Chamadas.frame_coords.x = Global.gX
 	$Chamadas.frame_coords.y = Global.gY
@@ -98,7 +99,7 @@ func _process(delta):
 	elif(Global.gX + Global.gY > 4 and  Global.fase == "02"):
 		
 		if(falas == false and $Control.vai == true):
-			porta1 = true
+			#porta1 = true
 			$BTN/Consulta.visible = true
 			$Control.visible = true
 			#$Control.vai = false
