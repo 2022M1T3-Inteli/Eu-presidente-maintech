@@ -15,7 +15,7 @@ var falas = false
 func _ready():
 	$BTN/Consulta.visible = false
 	if (Global.sprite == ""):
-		cardTree = load("")
+		cardTree = load("res://matriz jogo.png")
 	else:
 		cardTree = load(Global.sprite)
 	$Chamadas.texture = cardTree
@@ -84,12 +84,12 @@ func _process(delta):
 		if(Input.is_action_just_pressed("ui_click") and $Chamadas.visible == false):
 			porta1 = false
 			Global.expandir($Chamadas)
-			print("aqui",porta1)
+			print("aqui",$Chamadas.position)
 	
 	$Chamadas.frame_coords.x = Global.gX
 	$Chamadas.frame_coords.y = Global.gY
-	print(Global.gY,Global.gX)
-	
+	#print(Global.gY,Global.gX)
+	print($Chamadas.position, $Chamadas.visible)
 	
 	if((Global.fase == "" or Global.fase == "01") and (Global.gX + Global.gY > 1)):
 		escolha(true,"")
