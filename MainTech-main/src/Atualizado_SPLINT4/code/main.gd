@@ -13,6 +13,9 @@ var falas = false
 
 # As cordenadas comecao inicialmente em (0;0)
 func _ready():
+	$HUD/Node2D/L1.visible = false
+	$HUD/Node2D/L2.visible = false
+	$HUD/Node2D/L3.visible = false
 	$BTN/Consulta.visible = false
 	if (Global.sprite == ""):
 		cardTree = load("res://imag/CardsNovos/CardTree_Guide.jpg")
@@ -20,6 +23,7 @@ func _ready():
 		cardTree = load(Global.sprite)
 	$Chamadas.texture = cardTree
 	if(Global.fase == "01" or Global.fase == ""):
+		
 		$BTN/B.rect_position =  Vector2(0,0)
 		$BTN/A.rect_position =  Vector2(0,0)
 		falas = false
@@ -31,7 +35,6 @@ func _ready():
 		mineGamem = false
 		
 	elif(Global.fase == "02"):
-		$Control.vai = true
 		$BTN/B.rect_position =  Vector2(0,0)
 		$BTN/A.rect_position =  Vector2(0,0)
 		Global.gY = 3
@@ -45,7 +48,6 @@ func _ready():
 	elif(Global.fase == "03"):
 		$BTN/B.rect_position =  Vector2(0,0)
 		$BTN/A.rect_position =  Vector2(0,0)
-		$Control.vai = false
 		Global.gY = 6
 		Global.gX = 0
 		porta1 = true
@@ -56,8 +58,9 @@ func _ready():
 
 func _process(delta):
 	
-	if($Control.a > 2):
+	if($Control.a >= 5):
 			falas = true
+			
 	
 	if (porta2 == false ):
 		$Consulta_sprite.hide() # Esconde a SPRITE de consulta
@@ -128,7 +131,8 @@ func _on_Positivo_button_up(): # Quando precionado adiciona +1 a cordenada X
 		
 	elif(Global.gY == 1 and Global.gX == 1):
 		$HUD/Node2D/Congra.value += 5
-
+	if(Global.gX + Global.gY > 4 and  Global.fase == "02"):
+		$Control.vai = true
 
 
 func _on_Negativo_button_up(): # Quando precionado adiciona -1 a cordenada X
@@ -140,11 +144,12 @@ func _on_Negativo_button_up(): # Quando precionado adiciona -1 a cordenada X
 		
 	elif(Global.gY == 1 and Global.gX == 1):
 		$HUD/Node2D/Congra.value += 20
+	if(Global.gX + Global.gY > 4 and  Global.fase == "02"):
+		$Control.vai = true
 
 
 func _on_Consulta_button_up():
 	$Control.a += 1
-	$Control.vai = true
 	if (porta2 == false):
 		porta2 = true
 	else:
@@ -216,3 +221,4 @@ func escolha(a,b):
 		$BTN/A.rect_position =  Vector2(0,0)
 		$BTN/Negativo.rect_position = Vector2(0,0)
 		$BTN/Positivo.rect_position = Vector2(0,0)
+		

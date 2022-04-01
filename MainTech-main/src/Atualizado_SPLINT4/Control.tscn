@@ -1,12 +1,13 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://font/Oswald-VariableFont_wght.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://imag/CardsNovos/backDialogo.png" type="Texture" id=2]
+[ext_resource path="res://imag/CardsNovos/DialogoBack.png" type="Texture" id=2]
 [ext_resource path="res://Control.gd" type="Script" id=3]
 [ext_resource path="res://imag/CardsNovos/President_1/Presidente_3.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 26
+outline_color = Color( 0.0156863, 0.00784314, 0.00784314, 1 )
 extra_spacing_top = 3
 font_data = ExtResource( 1 )
 
@@ -42,11 +43,14 @@ tracks/0/keys = {
 }
 
 [node name="Control" type="Control"]
-anchor_right = 0.69
-anchor_bottom = 0.442
-margin_left = -3.0
-margin_right = 0.439941
-margin_bottom = -0.200012
+anchor_left = -0.168
+anchor_top = -0.287
+anchor_right = 0.813
+anchor_bottom = 0.549
+margin_left = 3.03201
+margin_top = 9.2
+margin_right = -1.51202
+margin_bottom = -8.40002
 rect_pivot_offset = Vector2( -1, 0 )
 script = ExtResource( 3 )
 __meta__ = {
@@ -54,22 +58,24 @@ __meta__ = {
 }
 
 [node name="Image(1)" type="Sprite" parent="."]
-position = Vector2( 400.723, 160.374 )
+position = Vector2( 400.723, 112.374 )
 scale = Vector2( 0.980721, 0.980721 )
+z_index = -1
 texture = ExtResource( 2 )
+hframes = 4
 
 [node name="Label" type="Label" parent="."]
-modulate = Color( 0.0627451, 0.00784314, 0.00784314, 1 )
-anchor_left = 0.006
-anchor_right = 0.755
-anchor_bottom = 0.551
-margin_left = -0.26
-margin_right = 138.95
-margin_bottom = 3.985
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.04
+anchor_top = 0.062
+anchor_right = 0.928
+anchor_bottom = 0.621
+margin_left = -2.67029e-05
+margin_top = -0.00800133
+margin_right = 0.209961
+margin_bottom = 0.10495
 rect_pivot_offset = Vector2( 300, 72 )
 custom_fonts/font = SubResource( 1 )
-text = "As Propostas de Emendas Constitucionais são mudanças,
- incrementos ou exclusões na Constituição Federal."
 autowrap = true
 percent_visible = 0.0
 __meta__ = {

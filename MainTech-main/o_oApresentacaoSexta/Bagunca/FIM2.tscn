@@ -1,0 +1,13 @@
+[gd_scene format=2]
+
+[node name="FIM2" type="Label"]
+margin_top = 57.0
+margin_right = 1026.0
+margin_bottom = 246.0
+text = "GAME OVER"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
