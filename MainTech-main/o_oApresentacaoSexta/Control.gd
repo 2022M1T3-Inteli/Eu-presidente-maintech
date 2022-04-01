@@ -15,7 +15,7 @@ export var quebraLinha = true
 func _process(delta):
 	if(vai == true):
 		$Label.text = falas [a]
-		$Label/AnimationPlayer.play("intro1")
+		#$Label/AnimationPlayer.play("intro1")
 
 
 func _ready():

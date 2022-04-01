@@ -56,7 +56,7 @@ func _ready():
 
 func _process(delta):
 	
-	if($Control.a > 2):
+	if($Control.a > 4):
 			falas = true
 	
 	if (porta2 == false ):
@@ -74,8 +74,8 @@ func _process(delta):
 		$BTN/Positivo.rect_position = Vector2(0,0)
 		porta3 = true
 	else: 
-		$BTN/Negativo.rect_position = Vector2(550,416)
-		$BTN/Positivo.rect_position = Vector2(344,416)
+		$BTN/Negativo.rect_position = Vector2(517,411)
+		$BTN/Positivo.rect_position = Vector2(344,411)
 		$Chamadas.visible = true
 		$Chamadas.show()
 		porta3 = false
@@ -99,7 +99,7 @@ func _process(delta):
 	elif(Global.gX + Global.gY > 4 and  Global.fase == "02"):
 		
 		if(falas == false and $Control.vai == true):
-			#porta1 = true
+			porta1 = true
 			$BTN/Consulta.visible = true
 			$Control.visible = true
 			#$Control.vai = false

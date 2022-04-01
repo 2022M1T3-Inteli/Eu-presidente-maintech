@@ -78,8 +78,8 @@ __meta__ = {
 }
 
 [node name="Chamadas" type="Sprite" parent="."]
-position = Vector2( 506, 326 )
-scale = Vector2( 0.952077, 0.952077 )
+position = Vector2( 505, 300.335 )
+scale = Vector2( 1.12516, 1.12516 )
 z_index = 8
 texture = ExtResource( 2 )
 hframes = 3
@@ -155,10 +155,10 @@ anchor_left = 0.336
 anchor_top = 0.693
 anchor_right = 0.457
 anchor_bottom = 0.752
-margin_left = -0.0640259
-margin_top = 0.199982
-margin_right = 0.0319824
-margin_bottom = -0.200012
+margin_left = -0.0639954
+margin_top = -4.80002
+margin_right = 0.0320129
+margin_bottom = -5.20001
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -169,10 +169,10 @@ anchor_left = 0.542
 anchor_top = 0.693
 anchor_right = 0.656
 anchor_bottom = 0.752
-margin_left = -5.008
-margin_top = 0.199982
-margin_right = 0.255981
-margin_bottom = -0.200012
+margin_left = -38.008
+margin_top = -5.80002
+margin_right = -32.744
+margin_bottom = -6.20001
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
