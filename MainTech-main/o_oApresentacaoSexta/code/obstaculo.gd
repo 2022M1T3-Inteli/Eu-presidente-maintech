@@ -6,8 +6,7 @@ var timer = 0
 
 func _ready():
 	if(Global.skinsGames == "floresta"):
-		$Roadblock.texture = load("res://imag/MineGameCorrida/arvore-obstaculo.png")
-		$Roadblock.scale = Vector2(0.1,0.1)
+		$Roadblock.texture = load("res://imag/MineGameCorrida/Asset 7-8.png")
 	rng.randomize()
 	posicaoObstaculo = rng.randi_range(0, 3) # gera um número aleatório (0, 1 ou 2)
 	if posicaoObstaculo == 0:
@@ -22,7 +21,7 @@ func _process(delta):
 	$".".position.y += Global.velocidade
 	if $".".position.y > 600:
 		queue_free()
-	if(Global.gX == 6):
+	if(Global.gX == 6 and Global.fase == "03"):
 		queue_free()
 
 func _on_obstaculo_body_entered(body):

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/P2C3 (2).png-5e67bb7fbfdf55dc6c636bfde6dfc9e5.stex"
+path="res://.import/exemplBgInterativo.png-081ac52f61129812f1661ea570ddbc39.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imag/CardsNovos/P2C3 (2).png"
-dest_files=[ "res://.import/P2C3 (2).png-5e67bb7fbfdf55dc6c636bfde6dfc9e5.stex" ]
+source_file="res://imag/BG/exemplBgInterativo.png"
+dest_files=[ "res://.import/exemplBgInterativo.png-081ac52f61129812f1661ea570ddbc39.stex" ]
 
 [params]
 

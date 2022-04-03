@@ -5,6 +5,7 @@ var falas = [
 	"Agora que você assumiu oficialmente o cargo de presidente, muitos desafios aparecerão pelo caminho, mas não se preocupe porque eu sempre estarei aqui para ajudar!",
 	"Realizamos um relatório dos problemas nacionais e os principais são: MÁ QUALIDADE DO ENSINO SUPERIOR PÚBLICO e INSUFICIÊNCIA DO ABASTECIMENTO DE ENERGIA ELÉTRICA",
 	"Além das grandes dificuldades no cenário econômico e na disponibilidade de recursos. É necessário tratar desses problemas antes de qualquer coisa!",
+	"",
 	
 	
 	]

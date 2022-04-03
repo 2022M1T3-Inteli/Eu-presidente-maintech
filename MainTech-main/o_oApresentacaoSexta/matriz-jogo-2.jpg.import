@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/P3C2 (2).png-80aaf4f676cc1fb56fdd758054e5066f.stex"
+path="res://.import/matriz-jogo-2.jpg-d535e9faa8679b171f36159262c7c073.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imag/CardsNovos/P3C2 (2).png"
-dest_files=[ "res://.import/P3C2 (2).png-80aaf4f676cc1fb56fdd758054e5066f.stex" ]
+source_file="res://matriz-jogo-2.jpg"
+dest_files=[ "res://.import/matriz-jogo-2.jpg-d535e9faa8679b171f36159262c7c073.stex" ]
 
 [params]
 

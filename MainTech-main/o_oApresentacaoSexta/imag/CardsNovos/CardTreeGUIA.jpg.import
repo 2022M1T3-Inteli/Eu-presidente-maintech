@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/P1C2 (2).png-92f05e5d40c1cbf39feecad3b2f118b6.stex"
+path="res://.import/CardTreeGUIA.jpg-04e5f0fbab3074f6cd5ac5782633586a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imag/CardsNovos/P1C2 (2).png"
-dest_files=[ "res://.import/P1C2 (2).png-92f05e5d40c1cbf39feecad3b2f118b6.stex" ]
+source_file="res://imag/CardsNovos/CardTreeGUIA.jpg"
+dest_files=[ "res://.import/CardTreeGUIA.jpg-04e5f0fbab3074f6cd5ac5782633586a.stex" ]
 
 [params]
 

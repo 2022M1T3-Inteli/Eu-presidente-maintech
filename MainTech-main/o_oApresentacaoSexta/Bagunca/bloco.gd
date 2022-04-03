@@ -7,6 +7,13 @@ export var frames = 0
 export var CSX = 0
 export var CSY = 0
 
+func _ready():
+	if(Global.skinsGames == "escola"):
+		$AnimatedSprite.animation = "escola"
+	else:
+		$AnimatedSprite.animation = "eletrica"
+		$AnimatedSprite.scale = Vector2(0.168,0.116)
+
 func _process(delta):
 	$AnimatedSprite.frame = frames
 	$CollisionShape2D.scale.x = CSX

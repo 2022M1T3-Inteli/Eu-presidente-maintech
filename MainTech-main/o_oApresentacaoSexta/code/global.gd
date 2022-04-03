@@ -16,10 +16,10 @@ var sprite = ""
 var final3 = 0
 var mute = true
 
-func expandir (obj):
+func expandir (obj,vezes):
 	
 	obj.scale = Vector2(0.25,0.25)
-	for i in 5:
+	for i in vezes:
 		obj.scale = Vector2(0.25*i,0.25*i)
 		i += 1
 		yield(get_tree().create_timer(0,25),"timeout")

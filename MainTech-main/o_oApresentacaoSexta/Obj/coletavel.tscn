@@ -30,7 +30,7 @@ func _on_coletavel_body_entered(body):
 
 func _process(delta):
 	$\".\".position.y += Global.velocidade
-	if $\".\".position.y > 600:
+	if $\".\".position.y > 600 or Global.fase == \"03\":
 		queue_free()
 	
 "

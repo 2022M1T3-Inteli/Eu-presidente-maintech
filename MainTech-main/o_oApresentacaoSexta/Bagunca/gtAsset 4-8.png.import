@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/P1C1 (2).png-e021a92835d0bfc4c146375ba82f00e0.stex"
+path="res://.import/gtAsset 4-8.png-e7007a128bc9a8d410ed945a3167c9be.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imag/CardsNovos/P1C1 (2).png"
-dest_files=[ "res://.import/P1C1 (2).png-e021a92835d0bfc4c146375ba82f00e0.stex" ]
+source_file="res://Bagunca/gtAsset 4-8.png"
+dest_files=[ "res://.import/gtAsset 4-8.png-e7007a128bc9a8d410ed945a3167c9be.stex" ]
 
 [params]
 

@@ -7,7 +7,7 @@ var tempo_on = false # Caso esteje funcioanando o timer dessa variavel e igual a
 
 func _ready():
 	if(Global.skinsGames == "vender"):
-		Global.expandir($Control/Titulo)
+		Global.expandir($Control/Titulo,5)
 		yield(get_tree().create_timer(2.5),"timeout")
 		tempo_on = true
 		$Control/Titulo.visible = false

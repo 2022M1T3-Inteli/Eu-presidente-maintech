@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/P2C3 - Emenda Constitucional.png-789d723b4e5f2a4776d22b92faa50faf.stex"
+path="res://.import/CardTree.png-0c2b1a2e20bf7ae1b239030e79061886.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imag/CardsNovos/P2C3 - Emenda Constitucional.png"
-dest_files=[ "res://.import/P2C3 - Emenda Constitucional.png-789d723b4e5f2a4776d22b92faa50faf.stex" ]
+source_file="res://CardTree.png"
+dest_files=[ "res://.import/CardTree.png-0c2b1a2e20bf7ae1b239030e79061886.stex" ]
 
 [params]
 

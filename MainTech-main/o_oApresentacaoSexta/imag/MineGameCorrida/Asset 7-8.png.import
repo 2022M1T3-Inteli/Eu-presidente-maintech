@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/quando o mouse passa em cima.png-1399cb448940bcd015e94b5c65d86b40.stex"
+path="res://.import/Asset 7-8.png-91bdd0ebbbd300f6266b0080286059bf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imag/CardsNovos/quando o mouse passa em cima.png"
-dest_files=[ "res://.import/quando o mouse passa em cima.png-1399cb448940bcd015e94b5c65d86b40.stex" ]
+source_file="res://imag/MineGameCorrida/Asset 7-8.png"
+dest_files=[ "res://.import/Asset 7-8.png-91bdd0ebbbd300f6266b0080286059bf.stex" ]
 
 [params]
 

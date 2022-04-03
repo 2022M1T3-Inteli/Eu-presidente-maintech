@@ -15,7 +15,7 @@ var falas = false
 func _ready():
 	$BTN/Consulta.visible = false
 	if (Global.sprite == ""):
-		cardTree = load("res://matriz jogo.png")
+		cardTree = load("res://imag/CardsNovos/CardTreeGUIA.jpg")
 	else:
 		cardTree = load(Global.sprite)
 	$Chamadas.texture = cardTree
@@ -56,9 +56,6 @@ func _ready():
 
 func _process(delta):
 	
-	if($Control.a > 2):
-			falas = true
-	
 	if (porta2 == false ):
 		$Consulta_sprite.hide() # Esconde a SPRITE de consulta
 		porta3 = false
@@ -83,16 +80,19 @@ func _process(delta):
 	if(foco == "papel"):
 		if(Input.is_action_just_pressed("ui_click") and $Chamadas.visible == false):
 			porta1 = false
-			Global.expandir($Chamadas)
+			Global.expandir($Chamadas,7)
 			print("aqui",$Chamadas.position)
+	elif(foco == "tablet"):
+		if(Input.is_action_just_pressed("ui_click") and $Chamadas.visible == false and Global.fase != "03"):
+			print("Essa funcionalidade só estara presente em futuras atualizaçoes")
 	
 	$Chamadas.frame_coords.x = Global.gX
 	$Chamadas.frame_coords.y = Global.gY
 	#print(Global.gY,Global.gX)
-	print($Chamadas.position, $Chamadas.visible)
+	#print($Chamadas.position, $Chamadas.visible)
 	
 	if((Global.fase == "" or Global.fase == "01") and (Global.gX + Global.gY > 1)):
-		escolha(true,"")
+		escolha("escolha")
 		if(mineGamem == true):
 			get_tree().change_scene("res://Telas/MiniGameDinheiro.tscn")
 			
@@ -107,15 +107,16 @@ func _process(delta):
 			$Control.visible=false
 			porta1 = false
 			$BTN/Consulta.visible = false
-			escolha(true,"proximo")
-			print("Foi", " Falas:",falas, " Vai:",$Control.vai)
+			escolha("escolha")
+			
+			#print("Foi", " Falas:",falas, " Vai:",$Control.vai)
 			
 		
 		if(mineGamem == true and falas == true):
 			get_tree().change_scene("res://Telas/minigame-corrida.tscn")
 			
 	elif(Global.gX + Global.gY > 7 and Global.fase == "03"):
-		escolha(true,"")
+		escolha("escolha")
 		if(mineGamem == true):
 			get_tree().change_scene("res://Bagunca/mini3.tscn")
 			
@@ -144,8 +145,11 @@ func _on_Negativo_button_up(): # Quando precionado adiciona -1 a cordenada X
 
 
 func _on_Consulta_button_up():
+	#print(falas,$Control.a )
 	$Control.a += 1
 	$Control.vai = true
+	if($Control.a >3):
+		falas = true
 	if (porta2 == false):
 		porta2 = true
 	else:
@@ -158,9 +162,7 @@ func _on_SaibaMais_mouse_entered():
 
 func _on_Tablet_mouse_entered():
 	foco = "tablet"
-	print(cardTree)
-	print("tablet")
-	pass # Replace with function body.
+
 
 
 func _on_PapelArea_mouse_entered():
@@ -205,15 +207,20 @@ func _on_A_button_down():
 		Global.gX += 1
 		mineGamem = true
 
-func escolha(a,b):
-	if(a == true):
+func escolha(b):
+	if(b == "escolha"):
 		$BTN/B.rect_position =  Vector2(537,405)
 		$BTN/A.rect_position =  Vector2(314,405)
 		$BTN/Negativo.rect_position = Vector2(0,0)
 		$BTN/Positivo.rect_position = Vector2(0,0)
-	elif(b=="proximo"):
-		$BTN/B.rect_position =  Vector2(612,455)
+		$BTN/Negativo.disabled = true
+		$BTN/Positivo.disabled = true
+	if(b=="proximo"):
 		$BTN/B.rect_position =  Vector2(0,0)
 		$BTN/A.rect_position =  Vector2(0,0)
 		$BTN/Negativo.rect_position = Vector2(0,0)
 		$BTN/Positivo.rect_position = Vector2(0,0)
+		$BTN/B.disabled = true
+		$BTN/A.disabled = true
+		$BTN/Negativo.disabled = true
+		$BTN/Positivo.disabled = true

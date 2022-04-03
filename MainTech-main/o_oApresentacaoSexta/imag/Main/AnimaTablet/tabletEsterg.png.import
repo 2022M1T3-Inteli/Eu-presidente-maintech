@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CardTree_Guide.jpg-60f612ed8589bb21cbf12f653d8724f0.stex"
+path="res://.import/tabletEsterg.png-7dd3198772b98bc74b32621e058cbd8f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imag/CardsNovos/CardTree_Guide.jpg"
-dest_files=[ "res://.import/CardTree_Guide.jpg-60f612ed8589bb21cbf12f653d8724f0.stex" ]
+source_file="res://imag/Main/AnimaTablet/tabletEsterg.png"
+dest_files=[ "res://.import/tabletEsterg.png-7dd3198772b98bc74b32621e058cbd8f.stex" ]
 
 [params]
 
