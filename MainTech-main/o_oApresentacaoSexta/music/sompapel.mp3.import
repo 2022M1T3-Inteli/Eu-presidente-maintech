@@ -11,5 +11,5 @@ dest_files=[ "res://.import/sompapel.mp3-6f9c38a55d2962fe0bb5fb73207fa991.mp3str
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
