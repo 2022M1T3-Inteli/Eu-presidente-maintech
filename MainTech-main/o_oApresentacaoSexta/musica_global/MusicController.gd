@@ -8,10 +8,12 @@ func _ready():
 
 func play_music():
 	
-	$Music.stream = sombotao
-	$Music.play()
+	if Global.som:
+		$Music.stream = sombotao
+		$Music.play()
 	
 func play_music2():
 	
-	$Music2.stream = musmenu
-	$Music2.play
+	if Global.som:
+		$Music2.stream = musmenu
+		$Music2.play

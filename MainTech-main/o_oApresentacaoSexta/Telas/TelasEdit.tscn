@@ -94,6 +94,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="CheckBox2" type="CheckBox" parent="Control"]
+margin_left = 36.0
+margin_top = 100.0
+margin_right = 60.0
+margin_bottom = 124.0
+text = "Efeitos Sonoros"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="mouse_entered" from="Control/Path" to="." method="_on_Path_mouse_entered"]
 [connection signal="mouse_exited" from="Control/Path" to="." method="_on_Path_mouse_exited"]
 [connection signal="button_down" from="Control/volta" to="." method="_on_volta_button_down"]

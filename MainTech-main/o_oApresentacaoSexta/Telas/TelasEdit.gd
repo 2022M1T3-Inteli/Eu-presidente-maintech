@@ -8,14 +8,28 @@ var click = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
+	$Control/CheckBox.pressed = true
+	$Control/CheckBox2.pressed = true
 	$Control/Label2.visible = false
+	if Global.musica == false:
+		$Control/CheckBox.pressed = false
+	if Global.som == false:
+		$Control/CheckBox2.pressed = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
 	if($Control/CheckBox.pressed == true):
-		Global.mute = true
+		Global.musica = true
+	else:
+		Global.musica = false
+		
+	if($Control/CheckBox2.pressed == true):
+		Global.som = true
+	else:
+		Global.som = false
+	
 		
 	if(click == true and $Control/Path.text == "" or $Control/Path.text == null ):
 		$Control/Label.text = "Algo deu errado, " + $Control/Path.text + "nao foi encontrado"
