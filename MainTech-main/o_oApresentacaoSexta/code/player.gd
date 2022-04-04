@@ -5,6 +5,10 @@ func _ready():
 	if(Global.skinsGames == "floresta"):
 		$"player-sprite".texture = load("res://imag/MineGameCorrida/carMin3.png")
 		$"player-sprite".scale = Vector2(1,1)
+	else:
+		$"player-sprite".texture = load("res://imag/MineGameCorrida/Asset 2-8.png")
+		$"player-sprite".scale = Vector2(0.149,0.149)
+		
 		
 
 func _physics_process(delta):

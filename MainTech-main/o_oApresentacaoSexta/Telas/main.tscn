@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://code/main.gd" type="Script" id=1]
 [ext_resource path="res://imag/CardsNovos/CardTreeGUIA.jpg" type="Texture" id=2]
@@ -17,6 +17,13 @@
 [ext_resource path="res://Subtract.png" type="Texture" id=18]
 [ext_resource path="res://progressCenadao.png" type="Texture" id=19]
 
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://font/Oswald-VariableFont_wght.ttf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 24
+font_data = SubResource( 2 )
+
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 8 ), ExtResource( 10 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 8 ) ],
@@ -33,6 +40,40 @@ margin_left = 2.0
 margin_top = 1.0
 margin_right = 1029.0
 margin_bottom = 604.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Titulo_01" type="Label" parent="HUD"]
+modulate = Color( 0.560784, 0.298039, 0.105882, 1 )
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 3 )
+text = "PARTE 1 - ORÇAMENTO PÚBLICO"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Titulo_02" type="Label" parent="HUD"]
+modulate = Color( 0.392157, 0.611765, 0.588235, 1 )
+margin_left = -1.0
+margin_top = 43.0
+margin_right = 287.0
+margin_bottom = 79.0
+custom_fonts/font = SubResource( 3 )
+text = "PARTE 2 - QUESTÃO AMBIENTAL"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Titulo_03" type="Label" parent="HUD"]
+modulate = Color( 0.776471, 0.313726, 0.282353, 1 )
+margin_left = -1.0
+margin_top = 101.0
+margin_right = 287.0
+margin_bottom = 137.0
+custom_fonts/font = SubResource( 3 )
+text = "PARTE 3 - CONSTRUÇÃO DA OBRA PÚBLICA"
 __meta__ = {
 "_edit_use_anchors_": false
 }
