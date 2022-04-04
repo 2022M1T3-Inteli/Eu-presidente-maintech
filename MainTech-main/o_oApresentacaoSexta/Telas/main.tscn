@@ -1,9 +1,10 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://code/main.gd" type="Script" id=1]
 [ext_resource path="res://imag/CardsNovos/CardTreeGUIA.jpg" type="Texture" id=2]
 [ext_resource path="res://imag/BG/Paint.jpg" type="Texture" id=3]
 [ext_resource path="res://Telas/mainmusica.gd" type="Script" id=4]
+[ext_resource path="res://music/mainmusica.wav" type="AudioStream" id=5]
 [ext_resource path="res://imag/Main/AnimaTablet/Tela_03.png" type="Texture" id=6]
 [ext_resource path="res://imag/Main/AnimaTablet/Tela_04.png" type="Texture" id=7]
 [ext_resource path="res://imag/Main/AnimaTablet/Tela_01.png" type="Texture" id=8]
@@ -12,6 +13,8 @@
 [ext_resource path="res://imag/Main/AnimaTablet/Tela_05.png" type="Texture" id=11]
 [ext_resource path="res://imag/Main/Papel.png" type="Texture" id=12]
 [ext_resource path="res://Control.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Telas/papel.gd" type="Script" id=14]
+[ext_resource path="res://music/sompapel.mp3" type="AudioStream" id=15]
 [ext_resource path="res://Group 1.png" type="Texture" id=16]
 [ext_resource path="res://progress.png" type="Texture" id=17]
 [ext_resource path="res://Subtract.png" type="Texture" id=18]
@@ -262,9 +265,6 @@ margin_top = 282.0
 margin_right = 929.0
 margin_bottom = 474.0
 
-[node name="mainmusica" type="AudioStreamPlayer2D" parent="."]
-script = ExtResource( 4 )
-
 [node name="Info" type="Control" parent="."]
 margin_left = 544.0
 margin_top = 247.0
@@ -274,6 +274,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="mainmusica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+script = ExtResource( 4 )
+
+[node name="papel" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+script = ExtResource( 14 )
+
 [connection signal="mouse_entered" from="BTN/Papel/PapelArea" to="." method="_on_PapelArea_mouse_entered"]
 [connection signal="mouse_entered" from="BTN/Tablet2/TabletArea" to="." method="_on_Tablet_mouse_entered"]
 [connection signal="button_up" from="BTN/Positivo" to="." method="_on_Positivo_button_up"]
@@ -281,5 +289,6 @@ __meta__ = {
 [connection signal="button_up" from="BTN/Consulta" to="." method="_on_Consulta_button_up"]
 [connection signal="button_down" from="BTN/B" to="." method="_on_B_button_down"]
 [connection signal="button_down" from="BTN/A" to="." method="_on_A_button_down"]
+[connection signal="button_down" from="BTN/A" to="papel" method="_on_A_button_down"]
 [connection signal="mouse_entered" from="Info" to="." method="_on_Info_mouse_entered"]
 [connection signal="mouse_exited" from="Info" to="." method="_on_Info_mouse_exited"]

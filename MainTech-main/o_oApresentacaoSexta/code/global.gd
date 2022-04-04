@@ -14,7 +14,8 @@ var apPopulacao = 60
 var timerInve = 0 
 var sprite = ""
 var final3 = 0
-var mute = true
+var musica = true
+var som = true
 var contador = 1
 
 func expandir (obj,vezes):

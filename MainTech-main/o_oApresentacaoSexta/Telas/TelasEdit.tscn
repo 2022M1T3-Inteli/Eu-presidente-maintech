@@ -89,7 +89,7 @@ margin_left = 0.264999
 margin_top = -0.282005
 margin_right = -0.124023
 margin_bottom = -0.236008
-text = "Mutar o som do jogo"
+text = "Música"
 __meta__ = {
 "_edit_use_anchors_": false
 }
