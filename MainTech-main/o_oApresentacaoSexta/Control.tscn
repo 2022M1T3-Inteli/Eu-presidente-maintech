@@ -85,3 +85,5 @@ anims/intro1 = SubResource( 3 )
 [node name="Presidente3" type="Sprite" parent="."]
 position = Vector2( 335, 58 )
 texture = ExtResource( 4 )
+
+[connection signal="p" from="." to="." method="_on_Control_p"]

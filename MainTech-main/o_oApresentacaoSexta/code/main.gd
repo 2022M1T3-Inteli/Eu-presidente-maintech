@@ -146,6 +146,7 @@ func _on_Negativo_button_up(): # Quando precionado adiciona +1 a cordenada Y
 
 func _on_Consulta_button_up(): # Botão proximo do acessor
 	#print(falas,$Control.a )
+	$Control.emit_signal("p")
 	$Control.a += 1
 	$Control.vai = true
 	if($Control.a >3): # Caso ultrapasse a fala 4

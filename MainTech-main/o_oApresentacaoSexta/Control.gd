@@ -9,6 +9,8 @@ var falas = [
 	
 	
 	]
+
+signal p 
 export var vai = true
 export var a = 0
 export var quebraLinha = true
@@ -39,3 +41,7 @@ func _ready():
 
 
 
+
+
+func _on_Control_p():
+	$Label/AnimationPlayer.play("intro1")
