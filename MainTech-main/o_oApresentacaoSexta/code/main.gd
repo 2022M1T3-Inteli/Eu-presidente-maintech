@@ -10,7 +10,7 @@ var porta3 = true # Essa Bolean restringe a atualizacao das cordenadas ao moment
 var mineGamem  = false #Não é ultil
 var click = 0
 var falas = false # Controla a aparicao do acessor
-
+var info = false
 
 # _ready: Execucoes iniciais para toda vez que entrar nessa cena
 func _ready():
@@ -57,6 +57,17 @@ func _ready():
 
 func _process(delta):
 	
+	if Global.contador == 1: #define a posicao do "sensor" dependendo do card em que esta
+		$Info.rect_position = Vector2(600, 250)
+	if Global.contador == 2:
+		$Info.rect_position = Vector2(500,300)
+	if Global.contador == 3:
+		$Info.rect_position = Vector2(440, 250)
+	if Global.contador == 4:
+		$Info.rect_position = Vector2(570, 330)
+	if Global.contador == 6:
+		$Info.rect_position = Vector2(550, 200)
+
 	if (porta2 == false ):
 		$Consulta_sprite.hide() # Esconde a SPRITE de consulta
 		porta3 = false
@@ -95,12 +106,12 @@ func _process(delta):
 	#print($Chamadas.position, $Chamadas.visible)
 
 # Pre-mineGame
-	if((Global.fase == "" or Global.fase == "01") and (Global.gX + Global.gY > 1)): # Termino das escolhas da fase 01
+	if((Global.fase == "" or Global.fase == "01") and (Global.gX + Global.gY > 1) and (info == false)): # Termino das escolhas da fase 01
 		escolha("escolha")
 		if(mineGamem == true):
 			get_tree().change_scene("res://Telas/MiniGameDinheiro.tscn")
 			
-	elif(Global.gX + Global.gY > 4 and  Global.fase == "02"): # Termino das escolhas da fase 02
+	elif(Global.gX + Global.gY > 4 and  Global.fase == "02" and info == false): # Termino das escolhas da fase 02
 		
 		if(falas == false and $Control.vai == true): # Aparicao do acessor pre-mineGame
 			porta1 = true
@@ -119,13 +130,14 @@ func _process(delta):
 		if(mineGamem == true and falas == true):
 			get_tree().change_scene("res://Telas/minigame-corrida.tscn")
 			
-	elif(Global.gX + Global.gY > 7 and Global.fase == "03"): # Termino das escolhas da fase 03
+	elif(Global.gX + Global.gY > 7 and Global.fase == "03" and info == false): # Termino das escolhas da fase 03
 		escolha("escolha")
 		if(mineGamem == true):
 			get_tree().change_scene("res://Bagunca/mini3.tscn")
 
 func _on_Positivo_button_up(): # Quando precionado adiciona +1 a cordenada X
 	if(porta3 == false):
+		Global.contador += 1
 		Global.gX += 1
 		$BTN/Papel.frame +=1
 		if(Global.gY == 1 and Global.gX == 0):
@@ -136,6 +148,7 @@ func _on_Positivo_button_up(): # Quando precionado adiciona +1 a cordenada X
 
 func _on_Negativo_button_up(): # Quando precionado adiciona +1 a cordenada Y
 	if(porta3 == false):
+		Global.contador += 1
 		Global.gY += 1
 		$BTN/Papel.frame +=1
 		if(Global.gY == 1 and Global.gX == 0):
@@ -159,6 +172,7 @@ func _on_PapelArea_mouse_entered():
 	foco = "papel" # Setando o foco para o papel
 
 func _on_B_button_down(): # Botão Direito que seta a Sking dos mine games
+	Global.contador += 1 
 	if(Global.fase == "" or Global.fase == "01" ):
 		Global.skinsGames = "vender"
 		Global.gX += 1
@@ -175,9 +189,11 @@ func _on_B_button_down(): # Botão Direito que seta a Sking dos mine games
 		mineGamem = true
 
 func _on_A_button_down(): # Botão Esquerdo que seta a Sking dos mine games
+	Global.contador += 1
 	if(Global.fase == "" or Global.fase == "01" ):
 		mineGamem = true
 		Global.gX += 1
+
 
 	elif(Global.fase == "02" ):
 		Global.skinsGames ="floresta"
@@ -205,3 +221,45 @@ func escolha(b): # Funcao que controla os Botoes princiapis
 		$BTN/A.disabled = true
 		$BTN/Negativo.disabled = true
 		$BTN/Positivo.disabled = true
+
+
+func _on_Info_mouse_entered(): #checa em qual card esta e manda para as coordenadas do card de informacao correspondente
+	if(porta3 == false):
+		info = true
+		if Global.contador == 1:
+			Global.gX = 2
+			Global.gY = 2
+		if Global.contador == 2:
+			Global.gX = 1
+			Global.gY = 2
+		if Global.contador == 3:
+			Global.gX = 2
+			Global.gY = 1
+		if Global.contador == 4:
+			Global.gX = 1
+			Global.gY = 6
+		if Global.contador == 6:
+			Global.gX = 2
+			Global.gY = 5
+	pass # Replace with function body.
+
+
+func _on_Info_mouse_exited(): #volta para o card original quando o mouse sai
+	info = false
+	if(porta3 == false):
+		if Global.contador == 1:
+			Global.gX = 0
+			Global.gY = 0
+		if Global.contador == 2:
+			Global.gX = 1
+			Global.gY = 0
+		if Global.contador == 3:
+			Global.gX = 2
+			Global.gY = 0
+		if Global.contador == 4:
+			Global.gX = 0
+			Global.gY = 3
+		if Global.contador == 6:
+			Global.gX = 2
+			Global.gY = 3
+	pass # Replace with function body.

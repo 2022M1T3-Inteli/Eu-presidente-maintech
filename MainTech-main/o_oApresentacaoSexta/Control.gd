@@ -34,7 +34,7 @@ func _ready():
 		$Presidente3.texture = load("res://imag/CardsNovos/President_1/Presidente_2.png")
 	elif Global.personagem == 4:
 		$Presidente3.texture = load("res://imag/CardsNovos/President_1/Presidente_4.png")
-	else: print("Erro, Control: nem um personagem selecionado")
+	else: print("Erro, Control: nenhum personagem selecionado")
 		
 	#print (falas[1])
 	

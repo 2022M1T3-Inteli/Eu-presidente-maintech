@@ -46,8 +46,9 @@ __meta__ = {
 
 [node name="Titulo_01" type="Label" parent="HUD"]
 modulate = Color( 0.560784, 0.298039, 0.105882, 1 )
-margin_right = 40.0
-margin_bottom = 14.0
+margin_left = 2.0
+margin_right = 290.0
+margin_bottom = 36.0
 custom_fonts/font = SubResource( 3 )
 text = "PARTE 1 - ORÇAMENTO PÚBLICO"
 __meta__ = {
@@ -69,9 +70,9 @@ __meta__ = {
 [node name="Titulo_03" type="Label" parent="HUD"]
 modulate = Color( 0.776471, 0.313726, 0.282353, 1 )
 margin_left = -1.0
-margin_top = 101.0
-margin_right = 287.0
-margin_bottom = 137.0
+margin_top = 81.0
+margin_right = 384.0
+margin_bottom = 117.0
 custom_fonts/font = SubResource( 3 )
 text = "PARTE 3 - CONSTRUÇÃO DA OBRA PÚBLICA"
 __meta__ = {
@@ -264,6 +265,15 @@ margin_bottom = 474.0
 [node name="mainmusica" type="AudioStreamPlayer2D" parent="."]
 script = ExtResource( 4 )
 
+[node name="Info" type="Control" parent="."]
+margin_left = 544.0
+margin_top = 247.0
+margin_right = 688.0
+margin_bottom = 279.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="mouse_entered" from="BTN/Papel/PapelArea" to="." method="_on_PapelArea_mouse_entered"]
 [connection signal="mouse_entered" from="BTN/Tablet2/TabletArea" to="." method="_on_Tablet_mouse_entered"]
 [connection signal="button_up" from="BTN/Positivo" to="." method="_on_Positivo_button_up"]
@@ -271,3 +281,5 @@ script = ExtResource( 4 )
 [connection signal="button_up" from="BTN/Consulta" to="." method="_on_Consulta_button_up"]
 [connection signal="button_down" from="BTN/B" to="." method="_on_B_button_down"]
 [connection signal="button_down" from="BTN/A" to="." method="_on_A_button_down"]
+[connection signal="mouse_entered" from="Info" to="." method="_on_Info_mouse_entered"]
+[connection signal="mouse_exited" from="Info" to="." method="_on_Info_mouse_exited"]
