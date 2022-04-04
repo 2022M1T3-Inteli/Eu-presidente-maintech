@@ -274,6 +274,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Info2" type="Control" parent="."]
+margin_right = 124.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="mainmusica" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
 script = ExtResource( 4 )
@@ -294,3 +301,5 @@ script = ExtResource( 14 )
 [connection signal="button_down" from="BTN/A" to="papel" method="_on_A_button_down"]
 [connection signal="mouse_entered" from="Info" to="." method="_on_Info_mouse_entered"]
 [connection signal="mouse_exited" from="Info" to="." method="_on_Info_mouse_exited"]
+[connection signal="mouse_entered" from="Info2" to="." method="_on_Info2_mouse_entered"]
+[connection signal="mouse_exited" from="Info2" to="." method="_on_Info2_mouse_exited"]

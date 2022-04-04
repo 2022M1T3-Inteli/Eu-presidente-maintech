@@ -20,7 +20,7 @@ func _ready():
 		$Chamadas.vframes = 7
 	else: # Seta cardTree personalizado
 		cardTree = load(Global.sprite) 
-
+		
 	# Controle de fase
 	if(Global.fase == "01" or Global.fase == ""): # Execucoes iniciais para fase 01
 		$BTN/B.rect_position =  Vector2(0,0)
@@ -65,9 +65,10 @@ func _process(delta):
 		$Info.rect_position = Vector2(440, 250)
 	if Global.contador == 4:
 		$Info.rect_position = Vector2(570, 330)
+		$Info2.rect_position = Vector2 (470, 330)
 	if Global.contador == 6:
 		$Info.rect_position = Vector2(550, 200)
-
+		
 	if (porta2 == false ):
 		$Consulta_sprite.hide() # Esconde a SPRITE de consulta
 		porta3 = false
@@ -241,7 +242,7 @@ func _on_Info_mouse_entered(): #checa em qual card esta e manda para as coordena
 		if Global.contador == 6:
 			Global.gX = 2
 			Global.gY = 5
-	pass # Replace with function body.
+
 
 
 func _on_Info_mouse_exited(): #volta para o card original quando o mouse sai
@@ -262,4 +263,19 @@ func _on_Info_mouse_exited(): #volta para o card original quando o mouse sai
 		if Global.contador == 6:
 			Global.gX = 2
 			Global.gY = 3
-	pass # Replace with function body.
+
+
+func _on_Info2_mouse_entered():
+	info = true
+	if(porta3 == false):
+		if Global.contador == 4:
+			Global.gX = 2
+			Global.gY = 6
+
+
+func _on_Info2_mouse_exited():
+	info = false
+	if(porta3 == false):
+		if Global.contador == 4:
+			Global.gX = 0
+			Global.gY = 3
