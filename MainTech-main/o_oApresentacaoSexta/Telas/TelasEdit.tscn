@@ -87,8 +87,8 @@ anchor_right = 0.244
 anchor_bottom = 0.188
 margin_left = 0.264999
 margin_top = -0.282005
-margin_right = -0.124023
-margin_bottom = -0.236008
+margin_right = -140.124
+margin_bottom = -25.236
 text = "Música"
 __meta__ = {
 "_edit_use_anchors_": false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://code/main.gd" type="Script" id=1]
 [ext_resource path="res://imag/CardsNovos/CardTreeGUIA.jpg" type="Texture" id=2]
@@ -19,6 +19,8 @@
 [ext_resource path="res://progress.png" type="Texture" id=17]
 [ext_resource path="res://Subtract.png" type="Texture" id=18]
 [ext_resource path="res://progressCenadao.png" type="Texture" id=19]
+[ext_resource path="res://music/btn2.wav" type="AudioStream" id=20]
+[ext_resource path="res://Telas/dialogo.gd" type="Script" id=21]
 
 [sub_resource type="DynamicFontData" id=2]
 font_path = "res://font/Oswald-VariableFont_wght.ttf"
@@ -289,6 +291,10 @@ script = ExtResource( 4 )
 stream = ExtResource( 15 )
 script = ExtResource( 14 )
 
+[node name="dialogo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 20 )
+script = ExtResource( 21 )
+
 [connection signal="mouse_entered" from="BTN/Papel/PapelArea" to="." method="_on_PapelArea_mouse_entered"]
 [connection signal="mouse_entered" from="BTN/Tablet2/TabletArea" to="." method="_on_Tablet_mouse_entered"]
 [connection signal="button_up" from="BTN/Positivo" to="." method="_on_Positivo_button_up"]
@@ -296,6 +302,7 @@ script = ExtResource( 14 )
 [connection signal="button_up" from="BTN/Negativo" to="." method="_on_Negativo_button_up"]
 [connection signal="button_up" from="BTN/Negativo" to="papel" method="_on_Negativo_button_up"]
 [connection signal="button_up" from="BTN/Consulta" to="." method="_on_Consulta_button_up"]
+[connection signal="button_up" from="BTN/Consulta" to="dialogo" method="_on_Consulta_button_up"]
 [connection signal="button_down" from="BTN/B" to="." method="_on_B_button_down"]
 [connection signal="button_down" from="BTN/A" to="." method="_on_A_button_down"]
 [connection signal="button_down" from="BTN/A" to="papel" method="_on_A_button_down"]
