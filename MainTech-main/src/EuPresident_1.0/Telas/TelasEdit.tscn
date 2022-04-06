@@ -80,6 +80,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="CL" type="Label" parent="Control"]
+anchor_left = 0.061
+anchor_top = 0.446
+anchor_right = 0.316
+anchor_bottom = 0.722
+margin_left = -0.281002
+margin_top = 99.738
+margin_right = 109.364
+margin_bottom = -17.034
+text = "Coloque o numero de colunas ( C ) e linhas ( L ) "
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="CheckBox" type="CheckBox" parent="Control"]
 anchor_left = 0.035
 anchor_top = 0.106
@@ -104,7 +119,25 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="H_frames" type="LineEdit" parent="Control"]
+margin_left = 62.0
+margin_top = 396.0
+margin_right = 120.0
+margin_bottom = 420.0
+text = "C"
+align = 1
+
+[node name="V_frames" type="LineEdit" parent="Control"]
+margin_left = 142.0
+margin_top = 396.0
+margin_right = 200.0
+margin_bottom = 420.0
+text = "L"
+align = 1
+
 [connection signal="mouse_entered" from="Control/Path" to="." method="_on_Path_mouse_entered"]
 [connection signal="mouse_exited" from="Control/Path" to="." method="_on_Path_mouse_exited"]
 [connection signal="button_down" from="Control/volta" to="." method="_on_volta_button_down"]
 [connection signal="button_up" from="Control/Acept" to="." method="_on_Acept_button_up"]
+[connection signal="mouse_entered" from="Control/H_frames" to="." method="_on_H_frames_mouse_entered"]
+[connection signal="mouse_entered" from="Control/V_frames" to="." method="_on_V_frames_mouse_entered"]

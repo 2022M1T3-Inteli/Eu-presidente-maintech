@@ -17,6 +17,8 @@ var final3 = 0
 var musica = true
 var som = true
 var contador = 1
+var Coluna = 0
+var Linha = 0
 
 func expandir (obj,vezes):
 	

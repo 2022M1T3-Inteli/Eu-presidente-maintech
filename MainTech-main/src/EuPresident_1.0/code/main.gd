@@ -20,6 +20,8 @@ func _ready():
 		$Chamadas.vframes = 7
 	else: # Seta cardTree personalizado
 		cardTree = load(Global.sprite) 
+		$Chamadas.hframes = int(Global.Coluna)
+		$Chamadas.vframes = int(Global.Linha)
 		
 	# Controle de fase
 	if(Global.fase == "01" or Global.fase == ""): # Execucoes iniciais para fase 01
