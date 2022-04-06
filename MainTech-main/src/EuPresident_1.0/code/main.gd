@@ -23,9 +23,11 @@ func _ready():
 		
 	# Controle de fase
 	if(Global.fase == "01" or Global.fase == ""): # Execucoes iniciais para fase 01
+		$Control.a = 0
 		$BTN/B.rect_position =  Vector2(0,0)
 		$BTN/A.rect_position =  Vector2(0,0)
-		falas = false
+		falas = true
+		$Control.vai = true 
 		$BTN/Papel.frame = 0
 		$HUD/Node2D/Congra.value = 60
 		$HUD/Node2D/Pop.value = 60
@@ -34,6 +36,7 @@ func _ready():
 		mineGamem = false # Controla a chamada para o minegame
 		
 	elif(Global.fase == "02"): # Execucoes iniciais para fase 02
+		$Control.a = 9
 		$Control.vai = true # Ativa a possibilidade de falas do acessor
 		$BTN/B.rect_position =  Vector2(0,0)
 		$BTN/A.rect_position =  Vector2(0,0)
@@ -45,9 +48,10 @@ func _ready():
 		mineGamem = false
 		
 	elif(Global.fase == "03"): # Execucoes iniciais para fase 03
+		$Control.a = 12
 		$BTN/B.rect_position =  Vector2(0,0)
 		$BTN/A.rect_position =  Vector2(0,0)
-		$Control.vai = false # Desativa a possibilidade de falas do acessor
+		$Control.vai = true 
 		Global.gY = 6
 		Global.gX = 0
 		porta1 = true
@@ -77,7 +81,7 @@ func _process(delta):
 		#$Consulta_sprite.show() # Mostra a SPRITE de consulta
 		porta3 = true
 
-# Chamas Ativa ou Inertes
+# Chamas Ativa ou Inertis
 	if (porta1 == true): 
 		$Chamadas.hide()
 		$BTN/Negativo.rect_position = Vector2(0,0)
@@ -106,6 +110,15 @@ func _process(delta):
 	#print(Global.gY,Global.gX)
 	#print($Chamadas.position, $Chamadas.visible)
 
+	if(Global.fase == "01" or Global.fase == ""):
+		dialogo()
+		if(Global.gX + Global.gY == 1 and $Control.a < 9):
+			falas = true
+			dialogo()
+	elif(Global.fase == "02"):
+		print()
+
+
 # Pre-mineGame
 	if((Global.fase == "" or Global.fase == "01") and (Global.gX + Global.gY > 1) and (info == false)): # Termino das escolhas da fase 01
 		escolha("escolha")
@@ -113,21 +126,7 @@ func _process(delta):
 			get_tree().change_scene("res://Telas/MiniGameDinheiro.tscn")
 			
 	elif(Global.gX + Global.gY > 4 and  Global.fase == "02" and info == false): # Termino das escolhas da fase 02
-		
-		if(falas == false and $Control.vai == true): # Aparicao do acessor pre-mineGame
-			porta1 = true
-			$BTN/Consulta.visible = true
-			$Control.visible = true
-			#$Control.vai = false
-		else: # Pós aparicao do acessor pre-mineGame
-			$Control.visible=false
-			porta1 = false
-			$BTN/Consulta.visible = false
-			escolha("escolha")
-			
-			#print("Foi", " Falas:",falas, " Vai:",$Control.vai)
-			
-		
+		escolha("escolha")
 		if(mineGamem == true and falas == true):
 			get_tree().change_scene("res://Telas/minigame-corrida.tscn")
 			
@@ -163,8 +162,14 @@ func _on_Consulta_button_up(): # Botão proximo do acessor
 	$Control.emit_signal("p")
 	$Control.a += 1
 	$Control.vai = true
-	if($Control.a >3): # Caso ultrapasse a fala 4
-		falas = true
+	if($Control.a > 7 and Global.fase == "" or Global.fase == "01" ): # Caso ultrapasse a fala 4
+		falas = false
+	elif($Control.a >8):
+		falas = false
+	elif($Control.a > 11):
+		falas = false
+	elif($Control.a > 17 and Global.fase == "03"):
+		falas = false
 
 func _on_Tablet_mouse_entered(): # Area do tablet
 	foco = "tablet" # Setando o foco para o tablet
@@ -279,3 +284,12 @@ func _on_Info2_mouse_exited():
 		if Global.contador == 4:
 			Global.gX = 0
 			Global.gY = 3
+
+func dialogo():
+	if(falas == true):
+		porta1 = true
+		$BTN/Consulta.visible = true
+		$Control.visible = true
+	else:
+		$BTN/Consulta.visible = false
+		$Control.visible = false

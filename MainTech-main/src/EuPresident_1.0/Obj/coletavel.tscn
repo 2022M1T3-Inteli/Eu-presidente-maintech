@@ -30,8 +30,9 @@ func _on_coletavel_body_entered(body):
 		print(Global.pontuacao)
 		queue_free() # caso o player entre na área do coletável, este será excluído da cena
 
+
 func _process(delta):
-	$\".\".position.y += Global.velocidade
+	$\".\".position.y += Global.velocidade 
 	if $\".\".position.y > 600 or Global.fase == \"03\":
 		queue_free()
 	

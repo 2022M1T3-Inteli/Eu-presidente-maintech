@@ -30,3 +30,4 @@ func _process(delta):
 func _on_obstaculo_body_entered(body):
 	if body.name == "player" and timer > 0:
 		Global.gameover = true
+
