@@ -114,11 +114,22 @@ func _process(delta):
 
 	if(Global.fase == "01" or Global.fase == ""):
 		dialogo()
-		if(Global.gX + Global.gY == 1 and $Control.a < 9):
+		if(Global.contador == 2 and $Control.a < 9):
 			falas = true
-			dialogo()
+			
 	elif(Global.fase == "02"):
-		print()
+		dialogo()
+		if(Global.contador == 5 and $Control.a <10):
+			falas = true 
+			print($Control.visible)
+			
+	elif(Global.fase == "03"):
+		dialogo()
+		print("contador:",Global.contador," a:",$Control.a)
+		if(Global.contador == 7 and $Control.a < 13):
+			falas = true
+		elif(Global.contador == 8 and $Control.a < 14):
+			pass
 
 
 # Pre-mineGame
@@ -129,7 +140,7 @@ func _process(delta):
 			
 	elif(Global.gX + Global.gY > 4 and  Global.fase == "02" and info == false): # Termino das escolhas da fase 02
 		escolha("escolha")
-		if(mineGamem == true and falas == true):
+		if(mineGamem == true):
 			get_tree().change_scene("res://Telas/minigame-corrida.tscn")
 			
 	elif(Global.gX + Global.gY > 7 and Global.fase == "03" and info == false): # Termino das escolhas da fase 03
@@ -166,7 +177,7 @@ func _on_Consulta_button_up(): # Botão proximo do acessor
 	$Control.vai = true
 	if($Control.a > 7 and Global.fase == "" or Global.fase == "01" ): # Caso ultrapasse a fala 4
 		falas = false
-	elif($Control.a >8):
+	elif($Control.a >9):
 		falas = false
 	elif($Control.a > 11):
 		falas = false
