@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/urna.wav-d5b68f8a578e51b1577f2f72631d707f.sample"
+
+[deps]
+
+source_file="res://music/urna.wav"
+dest_files=[ "res://.import/urna.wav-d5b68f8a578e51b1577f2f72631d707f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
