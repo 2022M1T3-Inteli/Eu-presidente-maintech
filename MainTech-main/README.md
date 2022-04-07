@@ -4,9 +4,9 @@
 <a href= "https://www.inteli.edu.br/"><img src="https://www.inteli.edu.br/wp-content/uploads/2021/08/20172028/marca_1-2.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
 </p>
 
-# Nome do Projeto
+# Eu Presidente
 
-## Nome do Grupo
+## Maintech
 
 ## Integrantes: <a>Bruno Leão</a>, <a>Fernando Araújo</a>, <a>Helena Gallas</a>, <a>Yusuke Urameshi</a>, <a>João Rodrigues</a>, <a>Mateus Almeida</a>, <a>Rafael Moritz</a>, <a>Sarah Ribeiro</a>
 
