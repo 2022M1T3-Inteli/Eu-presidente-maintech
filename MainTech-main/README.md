@@ -20,12 +20,11 @@
 </p>
 
 
-💡 De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
+💡
 <br><br>
-Meu projeto ajuda estudantes inteli a configurarem seus githubs.
+É um jogo engajante, em que é possível estimular o interesse de jovens e adultos em assuntos relacionados à política, não somente com o conteúdo presente no jogo, mas que os instiga a ir além.
 <br><br>
-May the force be with you!
-<br><br>
+Além de proporcionar entretenimento, o jogo também ensina de forma lúdica, didática ao colocar o usuário em contato direto com decisões reais do cenário político, o que o estimula a obter mais conhecimento sobre Direito e Política.
 
 ## 🛠 Estrutura de pastas
 
