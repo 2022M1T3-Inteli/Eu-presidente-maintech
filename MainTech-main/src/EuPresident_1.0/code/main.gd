@@ -15,9 +15,9 @@ var info = false
 # _ready: Execucoes iniciais para toda vez que entrar nessa cena
 func _ready():
 	if (Global.sprite == ""): # Caso não haja modificacao no cardTree
-		cardTree = load("res://imag/CardsNovos/CardTreeGUIA.jpg") # Seta cardTree padrao
+		cardTree = load("res://imag/CardsNovos/CardTree.png") # Seta cardTree padrao
 		$Chamadas.hframes = 3
-		$Chamadas.vframes = 7
+		$Chamadas.vframes = 12
 	else: # Seta cardTree personalizado
 		cardTree = load(Global.sprite) 
 		$Chamadas.hframes = int(Global.Coluna)
@@ -100,7 +100,7 @@ func _process(delta):
 	if(foco == "papel"): 
 		if(Input.is_action_just_pressed("ui_click") and $Chamadas.visible == false):
 			porta1 = false
-			Global.expandir($Chamadas,7)
+			Global.expandir($Chamadas,5)
 			print("aqui",$Chamadas.position)
 	elif(foco == "tablet"):
 		if(Input.is_action_just_pressed("ui_click") and $Chamadas.visible == false and Global.fase != "03"):
@@ -111,21 +111,22 @@ func _process(delta):
 	$Chamadas.frame_coords.y = Global.gY
 	#print(Global.gY,Global.gX)
 	#print($Chamadas.position, $Chamadas.visible)
-
+	dialogo()
+	print(Global.contador)
 	if(Global.fase == "01" or Global.fase == ""):
-		dialogo()
 		if(Global.contador == 2 and $Control.a < 9):
 			falas = true
 			
 	elif(Global.fase == "02"):
-		dialogo()
+		#dialogo()
 		if(Global.contador == 5 and $Control.a <10):
 			falas = true 
-			print($Control.visible)
+			#print($Control.visible)
 			
 	elif(Global.fase == "03"):
-		dialogo()
-		print("contador:",Global.contador," a:",$Control.a)
+		
+		#dialogo()
+		#print("contador:",Global.contador," a:",$Control.a)
 		if(Global.contador == 7 and $Control.a < 13):
 			falas = true
 		elif(Global.contador == 8 and $Control.a < 14):
@@ -143,7 +144,7 @@ func _process(delta):
 		if(mineGamem == true):
 			get_tree().change_scene("res://Telas/minigame-corrida.tscn")
 			
-	elif(Global.gX + Global.gY > 7 and Global.fase == "03" and info == false): # Termino das escolhas da fase 03
+	elif(Global.gX + Global.gY > 10 and Global.fase == "03" and info == false): # Termino das escolhas da fase 03
 		escolha("escolha")
 		if(mineGamem == true):
 			get_tree().change_scene("res://Bagunca/mini3.tscn")
@@ -151,24 +152,16 @@ func _process(delta):
 func _on_Positivo_button_up(): # Quando precionado adiciona +1 a cordenada X
 	if(porta3 == false):
 		Global.contador += 1
-		Global.gX += 1
+		if(Global.gX <= 1):
+			Global.gX += 1
+		else:Global.gY += 1
 		$BTN/Papel.frame +=1
-		if(Global.gY == 1 and Global.gX == 0):
-			$HUD/Node2D/Pop.value += 5
-		
-	elif(Global.gY == 1 and Global.gX == 1):
-		$HUD/Node2D/Congra.value += 5
 
 func _on_Negativo_button_up(): # Quando precionado adiciona +1 a cordenada Y
 	if(porta3 == false):
 		Global.contador += 1
 		Global.gY += 1
 		$BTN/Papel.frame +=1
-		if(Global.gY == 1 and Global.gX == 0):
-			$HUD/Node2D/Pop.value += 20
-		
-	elif(Global.gY == 1 and Global.gX == 1):
-		$HUD/Node2D/Congra.value += 20
 
 func _on_Consulta_button_up(): # Botão proximo do acessor
 	#print(falas,$Control.a )
@@ -204,6 +197,7 @@ func _on_B_button_down(): # Botão Direito que seta a Sking dos mine games
 		
 
 	elif(Global.fase == "03" ):
+		Global.skinsGames ="escola"
 		Global.gX += 1
 		mineGamem = true
 

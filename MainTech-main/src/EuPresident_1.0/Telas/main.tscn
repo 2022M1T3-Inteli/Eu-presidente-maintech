@@ -1,7 +1,7 @@
 [gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://code/main.gd" type="Script" id=1]
-[ext_resource path="res://imag/CardsNovos/CardTreeGUIA.jpg" type="Texture" id=2]
+[ext_resource path="res://imag/CardsNovos/CardTree.png" type="Texture" id=2]
 [ext_resource path="res://imag/BG/Paint.jpg" type="Texture" id=3]
 [ext_resource path="res://Telas/mainmusica.gd" type="Script" id=4]
 [ext_resource path="res://music/mainmusica.wav" type="AudioStream" id=5]
@@ -119,11 +119,10 @@ __meta__ = {
 
 [node name="Chamadas" type="Sprite" parent="."]
 position = Vector2( 504.13, 259 )
-scale = Vector2( 1.32384, 1.32384 )
 z_index = 8
 texture = ExtResource( 2 )
 hframes = 3
-vframes = 7
+vframes = 12
 
 [node name="BG" type="Sprite" parent="."]
 position = Vector2( 514, 300.312 )
@@ -195,10 +194,10 @@ anchor_left = 0.328
 anchor_top = 0.632
 anchor_right = 0.462
 anchor_bottom = 0.712
-margin_left = 0.127991
-margin_top = -0.200012
-margin_right = -0.0880127
-margin_bottom = -0.200012
+margin_left = -7.87201
+margin_top = 15.8
+margin_right = -8.08801
+margin_bottom = 15.8
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -209,10 +208,10 @@ anchor_left = 0.522
 anchor_top = 0.628
 anchor_right = 0.665
 anchor_bottom = 0.708
-margin_left = 0.471985
-margin_top = 0.199982
-margin_right = 0.039978
-margin_bottom = 0.200012
+margin_left = 6.47198
+margin_top = 18.2
+margin_right = 6.03998
+margin_bottom = 18.2
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -237,10 +236,10 @@ anchor_left = 0.528
 anchor_top = 0.63
 anchor_right = 0.661
 anchor_bottom = 0.7
-margin_left = 0.328003
-margin_top = -1.00003
-margin_right = 0.135986
-margin_bottom = 1.99997
+margin_left = 5.328
+margin_top = 17.0
+margin_right = 5.13599
+margin_bottom = 20.0
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -251,10 +250,10 @@ anchor_left = 0.327
 anchor_top = 0.632
 anchor_right = 0.458
 anchor_bottom = 0.71
-margin_left = 0.151978
-margin_top = -0.200012
-margin_right = 0.00796509
-margin_bottom = -3.05176e-05
+margin_left = -4.84796
+margin_top = 15.8
+margin_right = -4.99197
+margin_bottom = 16.0
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
