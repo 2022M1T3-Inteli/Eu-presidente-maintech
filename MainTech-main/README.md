@@ -8,7 +8,7 @@
 
 ## Nome do Grupo
 
-## Integrantes: <a>Bruno Leão</a>, <a href="https://www.linkedin.com/in/victorbarq/">Saitama One</a>, <a href="https://www.linkedin.com/in/victorbarq/">Ikki de Fenix</a>, <a href="https://www.linkedin.com/in/victorbarq/">Yusuke Urameshi</a>, <a href="https://www.linkedin.com/in/victorbarq/">Roronoa Zoro</a>
+## Integrantes: <a>Bruno Leão</a>, <a>Fernando Araújo</a>, <a>Helena Gallas</a>, <a>Yusuke Urameshi</a>, <a>João Rodrigues</a>, <a>Mateus Almeida</a>, <a>Rafael Moritz</a>, <a>Sarah Ribeiro</a>
 
 ## Descrição
 
