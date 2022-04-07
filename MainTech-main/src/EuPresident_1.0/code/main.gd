@@ -31,8 +31,8 @@ func _ready():
 		falas = true
 		$Control.vai = true 
 		$BTN/Papel.frame = 0
-		$HUD/Node2D/Congra.value = 60
-		$HUD/Node2D/Pop.value = 60
+		$HUD/Node2D/Congra.value = 0
+		$HUD/Node2D/Pop.value = 0
 		Global.gY = 0
 		Global.gX = 0
 		mineGamem = false # Controla a chamada para o minegame
@@ -62,7 +62,10 @@ func _ready():
 	$BTN/Consulta.visible = false
 
 func _process(delta):
-	
+	print($HUD/Node2D/Pop.value)
+	$HUD/Node2D/Pop.value = Global.apPopulacao
+	$HUD/Node2D/Congra.value = Global.apCongreco
+
 	if Global.contador == 1: #define a posicao do "sensor" dependendo do card em que esta
 		$Info.rect_position = Vector2(600, 250)
 	if Global.contador == 2:
@@ -151,6 +154,24 @@ func _process(delta):
 
 func _on_Positivo_button_up(): # Quando precionado adiciona +1 a cordenada X
 	if(porta3 == false):
+		if (Global.contador == 1): #essa secao controla a pontuacao do jogo dependendo de qual card estamos
+			Global.apPopulacao += 70
+			Global.apCongreco += 30
+		if(Global.contador == 2):
+			Global.apPopulacao += 20
+			Global.apCongreco += 80
+		if (Global.contador == 4):
+			Global.apPopulacao += 15
+			Global.apCongreco += 85
+		if (Global.contador == 5):
+			Global.apPopulacao += 65
+			Global.apCongreco += 35
+		if (Global.contador == 8):
+			Global.apPopulacao += 30
+			Global.apCongreco += 70
+		if (Global.contador == 10):
+			Global.apPopulacao += 20
+			Global.apCongreco += 80
 		Global.contador += 1
 		if(Global.gX <= 1):
 			Global.gX += 1
@@ -159,6 +180,24 @@ func _on_Positivo_button_up(): # Quando precionado adiciona +1 a cordenada X
 
 func _on_Negativo_button_up(): # Quando precionado adiciona +1 a cordenada Y
 	if(porta3 == false):
+		if (Global.contador == 1): #igual ao do outro botao, mas com os valores invertidos
+			Global.apPopulacao += 30
+			Global.apCongreco += 70
+		if (Global.contador == 2):
+			Global.apPopulacao += 80
+			Global.apCongreco += 20
+		if (Global.contador == 4):
+			Global.apPopulacao += 85
+			Global.apCongreco += 15
+		if (Global.contador == 5):
+			Global.apPopulacao += 35
+			Global.apCongreco += 65
+		if (Global.contador == 8):
+			Global.apPopulacao += 70
+			Global.apCongreco += 30
+		if (Global.contador == 10):
+			Global.apPopulacao += 80
+			Global.apCongreco += 20
 		Global.contador += 1
 		Global.gY += 1
 		$BTN/Papel.frame +=1
@@ -185,6 +224,15 @@ func _on_PapelArea_mouse_entered():
 
 func _on_B_button_down(): # Botão Direito que seta a Sking dos mine games
 	Global.contador += 1 
+	if (Global.contador == 3):
+		Global.apPopulacao += 90
+		Global.apCongreco += 10
+	if (Global.contador == 6):
+		Global.apPopulacao += 10
+		Global.apCongreco += 90
+	if (Global.contador == 12):
+		Global.apPopulacao += 40
+		Global.apCongreco += 60
 	if(Global.fase == "" or Global.fase == "01" ):
 		Global.skinsGames = "vender"
 		Global.gX += 1
@@ -203,6 +251,15 @@ func _on_B_button_down(): # Botão Direito que seta a Sking dos mine games
 
 func _on_A_button_down(): # Botão Esquerdo que seta a Sking dos mine games
 	Global.contador += 1
+	if (Global.contador == 3):
+		Global.apPopulacao += 10
+		Global.apCongreco += 90
+	if (Global.contador == 6):
+		Global.apPopulacao += 90
+		Global.apCongreco += 10
+	if (Global.contador == 12):
+		Global.apPopulacao += 40
+		Global.apCongreco += 60
 	if(Global.fase == "" or Global.fase == "01" ):
 		mineGamem = true
 		Global.gX += 1
