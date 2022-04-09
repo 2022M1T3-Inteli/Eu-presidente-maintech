@@ -1,0 +1,89 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://font/Oswald-VariableFont_wght.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://imag/CardsNovos/backDialogo.png" type="Texture" id=2]
+[ext_resource path="res://code/Control.gd" type="Script" id=3]
+[ext_resource path="res://imag/CardsNovos/President_1/Presidente_3.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 26
+extra_spacing_top = 3
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "intro1"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[node name="Control" type="Control"]
+anchor_left = -0.168
+anchor_top = -0.287
+anchor_right = 0.813
+anchor_bottom = 0.549
+margin_left = 3.03201
+margin_top = 9.2
+margin_right = -1.51202
+margin_bottom = -8.40002
+rect_pivot_offset = Vector2( -1, 0 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Image(1)" type="Sprite" parent="."]
+position = Vector2( 400.723, 160.374 )
+scale = Vector2( 0.980721, 0.980721 )
+z_index = -1
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.006
+anchor_right = 0.755
+anchor_bottom = 0.551
+margin_left = -0.26
+margin_right = 138.95
+margin_bottom = 3.985
+rect_pivot_offset = Vector2( 300, 72 )
+custom_fonts/font = SubResource( 1 )
+autowrap = true
+percent_visible = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Label"]
+anims/RESET = SubResource( 2 )
+anims/intro1 = SubResource( 3 )
+
+[node name="Presidente3" type="Sprite" parent="."]
+position = Vector2( 335, 58 )
+texture = ExtResource( 4 )
+
+[connection signal="p" from="." to="." method="_on_Control_p"]
