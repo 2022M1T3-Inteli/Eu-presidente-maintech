@@ -1,0 +1,103 @@
+[gd_scene load_steps=37 format=2]
+
+[ext_resource path="res://tutoriais/tutorial-minigame-construcao/screenshots/1.png" type="Texture" id=1]
+[ext_resource path="res://tutoriais/tutorial-minigame-construcao/screenshots/2.png" type="Texture" id=2]
+[ext_resource path="res://tutoriais/tutorial-minigame-construcao/screenshots/6.png" type="Texture" id=3]
+[ext_resource path="res://tutoriais/tutorial-minigame-construcao/screenshots/12.png" type="Texture" id=4]
+[ext_resource path="res://tutoriais/tutorial-minigame-construcao/screenshots/13.png" type="Texture" id=5]
+[ext_resource path="res://tutoriais/tutorial-minigame-construcao/card.png" type="Texture" id=6]
+[ext_resource path="res://tutoriais/tutorial-minigame-construcao/screenshots/3.png" type="Texture" id=7]
+[ext_resource path="res://tutoriais/tutorial-minigame-construcao/screenshots/5.png" type="Texture" id=8]
+[ext_resource path="res://tutoriais/tutorial-minigame-construcao/screenshots/7.png" type="Texture" id=9]
+[ext_resource path="res://tutoriais/tutorial-minigame-construcao/screenshots/11.png" type="Texture" id=10]
+[ext_resource path="res://tutoriais/tutorial-minigame-construcao/screenshots/9.png" type="Texture" id=11]
+[ext_resource path="res://tutoriais/tutorial-minigame-construcao/screenshots/10.png" type="Texture" id=12]
+[ext_resource path="res://tutoriais/tutorial-minigame-construcao/screenshots/4.png" type="Texture" id=13]
+[ext_resource path="res://tutoriais/tutorial-minigame-construcao/screenshots/8.png" type="Texture" id=14]
+[ext_resource path="res://tutoriais/tutorial-minigame-construcao/screenshots/19.png" type="Texture" id=15]
+[ext_resource path="res://tutoriais/tutorial-minigame-construcao/screenshots/18.png" type="Texture" id=16]
+[ext_resource path="res://tutoriais/tutorial-minigame-construcao/screenshots/20.png" type="Texture" id=17]
+[ext_resource path="res://tutoriais/tutorial-minigame-construcao/screenshots/17.png" type="Texture" id=18]
+[ext_resource path="res://tutoriais/tutorial-minigame-construcao/screenshots/14.png" type="Texture" id=19]
+[ext_resource path="res://tutoriais/tutorial-minigame-construcao/screenshots/15.png" type="Texture" id=20]
+[ext_resource path="res://tutoriais/tutorial-minigame-construcao/screenshots/16.png" type="Texture" id=21]
+[ext_resource path="res://tutoriais/tutorial-minigame-construcao/tutorial-minigame-construcao.gd" type="Script" id=22]
+
+[sub_resource type="StreamTexture" id=2]
+flags = 4
+
+[sub_resource type="StreamTexture" id=3]
+flags = 4
+
+[sub_resource type="StreamTexture" id=4]
+flags = 4
+
+[sub_resource type="StreamTexture" id=5]
+flags = 4
+
+[sub_resource type="StreamTexture" id=6]
+flags = 4
+
+[sub_resource type="StreamTexture" id=7]
+flags = 4
+
+[sub_resource type="StreamTexture" id=8]
+flags = 4
+
+[sub_resource type="StreamTexture" id=9]
+flags = 4
+
+[sub_resource type="StreamTexture" id=10]
+flags = 4
+
+[sub_resource type="StreamTexture" id=11]
+flags = 4
+
+[sub_resource type="StreamTexture" id=12]
+flags = 4
+
+[sub_resource type="StreamTexture" id=13]
+flags = 4
+
+[sub_resource type="StreamTexture" id=14]
+flags = 4
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 7 ), ExtResource( 13 ), ExtResource( 8 ), ExtResource( 3 ), ExtResource( 9 ), ExtResource( 14 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 18 ), ExtResource( 16 ), ExtResource( 15 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "New Anim",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="tutorial-minigame-construcao" type="Node2D"]
+script = ExtResource( 22 )
+
+[node name="Card" type="Sprite" parent="."]
+position = Vector2( 310, 201 )
+texture = ExtResource( 6 )
+
+[node name="gif" type="AnimatedSprite" parent="."]
+position = Vector2( 309, 154 )
+scale = Vector2( 0.1975, 0.1975 )
+frames = SubResource( 1 )
+animation = "New Anim"
+frame = 4
+playing = true
+
+[node name="Button" type="Button" parent="."]
+margin_left = 234.0
+margin_top = 315.0
+margin_right = 384.0
+margin_bottom = 370.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_up" from="Button" to="." method="_on_Button_button_up"]
