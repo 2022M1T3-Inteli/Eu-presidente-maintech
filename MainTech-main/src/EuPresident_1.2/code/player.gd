@@ -12,6 +12,10 @@ func _ready():
 		
 
 func _physics_process(delta):
+	if(get_parent().jogoON == true):
+		$"player-shape".disabled = false
+	else:
+		$"player-shape".disabled = true
 	movimento_player()
 	if Global.gameover:
 		morte_player()

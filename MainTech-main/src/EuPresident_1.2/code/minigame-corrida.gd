@@ -6,23 +6,17 @@ var velocidade = 1
 var aceleracao = 1
 var jogoON = false
 var comeco = false
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$"tutorial-minigame-corrida".visible = false
 	$Transicao.emit_signal("START")
-	#jogoON = true
 	$player.position.x = 512
 	$player.position.y = 400
-	#pass # Replace with function body.
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	
-	
-	
-	
 	if (jogoON == true):
 		if(Global.pontuacao <= 5):
 			Global.velocidade = 6
@@ -43,7 +37,8 @@ func _process(delta):
 			gameover()
 		if(Global.pontuacao >= 15 ):
 			gameover()
-			
+		
+
 
 
 func criar_coletavel():
