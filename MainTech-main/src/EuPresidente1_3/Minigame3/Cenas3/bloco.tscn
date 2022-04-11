@@ -1,0 +1,40 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Minigame3/Imagens3/universidadeMeio.JPG" type="Texture" id=1]
+[ext_resource path="res://Minigame3/Codes3/bloco.gd" type="Script" id=2]
+[ext_resource path="res://Minigame3/Imagens3/universidadeBaixo.png" type="Texture" id=3]
+[ext_resource path="res://Minigame3/Imagens3/universidadeTopo.png" type="Texture" id=4]
+[ext_resource path="res://Minigame3/Imagens3/eletricaTopo.png" type="Texture" id=5]
+[ext_resource path="res://Minigame3/Imagens3/eletricaBaixo.png" type="Texture" id=6]
+[ext_resource path="res://Minigame3/Imagens3/eletricaMeio.png" type="Texture" id=7]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 1 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "escola",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "eletrica",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 85.567, 16.4286 )
+
+[node name="blocos" type="KinematicBody2D"]
+position = Vector2( 0, -17 )
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 86, 30 )
+frames = SubResource( 2 )
+animation = "eletrica"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 86, 29.5 )
+scale = Vector2( 0.97, 0.7 )
+shape = SubResource( 1 )

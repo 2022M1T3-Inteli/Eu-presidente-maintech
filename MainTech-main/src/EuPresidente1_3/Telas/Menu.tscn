@@ -1,0 +1,100 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://code/Manu.gd" type="Script" id=1]
+[ext_resource path="res://imag/Captura_de_Tela_2022-03-08_às_15.16.10-removebg-preview.png" type="Texture" id=2]
+[ext_resource path="res://imag/Background.webp" type="Texture" id=3]
+[ext_resource path="res://imag/BTN_jogar-Menu.png" type="Texture" id=4]
+[ext_resource path="res://imag/settings-removebg-preview (1).png" type="Texture" id=5]
+[ext_resource path="res://imag/constituicao-removebg-preview.png" type="Texture" id=6]
+[ext_resource path="res://imag/EuPresidente.png" type="Texture" id=7]
+[ext_resource path="res://music/menumusica.wav" type="AudioStream" id=8]
+[ext_resource path="res://code/musicamenu.gd" type="Script" id=9]
+
+[sub_resource type="CanvasItemMaterial" id=2]
+
+[sub_resource type="Theme" id=1]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 117.0 ]
+}
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 511.95, 299 )
+scale = Vector2( 1.30267, 1.327 )
+texture = ExtResource( 3 )
+
+[node name="TituloPresidente" type="Sprite" parent="."]
+position = Vector2( 497, 87 )
+texture = ExtResource( 7 )
+
+[node name="Presidentes" type="Sprite" parent="."]
+position = Vector2( 518, 306 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 2 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 432.0
+margin_top = 501.0
+margin_right = 605.0
+margin_bottom = 553.0
+flat = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="BotãoDeJogar" type="Sprite" parent="Button"]
+position = Vector2( 89, 26 )
+texture = ExtResource( 4 )
+hframes = 2
+
+[node name="Button2" type="Button" parent="."]
+material = SubResource( 2 )
+margin_left = 36.0
+margin_top = 56.0
+margin_right = 106.0
+margin_bottom = 120.0
+theme = SubResource( 1 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="settings" type="Sprite" parent="Button2"]
+position = Vector2( 36, 30 )
+scale = Vector2( 0.386228, 0.386228 )
+z_index = 3
+texture = ExtResource( 5 )
+
+[node name="musicamenu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+script = ExtResource( 9 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+<<<<<<< Updated upstream:MainTech-main/src/EuPresident_1.2/Telas/Menu.tscn
+margin_left = 904.0
+margin_top = 36.0
+margin_right = 1129.0
+margin_bottom = 261.0
+=======
+margin_left = 898.0
+margin_top = 34.0
+margin_right = 1123.0
+margin_bottom = 259.0
+rect_min_size = Vector2( 0.4, 0 )
+>>>>>>> Stashed changes:MainTech-main/src/EuPresidente1.3/Telas/Menu.tscn
+rect_scale = Vector2( 0.4, 0.4 )
+texture_normal = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_Button_button_up"]
+[connection signal="mouse_entered" from="Button" to="." method="_on_Button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_Button_mouse_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
+[connection signal="button_down" from="TextureButton" to="." method="_on_TextureButton_button_down"]
