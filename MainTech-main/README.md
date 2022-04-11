@@ -8,7 +8,7 @@
 
 ## Maintech
 
-## Integrantes: <a>Bruno Leão</a>, <a>Fernando Araújo</a>, <a>Helena Gallas</a>, <a>Yusuke Urameshi</a>, <a>João Rodrigues</a>, <a>Mateus Almeida</a>, <a>Rafael Moritz</a>, <a>Sarah Ribeiro</a>
+## Integrantes: <a>Bruno Leão</a>, <a>Fernando Araújo</a>, <a>Helena Gallas</a>, <a>João Rodrigues</a>, <a>Mateus Almeida</a>, <a>Rafael Moritz</a>, <a>Sarah Ribeiro</a>
 
 ## Descrição
 
