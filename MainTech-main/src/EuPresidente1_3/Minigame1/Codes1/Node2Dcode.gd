@@ -24,7 +24,7 @@ func _process(delta):
 		Global.gX = 0
 		Global.gY = 3
 		yield(get_tree().create_timer(0.5),"timeout")
-		get_tree().change_scene("res://Telas/main.tscn")
+		get_tree().change_scene("res://finais/fim _mini.tscn")
 	else:
 		if(tempo_on == true):
 			if(Global.skinsGames == "vender"):

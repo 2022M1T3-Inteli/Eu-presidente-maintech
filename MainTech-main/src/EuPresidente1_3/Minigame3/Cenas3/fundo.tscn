@@ -7,8 +7,8 @@
 [ext_resource path="res://Minigame3/Imagens3/aviao.png" type="Texture" id=5]
 
 [node name="fundo" type="Sprite"]
-position = Vector2( 481, 338 )
-scale = Vector2( 0.77125, 0.77125 )
+position = Vector2( 481, 324.75 )
+scale = Vector2( 0.77125, 0.804375 )
 texture = ExtResource( 1 )
 
 [node name="GramaTeste" type="Sprite" parent="."]

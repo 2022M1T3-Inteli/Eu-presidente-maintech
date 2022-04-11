@@ -264,6 +264,7 @@ func _on_B_button_down(): # Botão Direito que seta a Sking dos mine games
 		print(Global.skinsGames)
 
 	elif(Global.fase == "02" ):
+		Global.skinsGames ="rua"
 		Global.gX += 1
 		mineGamem = true
 		
@@ -295,6 +296,7 @@ func _on_A_button_down(): # Botão Esquerdo que seta a Sking dos mine games
 		mineGamem = true
 
 	elif(Global.fase == "03" ):
+		Global.skinsGames ="eletrica"
 		Global.gX += 1
 		mineGamem = true
 

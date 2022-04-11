@@ -58,7 +58,7 @@ func gameover():
 	remove_child($player)
 	remove_child($obstaculo)
 	remove_child($background)
-	get_tree().change_scene("res://Telas/main.tscn")
+	get_tree().change_scene("res://finais/fim _mini.tscn")
 
 
 func _on_Transicao_FIM():

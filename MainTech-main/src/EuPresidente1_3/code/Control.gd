@@ -54,9 +54,9 @@ func _ready():
 		$Presidente3.texture = load("res://imag/CardsNovos/President_1/04.png")
 	elif Global.personagem == 3:
 		$Presidente3.texture = load("res://imag/CardsNovos/President_1/02.png")
-		$Presidente3.position.x +=50
 	elif Global.personagem == 4:
 		$Presidente3.texture = load("res://imag/CardsNovos/President_1/03.png")
+		$Presidente3.position.x +=50
 	else: print("Erro, Control: nenhum personagem selecionado")
 
 func _on_Control_p():

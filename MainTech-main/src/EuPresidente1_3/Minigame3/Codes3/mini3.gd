@@ -21,14 +21,14 @@ func _on_sensor2_body_entered(body): #Se o bloco passar por essa area2d, então 
 	Global.fase = ""
 	Global.final3 = 1
 	yield(get_tree().create_timer(1),"timeout")
-	get_tree().change_scene("res://Telas/main.tscn")
+	get_tree().change_scene("res://finais/fim _mini.tscn")
 
 func _process(delta):
 	if Global.pontuacao == 7:
 		Global.fase = ""
 		Global.final3 = 1
 		yield(get_tree().create_timer(1),"timeout")
-		get_tree().change_scene("res://Telas/main.tscn")
+		get_tree().change_scene("res://finais/fim _mini.tscn")
 	if Global.pontuacao < 5:
 		textura = 1
 
