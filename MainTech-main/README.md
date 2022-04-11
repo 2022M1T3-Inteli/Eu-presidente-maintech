@@ -37,8 +37,8 @@ Além de proporcionar entretenimento, o jogo também ensina de forma lúdica, di
   &emsp;|-->android<br>
   &emsp;|-->HTML<br>
 |-->imagens<br>
-|-->src<br>EuPresidente1_3
-  &emsp;|-->
+|-->src<br>
+  &emsp;|-->EuPresidente1_3<br>
 |readme.md<br>
 
 A pasta raiz contem dois arquivos que devem ser alterados:
