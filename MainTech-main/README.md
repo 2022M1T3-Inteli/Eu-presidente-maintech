@@ -38,6 +38,7 @@ Além de proporcionar entretenimento, o jogo também ensina de forma lúdica, di
   &emsp;|-->HTML<br>
 |-->imagens<br>
 |-->src<br>
+  &emsp;|-->EuPresidente1_3<br>
 |readme.md<br>
 
 A pasta raiz contem dois arquivos que devem ser alterados:
@@ -78,12 +79,6 @@ Para abrir este projeto você necessita das seguintes ferramentas:
 
 -<a href="https://godotengine.org/download">GODOT</a>
 
-```sh
-make install
-npm test
-Coloque código do prompt de comnando se for necessário
-```
-
 ## 🗃 Histórico de lançamentos
 
 A cada atualização os detalhes devem ser lançados aqui.
@@ -111,6 +106,4 @@ Aqui estão as referências usadas no projeto.
 
 1. <https://github.com/iuricode/readme-template>
 2. <https://github.com/gabrieldejesus/readme-model>
-3. <https://creativecommons.org/share-your-work/>
-4. <https://freesound.org/>
-5. Músicas por: <a href="https://freesound.org/people/DaveJf/sounds/616544/"> DaveJf </a> e <a href="https://freesound.org/people/DRFX/sounds/338986/"> DRFX </a> ambas com Licença CC 0.
+
