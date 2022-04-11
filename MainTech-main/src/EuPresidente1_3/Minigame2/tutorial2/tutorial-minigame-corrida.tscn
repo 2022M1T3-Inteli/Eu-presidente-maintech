@@ -35,7 +35,7 @@ texture = ExtResource( 6 )
 position = Vector2( 309, 154 )
 scale = Vector2( 0.1975, 0.1975 )
 frames = SubResource( 1 )
-frame = 11
+frame = 4
 playing = true
 
 [node name="Button" type="Button" parent="."]
@@ -43,6 +43,7 @@ margin_left = 229.0
 margin_top = 317.0
 margin_right = 383.0
 margin_bottom = 369.0
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

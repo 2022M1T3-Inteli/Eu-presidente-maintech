@@ -1,10 +1,7 @@
 extends Node2D
 
 export var url = "https://www.instagram.com/constituicaonasescolas" # Url para o instagram do progeto
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 #Quando clicar no botão, troca para o menu de personagens
 func _on_Button_button_down():
 	MusicController.play_music()

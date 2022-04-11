@@ -16,6 +16,7 @@ script = ExtResource( 2 )
 
 [node name="coletavel" parent="." instance=ExtResource( 3 )]
 position = Vector2( -252, 69 )
+script = null
 
 [node name="timer" type="Timer" parent="."]
 
@@ -30,6 +31,7 @@ __meta__ = {
 
 [node name="obstaculo" parent="." instance=ExtResource( 4 )]
 position = Vector2( -111, 116 )
+script = null
 
 [node name="gameover" type="RichTextLabel" parent="."]
 visible = false
