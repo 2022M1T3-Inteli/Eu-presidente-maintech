@@ -23,6 +23,7 @@ func _process(delta):
 		Global.fase = "02"
 		Global.gX = 0
 		Global.gY = 3
+		Global.pontuacao = pontos
 		yield(get_tree().create_timer(0.5),"timeout")
 		get_tree().change_scene("res://finais/fim _mini.tscn")
 	else:

@@ -9,6 +9,7 @@ var comeco = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Global.pontuacao = 0
 	$"tutorial-minigame-corrida".visible = false
 	$Transicao.emit_signal("START")
 	$player.position.x = 512
