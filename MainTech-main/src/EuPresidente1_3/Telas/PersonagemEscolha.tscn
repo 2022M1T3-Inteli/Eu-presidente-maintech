@@ -1,15 +1,23 @@
 [gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://imag/Background.webp" type="Texture" id=1]
-[ext_resource path="res://imag/CardsNovos/President_1/04.png" type="Texture" id=2]
-[ext_resource path="res://imag/CardsNovos/President_1/01.png" type="Texture" id=3]
+<<<<<<< Updated upstream
+[ext_resource path="res://imag/CardsNovos/President_1/Captura_de_Tela_2022-03-09_às_14.59.59-removebg-preview 19-25-57-381.png" type="Texture" id=2]
+=======
+[ext_resource path="res://imag/CardsNovos/President_1/Captura_de_Tela_2022-03-09_às_15.00.20-removebg-preview 15.38.40 19-26-03-774.png" type="Texture" id=2]
+>>>>>>> Stashed changes
+[ext_resource path="res://imag/CardsNovos/President_1/Captura_de_Tela_2022-03-09_às_14.59.51-removebg-preview 14-13-47-568.png" type="Texture" id=3]
 [ext_resource path="res://imag/WhatsApp_Image_2022-03-10_at_14.39.46__2_-removebg-preview.png" type="Texture" id=4]
 [ext_resource path="res://imag/WhatsApp_Image_2022-03-10_at_14.39.46__1_-removebg-preview.png" type="Texture" id=5]
 [ext_resource path="res://imag/images-removebg-preview (1).png" type="Texture" id=6]
 [ext_resource path="res://code/PersonagemEscolha.gd" type="Script" id=7]
 [ext_resource path="res://imag/WhatsApp_Image_2022-03-10_at_14.39.46-removebg-preview.png" type="Texture" id=8]
-[ext_resource path="res://imag/CardsNovos/President_1/03.png" type="Texture" id=9]
-[ext_resource path="res://imag/CardsNovos/President_1/02.png" type="Texture" id=10]
+<<<<<<< Updated upstream
+[ext_resource path="res://imag/CardsNovos/President_1/Captura_de_Tela_2022-03-09_às_15.00.20-removebg-preview 15.38.40.png" type="Texture" id=9]
+=======
+[ext_resource path="res://imag/CardsNovos/President_1/Captura_de_Tela_2022-03-09_às_14.59.59-removebg-preview 14-13-47-601.png" type="Texture" id=9]
+>>>>>>> Stashed changes
+[ext_resource path="res://imag/CardsNovos/President_1/Captura_de_Tela_2022-03-09_às_15.00.11-removebg-preview 19-26-03-740.png" type="Texture" id=10]
 [ext_resource path="res://imag/WhatsApp_Image_2022-03-10_at_14.39.46__3_-removebg-preview.png" type="Texture" id=11]
 [ext_resource path="res://music/menumusica.wav" type="AudioStream" id=12]
 [ext_resource path="res://code/musicamenu.gd" type="Script" id=13]
@@ -21,7 +29,7 @@ extents = Vector2( 45.25, 131 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 8 ), ExtResource( 2 ) ],
+"frames": [ ExtResource( 8 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "quatro",
 "speed": 5.0
@@ -32,7 +40,7 @@ extents = Vector2( 103, 250 )
 
 [sub_resource type="SpriteFrames" id=7]
 animations = [ {
-"frames": [ ExtResource( 5 ), ExtResource( 9 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "tres",
 "speed": 5.0
@@ -43,7 +51,7 @@ extents = Vector2( 52.5, 115.5 )
 
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
-"frames": [ ExtResource( 4 ), ExtResource( 3 ) ],
+"frames": [ ExtResource( 4 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "dois",
 "speed": 5.0
@@ -54,7 +62,7 @@ extents = Vector2( 34.5, 126.5 )
 
 [sub_resource type="SpriteFrames" id=8]
 animations = [ {
-"frames": [ ExtResource( 11 ), ExtResource( 10 ) ],
+"frames": [ ExtResource( 11 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "um",
 "speed": 5.0

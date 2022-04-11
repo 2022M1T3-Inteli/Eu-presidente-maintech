@@ -73,18 +73,11 @@ stream = ExtResource( 8 )
 script = ExtResource( 9 )
 
 [node name="TextureButton" type="TextureButton" parent="."]
-<<<<<<< Updated upstream:MainTech-main/src/EuPresident_1.2/Telas/Menu.tscn
-margin_left = 904.0
-margin_top = 36.0
-margin_right = 1129.0
-margin_bottom = 261.0
-=======
 margin_left = 898.0
 margin_top = 34.0
 margin_right = 1123.0
 margin_bottom = 259.0
 rect_min_size = Vector2( 0.4, 0 )
->>>>>>> Stashed changes:MainTech-main/src/EuPresidente1.3/Telas/Menu.tscn
 rect_scale = Vector2( 0.4, 0.4 )
 texture_normal = ExtResource( 6 )
 __meta__ = {

@@ -1,14 +1,10 @@
 extends Node2D
 
-<<<<<<< Updated upstream:MainTech-main/src/EuPresident_1.2/code/Manu.gd
-export var url = "https://www.instagram.com/constituicaonasescolas/"
-
-func _ready():
-	pass
+export var url = "https://www.instagram.com/constituicaonasescolas" # Url para o instagram do progeto
+<<<<<<< Updated upstream
 
 =======
-export var url = "https://www.instagram.com/constituicaonasescolas" # Url para o instagram do progeto
->>>>>>> Stashed changes:MainTech-main/src/EuPresidente1.3/code/Manu.gd
+>>>>>>> Stashed changes
 #Quando clicar no botão, troca para o menu de personagens
 func _on_Button_button_down():
 	MusicController.play_music()
@@ -31,8 +27,4 @@ func _on_Button_mouse_exited():
 
 
 func _on_TextureButton_button_down():
-<<<<<<< Updated upstream:MainTech-main/src/EuPresident_1.2/code/Manu.gd
-	OS.shell_open(url)
-=======
 	OS.shell_open(url) # Metodo para abrir um link
->>>>>>> Stashed changes:MainTech-main/src/EuPresidente1.3/code/Manu.gd
