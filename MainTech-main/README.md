@@ -83,17 +83,69 @@ Para abrir este projeto você necessita das seguintes ferramentas:
 
 A cada atualização os detalhes devem ser lançados aqui.
 
-* 0.2.1 - 14/02/2022
-    * Criação do projeto no GitHub
-* 0.2.0 - 15/01/2022
-    * MUDANÇA: Remove `setDefaultXYZ()`
-    * ADD: Adiciona `init()`
-* 0.1.1 - 11/01/2022
-    * CONSERTADO: Crash quando chama `baz()` (Obrigado @NomeDoContribuidorGeneroso!)
-* 0.1.0 - 10/01/2022
-    * O primeiro lançamento adequado
-    * MUDANÇA: Renomeia `foo()` para `bar()`
-* 0.0.1 - 01/01/2022
+* 0.6.2 - 11/04/2022
+    * Refatoração feita
+    * Implementação das telas de finais de Minigame
+    * Finalização do histórico de lançamentos
+    * Finalização do jogo!
+* 0.6.1 - 08/04/2022
+    * GDD finalizado
+    * Organização do Github
+    * Correção de bugs
+* 0.6.0 - 07/04/2022
+    * Tutoriais adicionados
+    * Atualização dos cards
+    * Sistema de pontos refinado
+    * Primeira versão do Readme
+* 0.5.3 - 04/04/2022
+    * Efeitos sonoros adicionados
+    * Conteúdo político revisado e corrigido
+* 0.5.2 - 01/04/2022
+    * Atualização do GDD
+    * Atualização dos cards
+* 0.5.1 - 29/03/2022
+    * Indicadores adicionados
+    * Correção de bugs
+    * Músicas atualizadas
+* 0.5.0 - 24/03/2022
+    * Atualização GDD
+    * Atualização das músicas
+    * Atualização Minigame 2
+* 0.4.2 - 17/03/2022
+    * Música autoral adiocionada
+    * Atualização dos cards
+    * Atualização Minigame 3
+    * Correção Minigame 2
+* 0.4.1 - 14/03/2022
+    * Menu inicial
+    * Primeira versão do Minigame 3
+    * Organização Github
+* 0.4.0 - 11/03/2022
+    * Correções do Minigame 1
+    * Atualização do GDD
+    * Primeira versão do Minigame 2
+* 0.3.2 - 08/03/2022
+    * Novas Games Stories
+* 0.3.1 - 03/03/2022
+    * Atualização do Minigame 1 (Timer, spawn dinheiro)
+    * Atualização GDD
+* 0.3.0 - 02/03/2022
+    * Atualização do Minigame 1
+    * Atualização do GDD
+* 0.2.2 - 25/02/2022
+    * Implementação da primeira versão do Minigame 1
+* 0.2.1 - 23/02/2022
+    * Atualização do GDD
+* 0.2.0 - 21/02/2022
+    * Primeiro export para HTML
+    * Segunda Demo do jogo
+* 0.1.1 - 18/02/2022
+    * Primeira Demo do jogo
+    * Primeira versão exportada para Windows
+* 0.1.0 - 15/02/2022
+    * Criação do GDD
+* 0.0.1 - 14/02/2022
+    * Criação do projeto no Github
     * Trabalho em andamento
 
 ## 📋 Licença/License
