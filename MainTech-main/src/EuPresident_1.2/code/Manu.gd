@@ -1,5 +1,7 @@
 extends Node2D
 
+export var url = "https://www.instagram.com/constituicaonasescolas/"
+
 func _ready():
 	pass
 
@@ -25,3 +27,7 @@ func _on_Button_mouse_entered():
 
 func _on_Button_mouse_exited():
 	$"Button/BotãoDeJogar".frame = 0
+
+
+func _on_TextureButton_button_down():
+	OS.shell_open(url)
