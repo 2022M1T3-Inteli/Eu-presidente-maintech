@@ -83,8 +83,8 @@ Para abrir este projeto você necessita das seguintes ferramentas:
 
 A cada atualização os detalhes devem ser lançados aqui.
 
-* 0.2.1 - 25/01/2022
-    * MUDANÇA: Atualização de docs (código do módulo permanece inalterado)
+* 0.2.1 - 14/02/2022
+    * Criação do projeto no GitHub
 * 0.2.0 - 15/01/2022
     * MUDANÇA: Remove `setDefaultXYZ()`
     * ADD: Adiciona `init()`
