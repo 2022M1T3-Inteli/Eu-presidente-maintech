@@ -65,13 +65,10 @@ Acesse https://brunomleao.itch.io/verso-0804-eu-presidente ou execute-o como uma
 
 ## 📈 Exemplo de uso
 
-Alguns exemplos interessantes e úteis sobre como seu projeto pode ser utilizado.
+<p align="center">
+<img src="https://i.gyazo.com/0deace7327618baaa38299fa60422161.png" alt="FUNCOES CARDTREE" border="0">
+<img src="https://i.gyazo.com/d5b8b2c586800a834cebc03e52076856.png" alt="CARDTREE SIMPLES" border="0">
 
-Adicione blocos de códigos e, se necessário, screenshots.
-
-Este modelo pode ser copiado e utilizado à vontade.
-
-Através da cópia/clone/ download do repositório, altere os dados do readme.md e carregue os arquivos de seu projeto.
 
 ## 💻 Configuração para Desenvolvimento
 
