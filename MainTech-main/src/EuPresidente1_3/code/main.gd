@@ -78,8 +78,8 @@ func _process(delta):
 	if Global.contador == 3:
 		$Info.rect_position = Vector2(440, 250)
 	if Global.contador == 4:
-		$Info.rect_position = Vector2(570, 330)
-		$Info2.rect_position = Vector2 (470, 330)
+		$Info.rect_position = Vector2(500, 330)
+		$Info2.rect_position = Vector2 (400, 330)
 	if Global.contador == 6:
 		$Info.rect_position = Vector2(450, 230)
 

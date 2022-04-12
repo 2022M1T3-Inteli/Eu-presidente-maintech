@@ -83,8 +83,8 @@ anims/RESET = SubResource( 2 )
 anims/intro1 = SubResource( 3 )
 
 [node name="Presidente3" type="Sprite" parent="."]
-position = Vector2( -110, 136 )
-scale = Vector2( 0.185, 0.185 )
+position = Vector2( -86, 115 )
+scale = Vector2( 0.1555, 0.1555 )
 texture = ExtResource( 4 )
 
 [connection signal="p" from="." to="." method="_on_Control_p"]
