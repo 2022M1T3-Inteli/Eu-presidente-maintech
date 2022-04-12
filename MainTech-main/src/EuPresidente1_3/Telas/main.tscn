@@ -657,7 +657,7 @@ margin_left = 68.0
 margin_top = 86.0
 margin_right = 123.0
 margin_bottom = 357.0
-max_value = 700.0
+max_value = 500.0
 step = 10.0
 texture_under = ExtResource( 16 )
 texture_over = ExtResource( 18 )
@@ -672,7 +672,7 @@ margin_left = 146.0
 margin_top = 86.0
 margin_right = 201.0
 margin_bottom = 357.0
-max_value = 700.0
+max_value = 500.0
 step = 10.0
 texture_under = ExtResource( 16 )
 texture_over = ExtResource( 18 )
@@ -701,8 +701,7 @@ anims/RESET = SubResource( 7 )
 modulate = Color( 0.392157, 0.611765, 0.588235, 1 )
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -513.5
-margin_right = -225.5
+margin_right = 288.0
 margin_bottom = 36.0
 rect_scale = Vector2( 0.1, 0.1 )
 custom_fonts/font = SubResource( 3 )
@@ -715,9 +714,8 @@ __meta__ = {
 modulate = Color( 0.776471, 0.313726, 0.282353, 1 )
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -513.5
 margin_top = 96.0
-margin_right = -128.5
+margin_right = 385.0
 margin_bottom = 132.0
 rect_scale = Vector2( 0.1, 0.1 )
 custom_fonts/font = SubResource( 3 )
@@ -730,9 +728,9 @@ __meta__ = {
 modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -156.5
+margin_left = 357.0
 margin_top = 96.0
-margin_right = 131.5
+margin_right = 645.0
 margin_bottom = 132.0
 rect_scale = Vector2( 0.2, 0.2 )
 rect_pivot_offset = Vector2( 149, 19 )
@@ -808,17 +806,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="FocosInfo" type="Control" parent="BTN/Tablet2"]
-margin_left = -112.881
-margin_top = -311.667
-margin_right = -72.881
-margin_bottom = -271.667
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="TabletView" type="Sprite" parent="BTN/Tablet2"]
-visible = false
 position = Vector2( 156.357, -212.143 )
 scale = Vector2( 1.56958, 1.56958 )
 texture = ExtResource( 22 )
@@ -929,7 +917,6 @@ script = ExtResource( 21 )
 
 [connection signal="mouse_entered" from="BTN/Papel/PapelArea" to="." method="_on_PapelArea_mouse_entered"]
 [connection signal="mouse_entered" from="BTN/Tablet2/TabletArea" to="." method="_on_Tablet_mouse_entered"]
-[connection signal="mouse_entered" from="BTN/Tablet2/FocosInfo" to="." method="_on_FocosInfo_mouse_entered"]
 [connection signal="button_up" from="BTN/Positivo" to="." method="_on_Positivo_button_up"]
 [connection signal="button_up" from="BTN/Positivo" to="papel" method="_on_Positivo_button_up"]
 [connection signal="button_up" from="BTN/Negativo" to="." method="_on_Negativo_button_up"]

@@ -9,11 +9,12 @@ var porta3 = true # Essa Bolean restringe a atualizacao das cordenadas ao moment
 var mineGamem  = false # Controla se o mine game pode aparecer
 var falas = false # Controla a aparicao do acessor
 var info = false
+var tabletOn = false
 
 # _ready: Execucoes iniciais para toda vez que entrar nessa cena
 func _ready():
 	if (Global.sprite == ""): # Caso não haja modificacao no cardTree
-		cardTree = load("res://imag/CardsNovos/CardTree.png") # Seta cardTree padrao
+		cardTree = load("res://imag/CardsNovos/CardTreePrinciapl.png") # Seta cardTree padrao
 		$Chamadas.hframes = 3
 		$Chamadas.vframes = 12
 	else: # Seta cardTree personalizado
@@ -106,17 +107,15 @@ func _process(delta):
 	elif(foco == "tablet"):
 		if(Input.is_action_just_pressed("ui_click") and $Chamadas.visible == false and Global.fase != "03"):
 			print("Essa funcionalidade só estara presente em futuras atualizaçoes")
-		elif(Input.is_action_just_pressed("ui_click") and $Chamadas.visible == false and Global.fase == "03"):
+		elif(Input.is_action_just_pressed("ui_click") and $Chamadas.visible == false and Global.fase == "03" and $BTN/Tablet2/TabletView.visible == false):
 			$BTN/Tablet2.frame = 0
-			foco = ""
 			$BTN/Tablet2/TabletView.visible = true
+			yield(get_tree().create_timer(1),"timeout")
+			#Global.fase = "egg"
+			print(Global.fase)
+			$BTN/Tablet2/TabletView.visible = false
 		else:
 			$BTN/Tablet2/TabletView.visible = false
-	elif(foco == "Egon" and $BTN/Tablet2/TabletView.visible == true and Input.is_action_just_pressed("ui_click")):
-		$HUD/Titulo_03.text = "Nada de inventar"
-		yield(get_tree().create_timer(1),"timeout")
-		foco = ""
-		$BTN/Tablet2/TabletView.visible = false
 
 # Atualização das cordenadas da Matriz cardTree
 	$Chamadas.frame_coords.x = Global.gX
@@ -376,5 +375,3 @@ func _on_Info2_mouse_exited():
 			Global.gY = 3
 
 
-func _on_FocosInfo_mouse_entered():
-	foco = "Egon"

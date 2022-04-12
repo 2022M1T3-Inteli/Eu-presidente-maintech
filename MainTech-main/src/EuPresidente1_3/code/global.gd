@@ -19,6 +19,7 @@ var som = true
 var contador = 1
 var Coluna = 0
 var Linha = 0
+var FimGame = false
 
 func expandir (obj,vezes):
 	
