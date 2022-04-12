@@ -22,19 +22,19 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 85.567, 16.4286 )
+extents = Vector2( 85.0515, 25.7143 )
 
 [node name="blocos" type="KinematicBody2D"]
 position = Vector2( 0, -17 )
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 86, 30 )
+position = Vector2( 85, 34 )
+scale = Vector2( 0.861907, 0.658551 )
 frames = SubResource( 2 )
 animation = "eletrica"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2( 86, 29.5 )
+position = Vector2( 85.5, 36 )
 scale = Vector2( 0.97, 0.7 )
 shape = SubResource( 1 )

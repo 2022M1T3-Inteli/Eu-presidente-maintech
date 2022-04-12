@@ -8,9 +8,17 @@ export var frames = 0
 func _ready():
 	if(Global.skinsGames == "escola"):
 		$AnimatedSprite.animation = "escola"
+		if Global.pontuacao == 0:
+			$AnimatedSprite.scale = Vector2(1, 1)
+		elif Global.pontuacao <= 7:
+			$AnimatedSprite.scale = Vector2(1, 0.60)
 	else:
 		$AnimatedSprite.animation = "eletrica"
-		$AnimatedSprite.scale = Vector2(0.168,0.116)
+		if Global.pontuacao == 0:
+			$AnimatedSprite.scale = Vector2(0.168,0.150)
+		elif Global.pontuacao <= 7:
+			$AnimatedSprite.scale = Vector2(0.168,0.116)
+
 
 func _process(delta):
 	$AnimatedSprite.frame = frames
@@ -19,11 +27,11 @@ func _process(delta):
 	if parado == false: #Começa o movimento do bloco se movendo 2 unidades para a direita.
 		if indo:
 			position.x += 2
-		if position.x == 700: #Se chegar no limite definido como 1024, ele volta -2 unidades.
+		if position.x == 870: #Se chegar no limite definido como 1024, ele volta -2 unidades.
 			indo = false		#Criando o movimento de ida e volta
 		if indo == false:
 			position.x -= 2
-		if position.x == 130:
+		if position.x == -10:
 			indo = true
 
 

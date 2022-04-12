@@ -23,7 +23,7 @@ position = Vector2( 10, 160 )
 input_pickable = true
 
 [node name="sensor" parent="." instance=ExtResource( 2 )]
-position = Vector2( 446, 270 )
+position = Vector2( 446, 260 )
 
 [node name="sensor2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 2, 24 )
@@ -47,6 +47,7 @@ margin_right = 1020.0
 margin_bottom = 673.0
 
 [node name="tutorial_minigame_construcao" parent="." instance=ExtResource( 10 )]
+visible = false
 position = Vector2( 204, 109 )
 
 [connection signal="area_exited" from="sensor" to="." method="_on_sensor_area_exited"]

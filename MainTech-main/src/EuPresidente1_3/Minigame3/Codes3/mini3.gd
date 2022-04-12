@@ -10,23 +10,25 @@ func _ready():
 	$tutorial_minigame_construcao.visible = false
 	Global.pontuacao = 0
 
-func _on_sensor_body_entered(body): #Se o bloco passar por essa area2d, então a funcão criar_bloco() é chamada.
+func _on_sensor_body_entered(body):
+	Global.pontuacao += 1 #Se o bloco passar por essa area2d, então a funcão criar_bloco() é chamada.
 	criar_bloco(textura)
-	Global.pontuacao += 1
-	$Camera.position.y -= 20
+	$Camera.position.y -= 15
 	novoBloco.position.y -= (Global.pontuacao*3)
 
 func _on_sensor2_body_entered(body): #Se o bloco passar por essa area2d, então o jogo é finalizado e cena de fim é chamada.
 	$'.'.get_tree().paused = true
+	Global.fase = ""
 	Global.final3 = 1
 	yield(get_tree().create_timer(1),"timeout")
-	get_tree().change_scene("res://finais/FinalFim.tscn")
+	get_tree().change_scene("res://finais/fim _mini.tscn")
 
 func _process(delta):
 	if Global.pontuacao == 7:
+		Global.fase = ""
 		Global.final3 = 1
 		yield(get_tree().create_timer(1),"timeout")
-		get_tree().change_scene("res://finais/FinalFim.tscn")
+		get_tree().change_scene("res://finais/fim _mini.tscn")
 	if Global.pontuacao < 5:
 		textura = 1
 
