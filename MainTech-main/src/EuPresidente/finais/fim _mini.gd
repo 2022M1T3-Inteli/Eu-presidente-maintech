@@ -13,7 +13,7 @@ func _ready():
 		$Control/Sprite.texture = load("res://Minigame2/Imagens2/fundoEstrada.jpg")
 	elif(Global.skinsGames == "eletrica"):
 		Global.FimGame = true
-		$Control/Sprite.texture = load("res://Minigame3/Imagens3/grama teste.jpg")
+		$Control/Sprite.texture = load("res://imag/MIn3_BG.png")
 	
 	$Control/pontuacao.text = "Parabéns, " + Global.nomePessoa + ", você fez " + str(Global.pontuacao) + " pontos"
 
