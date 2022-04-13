@@ -21,6 +21,7 @@ func _ready():
 
 
 func _process(delta):
+	
 	$AnimatedSprite.frame = frames
 	if Global.final3:
 		$".".visible = false
@@ -42,4 +43,5 @@ func _physics_process(delta):		#Ativa a "gravidade" do game, puxando o bloco par
 	if parado:
 		velocidade.y += 10 
 		move_and_slide(velocidade)
+
 

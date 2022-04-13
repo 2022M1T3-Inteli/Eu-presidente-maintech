@@ -8,7 +8,7 @@ func _ready():
 func play(from_position=0.0):
 	
 	randomize()
-	pitch_scale = rand_range(0.5, 1.7)
+	pitch_scale = rand_range(0.75, 1.5)
 	
 	.play(from_position)
 

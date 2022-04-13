@@ -17,11 +17,11 @@ func _on_sensor_body_entered(body):
 	novoBloco.position.y -= (Global.pontuacao*3)
 
 func _on_sensor2_body_entered(body): #Se o bloco passar por essa area2d, então o jogo é finalizado e cena de fim é chamada.
-	$'.'.get_tree().paused = true
 	Global.fase = ""
 	Global.final3 = 1
 	yield(get_tree().create_timer(1),"timeout")
 	get_tree().change_scene("res://finais/fim _mini.tscn")
+	
 
 func _process(delta):
 	if Global.pontuacao == 7:
