@@ -2,8 +2,8 @@ extends Control
 
 
 func _ready():
-	$Popular.text = str(Global.apPopulacao / 4.5) + "%"
-	$Congresso.text = str(Global.apCongreco / 4.5) + "%"
+	$Popular.text = str(int(Global.apPopulacao / 4.5)) + "%"
+	$Congresso.text = str(int(Global.apCongreco / 4.5)) + "%"
 	if(Global.personagem == 1):
 		$Sprite2.texture = load("res://imag/CardsNovos/President_1/04.png")
 	elif(Global.personagem == 2):
