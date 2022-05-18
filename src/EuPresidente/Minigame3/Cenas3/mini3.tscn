@@ -1,0 +1,57 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Minigame3/Cenas3/bloco.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Minigame3/Cenas3/sensor.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Minigame3/Codes3/mini3.gd" type="Script" id=3]
+[ext_resource path="res://Minigame3/Cenas3/chão.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Minigame3/Cenas3/sensor2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://music/sambaminigame1.wav" type="AudioStream" id=6]
+[ext_resource path="res://Minigame3/Cenas3/fundo.tscn" type="PackedScene" id=7]
+[ext_resource path="res://code/AudioStreamPlayer.gd" type="Script" id=8]
+[ext_resource path="res://Obj/Transicao.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Minigame3/tutorial3/tutorial-minigame-construcao.tscn" type="PackedScene" id=10]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="fundo" parent="." instance=ExtResource( 7 )]
+position = Vector2( 462, 297 )
+scale = Vector2( 0.690313, 0.751563 )
+
+[node name="blocos" parent="." instance=ExtResource( 1 )]
+position = Vector2( 10, 160 )
+input_pickable = true
+
+[node name="sensor" parent="." instance=ExtResource( 2 )]
+position = Vector2( 446, 260 )
+
+[node name="sensor2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2, 24 )
+
+[node name="chão" parent="." instance=ExtResource( 4 )]
+position = Vector2( 9, 265 )
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2( 513, 336 )
+current = true
+zoom = Vector2( 1, 1.125 )
+smoothing_enabled = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+script = ExtResource( 8 )
+
+[node name="Transicao" parent="." instance=ExtResource( 9 )]
+margin_top = 1.0
+margin_right = 1020.0
+margin_bottom = 673.0
+
+[node name="tutorial_minigame_construcao" parent="." instance=ExtResource( 10 )]
+visible = false
+position = Vector2( 204, 109 )
+
+[connection signal="area_exited" from="sensor" to="." method="_on_sensor_area_exited"]
+[connection signal="body_entered" from="sensor" to="." method="_on_sensor_body_entered"]
+[connection signal="body_entered" from="sensor2" to="." method="_on_sensor2_body_entered"]
+[connection signal="FIM" from="Transicao" to="." method="_on_Transicao_FIM"]
+[connection signal="PROXIMO" from="tutorial_minigame_construcao" to="." method="_on_tutorialminigameconstrucao_PROXIMO"]

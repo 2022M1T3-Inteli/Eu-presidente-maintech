@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sompapel.mp3-6f9c38a55d2962fe0bb5fb73207fa991.mp3str"
+
+[deps]
+
+source_file="res://music/sompapel.mp3"
+dest_files=[ "res://.import/sompapel.mp3-6f9c38a55d2962fe0bb5fb73207fa991.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
